@@ -35,6 +35,14 @@
                         <td>{{ $event->begins_at->format('m/d/Y g:ia') }}</td>
                         <td>{{ $event->ends_at->format('m/d/Y g:ia') }}</td>
                         <td>
+                            {{
+                                Form::open([
+                                    'route' => ['admin.events.destroy', $event->id],
+                                    'method' => 'delete',
+                                    'style' => 'margin-bottom: 0;'
+                                ])
+                            }}
+
                             @if ($event->link)
                             <a href="{{ $event->link }}" class="btn btn-default btn-xs">
                                 <span class="glyphicon glyphicon-link"></span> Link
@@ -43,9 +51,11 @@
                             <a href="{{ route('admin.events.edit', ['id' => $event->id]) }}" class="btn btn-primary btn-xs">
                                 <span class="glyphicon glyphicon-pencil"></span> Edit
                             </a>
-                            <a href="{{ route('admin.events.destroy', ['id' => $event->id]) }}" class="btn btn-danger btn-xs">
+                            <button class="btn btn-danger btn-xs" type="submit">
                                 <span class="glyphicon glyphicon-remove"></span> Delete
-                            </a>
+                            </button>
+
+                            {{ Form::close() }}
                         </td>
                     </tr>
                 @endforeach

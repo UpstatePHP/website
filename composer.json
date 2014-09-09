@@ -5,7 +5,9 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-        "orchestra/asset": "2.2.*"
+        "orchestra/asset": "2.2.*",
+        "league/geotools": "0.4.*",
+        "league/flysystem": "0.5.*"
 	},
     "require-dev": {
         "way/generators": "2.*",

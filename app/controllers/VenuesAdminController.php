@@ -63,7 +63,10 @@ class VenuesAdminController extends AdminController
      */
     public function edit($id)
     {
-
+        $data = [
+            'venue' => Models\Venue::find($id)
+        ];
+        $this->layout->body = View::make('venues.admin.edit', $data);
     }
 
     /**
@@ -75,7 +78,8 @@ class VenuesAdminController extends AdminController
      */
     public function update($id)
     {
-        //
+        Models\Venue::find($id)->update(Input::except('_token', '_crsf', '_method'));
+        return Redirect::route('admin.venues.index');
     }
 
     /**

@@ -82,7 +82,9 @@ class EventsAdminController extends AdminController
      */
     public function update($id)
     {
-        //
+        Models\Event::find($id)->update(Input::except('_crsf', '_token', '_method'));
+
+        return Redirect::route('admin.events.index');
     }
 
     /**
@@ -94,7 +96,9 @@ class EventsAdminController extends AdminController
      */
     public function destroy($id)
     {
-        //
+        Models\Event::find($id)->delete();
+
+        return Redirect::route('admin.events.index');
     }
 
 }
