@@ -95,4 +95,11 @@ Route::filter('admin', function()
     Orchestra\Asset::style('admin-plugins', 'css/admin-plugins.min.css', ['plugins']);
     Orchestra\Asset::container('footer')->script('admin-plugins', 'js/admin-plugins.min.js', 'jquery');
     Orchestra\Asset::container('footer')->script('admin', 'js/admin.min.js', ['jquery', 'admin-plugins']);
+
+    App::make('menu')->put('admin', [
+        'items' => [
+            'events' => URL::route('admin.events.index'),
+            'venues' => URL::route('admin.venues.index')
+        ]
+    ]);
 });

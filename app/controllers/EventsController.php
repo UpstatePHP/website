@@ -2,7 +2,7 @@
 
 use UpstatePHP\Website\Models;
 
-class VenuesAdminController extends AdminController
+class EventsController extends PageController
 {
 
     /**
@@ -11,13 +11,13 @@ class VenuesAdminController extends AdminController
      *
      * @return Response
      */
-    public function index()
+    public function adminIndex()
     {
         $data = [
-            'venues' => Models\Venue::all()
+            'events' => Models\Event::all()
         ];
 
-        $this->layout->body = View::make('venues.admin.index', $data);
+        $this->layout->body = View::make('events.admin.index', $data);
     }
 
     /**
@@ -28,7 +28,7 @@ class VenuesAdminController extends AdminController
      */
     public function create()
     {
-
+        $this->layout->body = View::make('events.admin.create');
     }
 
     /**
@@ -39,7 +39,9 @@ class VenuesAdminController extends AdminController
      */
     public function store()
     {
+        Models\Event::create(Input::except('_token', '_crsf'));
 
+        return Redirect::route('admin.events.index');
     }
 
     /**
@@ -64,9 +66,11 @@ class VenuesAdminController extends AdminController
     public function edit($id)
     {
         $data = [
-            'venue' => Models\Venue::find($id)
+            'event' => Models\Event::find($id),
+            'venues' => Models\Venue::all()
         ];
-        $this->layout->body = View::make('venues.admin.edit', $data);
+
+        $this->layout->body = View::make('events.admin.edit', $data);
     }
 
     /**
@@ -78,8 +82,9 @@ class VenuesAdminController extends AdminController
      */
     public function update($id)
     {
-        Models\Venue::find($id)->update(Input::except('_token', '_crsf', '_method'));
-        return Redirect::route('admin.venues.index');
+        Models\Event::find($id)->update(Input::except('_crsf', '_token', '_method'));
+
+        return Redirect::route('admin.events.index');
     }
 
     /**
@@ -91,7 +96,9 @@ class VenuesAdminController extends AdminController
      */
     public function destroy($id)
     {
-        //
+        Models\Event::find($id)->delete();
+
+        return Redirect::route('admin.events.index');
     }
 
 }

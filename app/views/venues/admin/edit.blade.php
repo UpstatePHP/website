@@ -9,7 +9,7 @@
     </div>
 </div>
 
-{{ Form::model($venue, ['route' => ['admin.venues.update', $venue->id], 'method' => 'put']) }}
+{{ Form::model($venue, ['route' => ['admin.venues.update', $venue->id]]) }}
 
 <div class="container">
     <div class="row">

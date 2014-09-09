@@ -1,11 +1,25 @@
 <?php
 
+// Filters
+Route::when('admin/*', 'admin');
+
+// Routes
 Route::get('/', 'PageController@index');
 
 Route::group(['prefix' => 'admin'], function()
 {
-    Route::resource('events', 'EventsAdminController');
-    Route::resource('venues', 'VenuesAdminController');
-});
+    Route::get('events', ['as' => 'admin.events.index', 'uses' => 'EventsController@adminIndex']);
+    Route::get('events/create', ['as' => 'admin.events.create', 'uses' => 'EventsController@create']);
+    Route::post('events', ['as' => 'admin.events.store', 'uses' => 'EventsController@store']);
+    Route::get('events/edit/{id}', ['as' => 'admin.events.edit', 'uses' => 'EventsController@edit']);
+    Route::post('events/{id}', ['as' => 'admin.events.update', 'uses' => 'EventsController@update']);
+    Route::get('events/delete/{id}', ['as' => 'admin.events.delete', 'uses' => 'EventsController@delete']);
 
-Route::when('admin/*', 'admin');
+    Route::get('venues', ['as' => 'admin.venues.index', 'uses' => 'VenuesController@adminIndex']);
+    Route::get('venues/create', ['as' => 'admin.venues.create', 'uses' => 'VenuesController@create']);
+    Route::post('venues', ['as' => 'admin.venues.store', 'uses' => 'VenuesController@store']);
+    Route::get('venues/edit/{id}', ['as' => 'admin.venues.edit', 'uses' => 'VenuesController@edit']);
+    Route::post('venues/{id}', ['as' => 'admin.venues.update', 'uses' => 'VenuesController@update']);
+    Route::get('venues/delete/{id}', ['as' => 'admin.venues.delete', 'uses' => 'VenuesController@delete']);
+
+});
