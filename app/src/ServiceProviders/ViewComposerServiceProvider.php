@@ -7,9 +7,9 @@ class ViewComposerServiceProvider extends ServiceProvider
     public function register()
     {
         $this->add('events.next', 'NextEventComposer');
-        $this->add(['events.admin.create', 'events.admin.edit'], 'VenueListComposer');
+        $this->add('events.admin.form', 'VenueListComposer');
         $this->add('partials.menu', 'MenuComposer');
-        $this->add(['venues.admin.create', 'venues.admin.edit'], 'StatesDropdownComposer');
+        $this->add('venues.admin.form', 'StatesDropdownComposer');
     }
 
     protected function add($view, $class)

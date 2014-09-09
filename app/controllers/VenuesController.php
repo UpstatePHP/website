@@ -28,7 +28,10 @@ class VenuesController extends PageController
      */
     public function create()
     {
-
+        $data = [
+            'venue' => new Models\Venue
+        ];
+        $this->layout->body = View::make('venues.admin.form', $data);
     }
 
     /**
@@ -39,7 +42,8 @@ class VenuesController extends PageController
      */
     public function store()
     {
-
+        Models\Venue::create(Input::except('_token', '_crsf', '_method'));
+        return Redirect::route('admin.venues.index');
     }
 
     /**
@@ -66,7 +70,7 @@ class VenuesController extends PageController
         $data = [
             'venue' => Models\Venue::find($id)
         ];
-        $this->layout->body = View::make('venues.admin.edit', $data);
+        $this->layout->body = View::make('venues.admin.form', $data);
     }
 
     /**
@@ -89,9 +93,10 @@ class VenuesController extends PageController
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        Models\Venue::find($id)->delete();
+        return Redirect::route('admin.venues.index');
     }
 
 }

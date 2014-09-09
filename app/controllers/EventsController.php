@@ -28,7 +28,10 @@ class EventsController extends PageController
      */
     public function create()
     {
-        $this->layout->body = View::make('events.admin.create');
+        $data = [
+            'event' => new Models\Event
+        ];
+        $this->layout->body = View::make('events.admin.form', $data);
     }
 
     /**
@@ -70,7 +73,7 @@ class EventsController extends PageController
             'venues' => Models\Venue::all()
         ];
 
-        $this->layout->body = View::make('events.admin.edit', $data);
+        $this->layout->body = View::make('events.admin.form', $data);
     }
 
     /**
