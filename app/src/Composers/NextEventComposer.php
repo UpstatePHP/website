@@ -10,7 +10,7 @@ class NextEventComposer
 
         $view->nextEvent = (object) [
             'startDate' => $next->begins_at->format('m/d'),
-            'startTime' => $next->begins_at->format('H:i'),
+            'startTime' => $next->begins_at->format('g:ia'),
             'link' => $next->link,
             'venue' => ''
         ];

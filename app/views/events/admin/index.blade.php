@@ -44,7 +44,7 @@
                                 <span class="glyphicon glyphicon-pencil"></span> Edit
                             </a>
                             <a href="{{ route('admin.events.destroy', ['id' => $event->id]) }}" class="btn btn-danger btn-xs">
-                                <span class="glyphicon glyphicon-remove"></span> Edit
+                                <span class="glyphicon glyphicon-remove"></span> Delete
                             </a>
                         </td>
                     </tr>

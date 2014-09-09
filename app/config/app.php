@@ -126,6 +126,7 @@ return array(
         'Way\Generators\GeneratorsServiceProvider',
 
         'UpstatePHP\Website\ServiceProviders\ViewComposerServiceProvider',
+        'UpstatePHP\Website\ServiceProviders\MenuServiceProvider',
 	),
 
 	/*

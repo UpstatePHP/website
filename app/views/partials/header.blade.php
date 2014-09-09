@@ -20,9 +20,7 @@
                     <span id="header-name">UpstatePHP</span>
                 </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul id="" class=" nav navbar-nav pull-right"></ul>
-            </div><!--/.nav-collapse -->
+            @include('partials.menu')
         </div>
     </div>
 
