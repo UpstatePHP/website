@@ -42,7 +42,7 @@ class EventsController extends PageController
      */
     public function store()
     {
-        Models\Event::create(Input::except('_token', '_crsf'));
+        Models\Event::create(Input::except('_token'));
 
         return Redirect::route('admin.events.index');
     }
@@ -85,7 +85,7 @@ class EventsController extends PageController
      */
     public function update($id)
     {
-        Models\Event::find($id)->update(Input::except('_crsf', '_token', '_method'));
+        Models\Event::find($id)->update(Input::except('_token', '_method'));
 
         return Redirect::route('admin.events.index');
     }

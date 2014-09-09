@@ -42,7 +42,7 @@ class VenuesController extends PageController
      */
     public function store()
     {
-        Models\Venue::create(Input::except('_token', '_crsf', '_method'));
+        Models\Venue::create(Input::except('_token'));
         return Redirect::route('admin.venues.index');
     }
 
@@ -82,7 +82,7 @@ class VenuesController extends PageController
      */
     public function update($id)
     {
-        Models\Venue::find($id)->update(Input::except('_token', '_crsf', '_method'));
+        Models\Venue::find($id)->update(Input::except('_token', '_method'));
         return Redirect::route('admin.venues.index');
     }
 
