@@ -1,0 +1,100 @@
+<?php
+
+use UpstatePHP\Website\Models;
+
+class EventsAdminController extends AdminController
+{
+
+    /**
+     * Display a listing of the resource.
+     * GET /eventsadmin
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $data = [
+            'events' => Models\Event::all()
+        ];
+
+        $this->layout->body = View::make('events.admin.index', $data);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     * GET /eventsadmin/create
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        $this->layout->body = View::make('events.admin.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     * POST /eventsadmin
+     *
+     * @return Response
+     */
+    public function store()
+    {
+        Models\Event::create(Input::except('_token', '_crsf'));
+
+        return Redirect::route('admin.events.index');
+    }
+
+    /**
+     * Display the specified resource.
+     * GET /eventsadmin/{id}
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     * GET /eventsadmin/{id}/edit
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+        $data = [
+            'event' => Models\Event::find($id),
+            'venues' => Models\Venue::all()
+        ];
+
+        $this->layout->body = View::make('events.admin.edit', $data);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     * PUT /eventsadmin/{id}
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function update($id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     * DELETE /eventsadmin/{id}
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+
+}

@@ -1,0 +1,104 @@
+h2,
+h3 {
+  font-family: 'Droid Sans Mono';
+  font-weight: 300;
+}
+h2::before,
+h3::before {
+  content: '//';
+  margin-right: 10px;
+}
+.section-bg-primary {
+  background-color: #455c7a;
+  color: #fff;
+}
+.home-bucket {
+  font-weight: 300;
+}
+.navbar {
+  font-family: 'Droid Sans Mono';
+}
+.navbar.navbar-default.navbar-static-top {
+  margin-bottom: 32px;
+}
+.navbar-default {
+  background: #2e3641;
+  border-bottom: 12px solid #455c7a;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  background-color: #455c7a;
+  color: #fff;
+}
+#main-brand {
+  color: #fff;
+  padding-left: 150px;
+  position: relative;
+}
+#header-logo {
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 143px;
+}
+.event {
+  overflow: hidden;
+}
+.event .event-body {
+  position: relative;
+  overflow: hidden;
+}
+.event .event-datetime {
+  border-right: 1px solid #455c7a;
+  float: left;
+  font-size: 32px;
+  line-height: 35px;
+  margin: 0 15px 15px 0;
+  padding: 10px 15px 10px 0;
+  text-align: center;
+}
+.event .event-title {
+  font-size: 22px;
+}
+.event .event-title.page-header {
+  margin-top: 0;
+}
+.event .event-details {
+  font-size: 18px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+.event .map-thumbnail {
+  margin-top: 20px;
+  position: relative;
+}
+.event #venue-map {
+  height: 225px;
+}
+.event #venue-info {
+  background: rgba(255, 255, 255, 0.8);
+  bottom: 0;
+  display: none;
+  left: 0;
+  padding: 5px 20px;
+  position: absolute;
+  right: 0;
+}
+.event-meta-line {
+  overflow: hidden;
+}
+.meta-line-title {
+  float: left;
+  font-weight: bold;
+  margin-right: 5px;
+  text-transform: capitalize;
+}
+.meta-line-title + div {
+  float: left;
+}
+#home-content > .row {
+  margin-bottom: 40px;
+  margin-top: 40px;
+}

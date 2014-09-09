@@ -1,0 +1,33 @@
+.navbar {
+    font-family: 'Droid Sans Mono';
+    &.navbar-default.navbar-static-top {
+        margin-bottom: 32px;
+    }
+}
+
+.navbar-default {
+    background: @brand-secondary;
+    border-bottom: 12px solid @brand-primary;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+
+    &:hover {
+        background-color: @brand-primary;
+        color: #fff;
+    }
+}
+
+#main-brand {
+    color: #fff;
+    padding-left: 150px;
+    position: relative;
+}
+
+#header-logo {
+    left: 0;
+    position: absolute;
+    top: 6px;
+    width: 143px;
+}
