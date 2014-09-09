@@ -50,10 +50,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VenueListComposer.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="VenueListComposer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/Composers/VenueListComposer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="10" selection-start="294" selection-end="294" vertical-scroll-proportion="0.3853755" vertical-offset="0" max-vertical-offset="506">
+            <state line="13" column="10" selection-start="294" selection-end="294" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="360">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="0.2264151" vertical-offset="0" max-vertical-offset="530">
               <folding />
             </state>
           </provider>
@@ -111,7 +120,6 @@
         <option value="$PROJECT_DIR$/app/views/partials/menu.blade.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/app/src/Composers/NextEventComposer.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/src/Models/Event.php" />
         <option value="$PROJECT_DIR$/app/controllers/EventsAdminController.php" />
@@ -128,6 +136,7 @@
         <option value="$PROJECT_DIR$/app/views/venues/admin/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/venues/admin/index.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/VenuesController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -492,7 +501,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25679544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -722,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="6" selection-start="106" selection-end="106" vertical-scroll-proportion="0.2264151" vertical-offset="0" max-vertical-offset="530">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="35" selection-start="283" selection-end="283" vertical-scroll-proportion="0.2667984" vertical-offset="0" max-vertical-offset="780">
@@ -853,7 +855,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Composers/VenueListComposer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="10" selection-start="294" selection-end="294" vertical-scroll-proportion="0.3853755" vertical-offset="0" max-vertical-offset="506">
+        <state line="13" column="10" selection-start="294" selection-end="294" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="0.2264151" vertical-offset="0" max-vertical-offset="530">
           <folding />
         </state>
       </provider>
