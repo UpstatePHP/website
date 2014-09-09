@@ -28,20 +28,12 @@
                     <td>{{ $venue->name }}</td>
                     <td><a href="{{ $venue->url }}">{{ $venue->url }}</a></td>
                     <td>
-                        {{
-                            Form::open([
-                            'route' => ['admin.venues.destroy', $venue->id],
-                            'method' => 'delete',
-                            'style' => 'margin-bottom: 0;'
-                            ])
-                        }}
                         <a href="{{ route('admin.venues.edit', ['id' => $venue->id]) }}" class="btn btn-primary btn-xs">
                             <span class="glyphicon glyphicon-pencil"></span> Edit
                         </a>
-                        <button class="btn btn-danger btn-xs" type="submit">
+                        <a href="{{ route('admin.venues.delete', ['id' => $venue->id]) }}" class="btn btn-danger btn-xs">
                             <span class="glyphicon glyphicon-remove"></span> Delete
-                        </button>
-                        {{ Form::close() }}
+                        </a>
                     </td>
                 </tr>
                 @endforeach
