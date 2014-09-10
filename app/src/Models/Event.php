@@ -1,8 +1,11 @@
 <?php namespace UpstatePHP\Website\Models;
 
 use Carbon\Carbon;
+use UpstatePHP\Website\Traits\SluggableTrait;
 
 class Event extends \Eloquent {
+
+    use SluggableTrait;
 
     protected $dates = ['begins_at', 'ends_at'];
 
@@ -21,6 +24,12 @@ class Event extends \Eloquent {
     public function setEndsAtAttribute($value)
     {
         $this->attributes['ends_at'] = new Carbon($value);
+    }
+
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title'] = $value;
+        $this->attributes['slug'] = $this->makeSlugFromDatabase($value);
     }
 
     public function venue()
