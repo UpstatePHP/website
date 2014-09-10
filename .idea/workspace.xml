@@ -22,55 +22,7 @@
     <favorites_list name="upstate.laravel" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="composer.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="8" selection-start="220" selection-end="247" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="810">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NextEventComposer.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Composers/NextEventComposer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="36" selection-start="243" selection-end="243" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="555">
-              <folding>
-                <element signature="e#47#77#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Venue.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/Models/Venue.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="25" selection-start="351" selection-end="351" vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="next.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/events/next.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="79" selection-start="1652" selection-end="1652" vertical-scroll-proportion="-13.75" vertical-offset="180" max-vertical-offset="705">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/js/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="29" selection-start="606" selection-end="606" vertical-scroll-proportion="0.6792453" vertical-offset="0" max-vertical-offset="530">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -124,13 +76,13 @@
         <option value="$PROJECT_DIR$/app/src/Models/Event.php" />
         <option value="$PROJECT_DIR$/app/src/Traits/SluggableTrait.php" />
         <option value="$PROJECT_DIR$/app/src/Models/Organization.php" />
-        <option value="$PROJECT_DIR$/app/controllers/OrganizationsController.php" />
         <option value="$PROJECT_DIR$/app/views/events/next.blade.php" />
         <option value="$PROJECT_DIR$/app/src/Composers/NextEventComposer.php" />
         <option value="$PROJECT_DIR$/app/src/Models/Venue.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/app/controllers/OrganizationsController.php" />
       </list>
     </option>
   </component>
@@ -878,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/VenuesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="-0.6304348" vertical-offset="409" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_07_015403_create_events_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="7" selection-start="725" selection-end="725" vertical-scroll-proportion="0.8300395" vertical-offset="0" max-vertical-offset="675">
@@ -922,33 +867,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/logos/.gitkeep">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="530">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/OrganizationsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="54" selection-start="2232" selection-end="2232" vertical-scroll-proportion="0.58498025" vertical-offset="994" max-vertical-offset="1500">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/events/next.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="79" selection-start="1652" selection-end="1652" vertical-scroll-proportion="-13.75" vertical-offset="180" max-vertical-offset="705">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Composers/NextEventComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="243" selection-end="243" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="555">
-          <folding>
-            <element signature="e#47#77#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -966,16 +888,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="8" selection-start="220" selection-end="247" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="810">
+        <state line="24" column="29" selection-start="606" selection-end="606" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/main.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/VenuesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="29" selection-start="606" selection-end="606" vertical-scroll-proportion="0.6792453" vertical-offset="0" max-vertical-offset="530">
+        <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="-0.6583851" vertical-offset="408" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="8" selection-start="220" selection-end="247" vertical-scroll-proportion="0.23715416" vertical-offset="0" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Composers/NextEventComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="36" selection-start="243" selection-end="243" vertical-scroll-proportion="0.32608697" vertical-offset="0" max-vertical-offset="555">
+          <folding>
+            <element signature="e#47#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/OrganizationsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="47" selection-start="854" selection-end="854" vertical-scroll-proportion="0.9782609" vertical-offset="0" max-vertical-offset="1500">
           <folding />
         </state>
       </provider>

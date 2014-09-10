@@ -31,7 +31,7 @@ class OrganizationsController extends PageController
             $path = Input::file('logo')->getRealPath();
             $logo = Image::make($path);
             $logo->resize(300, null);
-            $logo->save(public_path().'/images/logos/'.$filename);
+            $logo->save(public_path().'/uploads/'.$filename);
 
             $input['logo'] = $filename;
         }
@@ -65,12 +65,12 @@ class OrganizationsController extends PageController
             $path = Input::file('logo')->getRealPath();
             $logo = Image::make($path);
             $logo->resize(300, null);
-            $logo->save(public_path().'/images/logos/'.$filename);
+            $logo->save(public_path().'/uploads/'.$filename);
 
             $input['logo'] = $filename;
 
             if (! is_null($organization->logo)) {
-                File::delete(public_path().'/images/logos/'.$organization->logo);
+                File::delete(public_path().'/uploads/'.$organization->logo);
             }
         }
 
@@ -84,7 +84,7 @@ class OrganizationsController extends PageController
         $organization = Models\Organization::find($id);
 
         if (! is_null($organization->logo)) {
-            File::delete(public_path().'/images/logos/'.$organization->logo);
+            File::delete(public_path().'/uploads/'.$organization->logo);
         }
 
         $organization->delete();
