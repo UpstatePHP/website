@@ -1,6 +1,6 @@
 <?php namespace UpstatePHP\Website\Models;
 
-use Geotools;
+use Geocode;
 
 class Venue extends \Eloquent
 {
@@ -12,9 +12,10 @@ class Venue extends \Eloquent
 
         self::saving(function($venue)
         {
-            $geoInfo = Geotools::geocode($venue->address);
+            $response = Geocode::make()->address($venue->address);
 
-            dd($geoInfo);
+            $venue->latitude = $response->latitude();
+            $venue->longitude = $response->longitude();
         });
     }
 
