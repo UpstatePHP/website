@@ -23,19 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="2014_09_09_231328_create_organizations_table.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_09_231328_create_organizations_table.php">
+      <file leaf-file-name="routes.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="29" selection-start="630" selection-end="630" vertical-scroll-proportion="-11.083333" vertical-offset="64" max-vertical-offset="660">
+            <state line="24" column="104" selection-start="1454" selection-end="1477" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="2014_09_07_015403_create_events_table.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_07_015403_create_events_table.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="0.2264151" vertical-offset="0" max-vertical-offset="530">
+            <state line="21" column="41" selection-start="570" selection-end="570" vertical-scroll-proportion="0.36561266" vertical-offset="115" max-vertical-offset="675">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrganizationsController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/OrganizationsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="1" selection-start="93" selection-end="93" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1500">
               <folding />
             </state>
           </provider>
@@ -51,12 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/../../Homestead/Homestead.yaml" />
-        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
-        <option value="$PROJECT_DIR$/app/start/global.php" />
-        <option value="$PROJECT_DIR$/vendor/orchestra/asset/src/Asset/Container.php" />
-        <option value="$PROJECT_DIR$/app/views/layouts/main.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/footer.blade.php" />
         <option value="$PROJECT_DIR$/app/views/pages/home.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/PageController.php" />
         <option value="$PROJECT_DIR$/app/views/pages/index.blade.php" />
@@ -69,13 +72,11 @@
         <option value="$PROJECT_DIR$/assets/js/main.js" />
         <option value="$PROJECT_DIR$/app/views/events/admin/create.blade.php" />
         <option value="$PROJECT_DIR$/assets/js/admin.js" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_09_07_015403_create_events_table.php" />
         <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/database/seeds/EventsTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_09_08_191958_create_venues_table.php" />
         <option value="$PROJECT_DIR$/app/database/seeds/VenuesTableSeeder.php" />
         <option value="$PROJECT_DIR$/app/src/Composers/VenueListComposer.php" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/src/ServiceProviders/MenuServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/app/views/partials/header-menu.blade.php" />
@@ -84,7 +85,6 @@
         <option value="$PROJECT_DIR$/app/views/partials/menu.blade.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/app/src/Composers/NextEventComposer.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/src/Models/Event.php" />
         <option value="$PROJECT_DIR$/app/controllers/EventsAdminController.php" />
         <option value="$PROJECT_DIR$/app/config/states.php" />
@@ -93,15 +93,24 @@
         <option value="$PROJECT_DIR$/app/src/Models/Venue.php" />
         <option value="$PROJECT_DIR$/app/views/events/admin/edit.blade.php" />
         <option value="$PROJECT_DIR$/app/views/events/admin/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/filters.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/views/venues/admin/edit.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/venues/admin/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/src/ServiceProviders/ViewComposerServiceProvider.php" />
-        <option value="$PROJECT_DIR$/app/controllers/EventsController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/VenuesController.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_09_09_231328_create_organizations_table.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_09_07_015403_create_events_table.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/src/Models/Organization.php" />
+        <option value="$PROJECT_DIR$/app/filters.php" />
+        <option value="$PROJECT_DIR$/app/config/site-config.php" />
+        <option value="$PROJECT_DIR$/app/src/ServiceProviders/ViewComposerServiceProvider.php" />
+        <option value="$PROJECT_DIR$/app/src/Composers/OrganizationTypesComposer.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/config/app.php" />
+        <option value="$PROJECT_DIR$/app/views/venues/admin/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/organizations/admin/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/organizations/admin/form.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/OrganizationsController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/VenuesController.php" />
       </list>
     </option>
   </component>
@@ -254,6 +263,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upstate.laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="upstatephp.laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="organizations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,14 +494,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistory" value="laravel&#10;app.php" />
+    <property name="SearchEverywhereHistory" value="app.&#10;laravel&#10;app.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/organizations/admin" />
+      <recent name="$PROJECT_DIR$/app/src/Models" />
+      <recent name="$PROJECT_DIR$/app/controllers" />
       <recent name="$PROJECT_DIR$/app/views/venues/admin" />
       <recent name="$PROJECT_DIR$/app/src/Composers" />
-      <recent name="$PROJECT_DIR$/app/views/events/admin" />
-      <recent name="$PROJECT_DIR$/app/views/layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/Models" />
@@ -538,38 +574,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="33" selection-start="2576" selection-end="2576" vertical-scroll-proportion="0.8517786" vertical-offset="664" max-vertical-offset="1185" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/PageController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="27" selection-start="155" selection-end="155" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../upstatephp.com/wp-content/themes/upstatephp/library/includes/templates/next-event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="32" selection-start="0" selection-end="1529" vertical-scroll-proportion="0.41501975" vertical-offset="0" max-vertical-offset="660" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="28" selection-start="1789" selection-end="1794" vertical-scroll-proportion="0.35573122" vertical-offset="690" max-vertical-offset="1950" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/local/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="38" selection-start="768" selection-end="768" vertical-scroll-proportion="-4.375" vertical-offset="270" max-vertical-offset="795" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/main.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="14" selection-start="43" selection-end="43" vertical-scroll-proportion="0.05928854" vertical-offset="0" max-vertical-offset="506" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="41" selection-start="48" selection-end="48" vertical-scroll-proportion="0.05928854" vertical-offset="0" max-vertical-offset="506">
@@ -624,11 +628,6 @@
         <state line="13" column="41" selection-start="196" selection-end="196" vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="360" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_07_015403_create_events_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="64" selection-start="414" selection-end="414" vertical-scroll-proportion="0.24703558" vertical-offset="115" max-vertical-offset="660" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/seeds/EventsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="27" column="58" selection-start="817" selection-end="817" vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="570">
@@ -638,11 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_08_191958_create_venues_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="37" selection-start="720" selection-end="720" vertical-scroll-proportion="-11.25" vertical-offset="75" max-vertical-offset="690" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/database/seeds/VenuesTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="48" selection-start="620" selection-end="620" vertical-scroll-proportion="-13.125" vertical-offset="0" max-vertical-offset="480">
@@ -650,11 +644,6 @@
             <element signature="e#7#34#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="66" selection-start="4595" selection-end="4595" vertical-scroll-proportion="0.40711462" vertical-offset="1714" max-vertical-offset="3090" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Composers/MenuComposer.php">
@@ -719,13 +708,6 @@
         <state line="32" column="45" selection-start="1500" selection-end="1500" vertical-scroll-proportion="0.9486166" vertical-offset="0" max-vertical-offset="660" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="283" selection-end="283" vertical-scroll-proportion="0.2667984" vertical-offset="0" max-vertical-offset="780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/storage/logs/laravel.log">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-68.67347" vertical-offset="33650" max-vertical-offset="34215" />
@@ -767,30 +749,9 @@
         <state line="12" column="8" selection-start="207" selection-end="408" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="375" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/filters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="23" selection-start="2552" selection-end="2552" vertical-scroll-proportion="-16.708334" vertical-offset="934" max-vertical-offset="1515">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="9" selection-start="61" selection-end="61" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/events/admin/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="55" selection-start="263" selection-end="263" vertical-scroll-proportion="0.20750988" vertical-offset="0" max-vertical-offset="975">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/venues/admin/form.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="70" selection-start="238" selection-end="238" vertical-scroll-proportion="-0.36363637" vertical-offset="349" max-vertical-offset="990">
           <folding />
         </state>
       </provider>
@@ -802,13 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Composers/VenueListComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="10" selection-start="294" selection-end="294" vertical-scroll-proportion="0.3853755" vertical-offset="0" max-vertical-offset="506">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/ServiceProviders/MenuServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="30" selection-start="249" selection-end="249" vertical-scroll-proportion="0.23715416" vertical-offset="0" max-vertical-offset="506">
@@ -816,44 +770,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/venues/admin/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="27" selection-start="1396" selection-end="1396" vertical-scroll-proportion="0.5256917" vertical-offset="259" max-vertical-offset="765">
+        <state line="8" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="0.2264151" vertical-offset="0" max-vertical-offset="530">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/ServiceProviders/ViewComposerServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_08_191958_create_venues_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="30" selection-start="185" selection-end="185" vertical-scroll-proportion="0.17786561" vertical-offset="0" max-vertical-offset="506">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/VenuesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="51" selection-start="908" selection-end="908" vertical-scroll-proportion="1.3043479" vertical-offset="0" max-vertical-offset="1605">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="54" selection-start="1805" selection-end="1805" vertical-scroll-proportion="1.4229249" vertical-offset="585" max-vertical-offset="1680">
+        <state line="24" column="37" selection-start="720" selection-end="720" vertical-scroll-proportion="0.5335968" vertical-offset="75" max-vertical-offset="690">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_09_231328_create_organizations_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="29" selection-start="630" selection-end="630" vertical-scroll-proportion="-11.083333" vertical-offset="64" max-vertical-offset="660">
+        <state line="18" column="12" selection-start="412" selection-end="435" vertical-scroll-proportion="0.37747034" vertical-offset="64" max-vertical-offset="660">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/src/Models/Organization.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="5" selection-start="105" selection-end="105" vertical-scroll-proportion="0.2264151" vertical-offset="0" max-vertical-offset="530">
+        <state line="2" column="18" selection-start="62" selection-end="62" vertical-scroll-proportion="0.05928854" vertical-offset="0" max-vertical-offset="506">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="71" selection-start="2717" selection-end="2717" vertical-scroll-proportion="0.73320156" vertical-offset="1009" max-vertical-offset="1530">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/venues/admin/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="16" selection-start="1163" selection-end="1234" vertical-scroll-proportion="-16.083334" vertical-offset="169" max-vertical-offset="990">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Composers/VenueListComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="379" selection-end="379" vertical-scroll-proportion="0.5590062" vertical-offset="0" max-vertical-offset="483">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/ServiceProviders/ViewComposerServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="76" selection-start="506" selection-end="506" vertical-scroll-proportion="0.3726708" vertical-offset="0" max-vertical-offset="483">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/site-config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="103" selection-end="103" vertical-scroll-proportion="0.20750988" vertical-offset="0" max-vertical-offset="506">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Composers/OrganizationTypesComposer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="22" selection-start="323" selection-end="323" vertical-scroll-proportion="0.35573122" vertical-offset="0" max-vertical-offset="506">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="37" selection-start="322" selection-end="322" vertical-scroll-proportion="0.2964427" vertical-offset="0" max-vertical-offset="795">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/venues/admin/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="78" selection-start="905" selection-end="905" vertical-scroll-proportion="0.513834" vertical-offset="160" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/organizations/admin/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="36" selection-start="1232" selection-end="1268" vertical-scroll-proportion="-11.541667" vertical-offset="233" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/organizations/admin/form.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="64" selection-start="950" selection-end="950" vertical-scroll-proportion="0.5335968" vertical-offset="195" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="198" column="54" selection-start="7882" selection-end="7882" vertical-scroll-proportion="0.88142294" vertical-offset="2524" max-vertical-offset="3120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/OrganizationsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="1" selection-start="93" selection-end="93" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="0" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.58498025" vertical-offset="469" max-vertical-offset="975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/VenuesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="87" selection-end="87" vertical-scroll-proportion="-0.6304348" vertical-offset="409" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="104" selection-start="1454" selection-end="1477" vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_07_015403_create_events_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="41" selection-start="570" selection-end="570" vertical-scroll-proportion="0.36561266" vertical-offset="115" max-vertical-offset="675">
           <folding />
         </state>
       </provider>

@@ -22,4 +22,11 @@ Route::group(['prefix' => 'admin'], function()
     Route::post('venues/{id}', ['as' => 'admin.venues.update', 'uses' => 'VenuesController@update']);
     Route::get('venues/delete/{id}', ['as' => 'admin.venues.delete', 'uses' => 'VenuesController@delete']);
 
+    Route::get('organizations', ['as' => 'admin.organizations.index', 'uses' => 'OrganizationsController@adminIndex']);
+    Route::get('organizations/create', ['as' => 'admin.organizations.create', 'uses' => 'OrganizationsController@create']);
+    Route::post('organizations', ['as' => 'admin.organizations.store', 'uses' => 'OrganizationsController@store']);
+    Route::get('organizations/edit/{id}', ['as' => 'admin.organizations.edit', 'uses' => 'OrganizationsController@edit']);
+    Route::post('organizations/{id}', ['as' => 'admin.organizations.update', 'uses' => 'OrganizationsController@update']);
+    Route::get('organizations/delete/{id}', ['as' => 'admin.organizations.delete', 'uses' => 'OrganizationsController@delete']);
+
 });

@@ -10,6 +10,7 @@ class ViewComposerServiceProvider extends ServiceProvider
         $this->add('events.admin.form', 'VenueListComposer');
         $this->add('partials.menu', 'MenuComposer');
         $this->add('venues.admin.form', 'StatesDropdownComposer');
+        $this->add('organizations.admin.form', 'OrganizationTypesComposer');
     }
 
     protected function add($view, $class)

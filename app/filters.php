@@ -99,6 +99,7 @@ Route::filter('admin', function()
     App::make('menu')->put('admin', [
         'items' => [
             'events' => URL::route('admin.events.index'),
+            'organizations' => URL::route('admin.organizations.index'),
             'venues' => URL::route('admin.venues.index')
         ]
     ]);

@@ -16,6 +16,7 @@ class CreateEventsTable extends Migration {
         {
             $table->increments('id');
             $table->integer('venue_id')->unsigned()->nullable();
+            $table->string('slug');
             $table->string('title');
             $table->text('description');
             $table->string('registration_link');

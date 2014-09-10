@@ -124,6 +124,7 @@ return array(
 
         'Orchestra\Asset\AssetServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
+        'Intervention\Image\ImageServiceProvider',
 
         'UpstatePHP\Website\ServiceProviders\ViewComposerServiceProvider',
         'UpstatePHP\Website\ServiceProviders\MenuServiceProvider',
@@ -195,6 +196,7 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
         'Orchestra\Asset' => 'Orchestra\Support\Facades\Asset',
+        'Image' => 'Intervention\Image\Facades\Image',
 	),
 
 );
