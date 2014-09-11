@@ -1,6 +1,6 @@
 <div class="col-lg-4 home-bucket">
 
-    <h3>Tweets</h3>
+    <h3>Recent Tweets</h3>
 
     @foreach($tweets as $tweet)
 

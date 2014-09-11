@@ -4,7 +4,7 @@
 Route::when('admin/*', 'admin');
 
 // Routes
-Route::get('/', 'PageController@index');
+Route::get('/', ['before' => 'cache', 'after' => 'cache', 'uses' => 'PageController@index']);
 
 Route::group(['prefix' => 'admin'], function()
 {
