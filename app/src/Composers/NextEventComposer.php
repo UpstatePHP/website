@@ -23,7 +23,7 @@ class NextEventComposer
         $view->nextEvent = (object) [
             'startDate' => $next->begins_at->format('m/d'),
             'startTime' => $next->begins_at->format('g:ia'),
-            'link' => $next->link,
+            'registration_link' => $next->registration_link,
             'venue' => $next->venue,
             'venueConfig' => $venueConfig,
             'description' => Markdown::defaultTransform($next->description)

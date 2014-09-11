@@ -9,7 +9,7 @@
             lng: venue.longitude,
             disableDefaultUI: true
         });
-        map.addMarker({
+        var marker = map.addMarker({
             lat: venue.latitude,
             lng: venue.longitude,
             title: venue.name,
@@ -19,6 +19,10 @@
             infoWindow: {
                 content: venue.popup
             }
+        });
+
+        $(window).load(function(){
+            google.maps.event.trigger(marker, 'click');
         });
     }
 

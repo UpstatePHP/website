@@ -24,7 +24,7 @@
 <!--                <a href="--><?php ////echo $permalink; ?><!--" target="_blank">-->
 <!--                    <button type="button" class="btn btn-primary btn-lg">Learn More</button>-->
 <!--                </a>-->
-                <a href="{{ $nextEvent->link }}?ref=ebtnebregn" target="_blank">
+                <a href="{{ $nextEvent->registration_link }}?ref=ebtnebregn" target="_blank">
                     <button type="button" class="btn btn-primary btn-lg pull-right">Register Now &raquo;</button>
                 </a>
             </div>

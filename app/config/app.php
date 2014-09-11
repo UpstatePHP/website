@@ -126,6 +126,7 @@ return array(
         'Way\Generators\GeneratorsServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'Jcf\Geocode\GeocodeServiceProvider',
+        'Thujohn\Twitter\TwitterServiceProvider',
 
         'UpstatePHP\Website\ServiceProviders\ViewComposerServiceProvider',
         'UpstatePHP\Website\ServiceProviders\MenuServiceProvider',
@@ -199,6 +200,7 @@ return array(
         'Orchestra\Asset' => 'Orchestra\Support\Facades\Asset',
         'Image' => 'Intervention\Image\Facades\Image',
         'Geocode' => 'Jcf\Geocode\Facades\Geocode',
+        'Twitter' => 'Thujohn\Twitter\TwitterFacade',
 	),
 
 );
