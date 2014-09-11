@@ -11,7 +11,15 @@
 <div class="section-bg-primary">
     <div class="container">
         <div class="row">
+            <div class="col-lg-4 home-bucket">
 
+            </div>
+
+            @include('buckets.recent-tweets')
+
+            <div class="col-lg-4 home-bucket">
+                @include('buckets.supporters')
+            </div>
         </div>
     </div>
 </div>

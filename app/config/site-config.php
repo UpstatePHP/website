@@ -6,6 +6,8 @@ return [
         'Friend',
         'Supporter',
         'Sponsor'
-    ]
+    ],
+
+    'twitter-username' => 'UpstatePHP'
 
 ];

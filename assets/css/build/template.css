@@ -12,6 +12,9 @@ h3::before {
   background-color: #455c7a;
   color: #fff;
 }
+.section-bg-primary a {
+  color: #fff;
+}
 .home-bucket {
   font-weight: 300;
 }
@@ -101,4 +104,12 @@ h3::before {
 #home-content > .row {
   margin-bottom: 40px;
   margin-top: 40px;
+}
+.tweet {
+  border-bottom: 1px solid #fff;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.tweet:last-child {
+  border: none;
 }
