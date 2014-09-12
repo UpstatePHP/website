@@ -8,7 +8,7 @@ class RecentTweetsComposer
         {
             return $view->app->make('ttwitter')->getUserTimeline([
                 'screen_name' => $view->app->config->get('site-config.twitter-username'),
-                'count' => 3
+                'count' => 2
             ]);
         });
     }

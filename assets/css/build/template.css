@@ -108,13 +108,15 @@ h3::before {
   margin-bottom: 40px;
   margin-top: 40px;
 }
-.tweet {
-  border-bottom: 1px solid #fff;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
+.tweet img {
+  border-radius: 4px;
 }
 .tweet:last-child {
   border: none;
+}
+.tweet .ago {
+  margin-top: 10px;
+  text-align: right;
 }
 .home-bucket .supporter .thumbnail {
   background: none;
