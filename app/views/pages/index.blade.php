@@ -17,9 +17,7 @@
 
             @include('buckets.recent-tweets')
 
-            <div class="col-lg-4 home-bucket">
-                @include('buckets.supporters')
-            </div>
+            @include('buckets.supporters')
         </div>
     </div>
 </div>

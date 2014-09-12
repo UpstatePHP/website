@@ -18,6 +18,9 @@ h3::before {
 .home-bucket {
   font-weight: 300;
 }
+.home-bucket .bucket-title {
+  margin-bottom: 25px;
+}
 .navbar {
   font-family: 'Droid Sans Mono';
 }
@@ -112,4 +115,10 @@ h3::before {
 }
 .tweet:last-child {
   border: none;
+}
+.home-bucket .supporter .thumbnail {
+  background: none;
+}
+.home-bucket .supporter .thumbnail img {
+  border-radius: 2px;
 }

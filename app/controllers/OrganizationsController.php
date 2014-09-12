@@ -30,7 +30,10 @@ class OrganizationsController extends PageController
 
             $path = Input::file('logo')->getRealPath();
             $logo = Image::make($path);
-            $logo->resize(300, null);
+            $logo->resize(300, null, function($constraint)
+            {
+                $constraint->aspectRatio();
+            });
             $logo->save(public_path().'/uploads/'.$filename);
 
             $input['logo'] = $filename;
@@ -64,7 +67,10 @@ class OrganizationsController extends PageController
 
             $path = Input::file('logo')->getRealPath();
             $logo = Image::make($path);
-            $logo->resize(300, null);
+            $logo->resize(300, null, function($constraint)
+            {
+                $constraint->aspectRatio();
+            });
             $logo->save(public_path().'/uploads/'.$filename);
 
             $input['logo'] = $filename;

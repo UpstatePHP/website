@@ -14,4 +14,9 @@ class Organization extends \Eloquent
         $this->attributes['slug'] = $this->makeSlugFromDatabase($value);
     }
 
+    public function scopeSupportersAndSponsors($query)
+    {
+        return $query->whereIn('type', ['supporter', 'sponsor']);
+    }
+
 }

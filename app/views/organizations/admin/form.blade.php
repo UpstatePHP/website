@@ -29,7 +29,7 @@
                 {{ Form::label('logo') }}
 
                 @if (! is_null($organization->logo))
-                <a href="{{ asset('images/'.$organization->logo) }}" class="btn btn-default btn-xs pull-right" target="_blank">
+                <a href="{{ asset('uploads/'.$organization->logo) }}" class="btn btn-default btn-xs pull-right" target="_blank">
                     <span class="glyphicon glyphicon-picture"></span> View Logo
                 </a>
                 @endif

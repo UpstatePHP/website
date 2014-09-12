@@ -1,11 +1,17 @@
 <?php
 
+use UpstatePHP\Website\Models\Organization;
+
 class PageController extends BaseController
 {
     protected $layout = 'layouts.main';
 
     public function index()
     {
-        $this->layout->body = View::make('pages.index');
+        $data = [
+            'supporters' => Organization::supportersAndSponsors()->get()
+        ];
+
+        $this->layout->body = View::make('pages.index', $data);
     }
 }
