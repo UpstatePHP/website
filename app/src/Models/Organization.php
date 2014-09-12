@@ -16,7 +16,8 @@ class Organization extends \Eloquent
 
     public function scopeSupportersAndSponsors($query)
     {
-        return $query->whereIn('type', ['supporter', 'sponsor']);
+        return $query->whereIn('type', ['supporter', 'sponsor'])
+                     ->orderBy(\DB::raw('RAND()'));
     }
 
 }

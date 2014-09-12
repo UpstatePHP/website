@@ -9,7 +9,7 @@ class PageController extends BaseController
     public function index()
     {
         $data = [
-            'supporters' => Organization::supportersAndSponsors()->get()
+            'supporters' => Organization::supportersAndSponsors()->take(4)->get()
         ];
 
         $this->layout->body = View::make('pages.index', $data);
