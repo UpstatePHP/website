@@ -3,9 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
-    <link href="//fonts.googleapis.com/css?family=Droid+Sans+Mono" rel="stylesheet" />
-    <link href="/css/plugins.min.css" rel="stylesheet" />
-    <link href="/css/template.min.css" rel="stylesheet" />
 
     {{ Orchestra\Asset::styles() }}
 </head>

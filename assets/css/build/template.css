@@ -118,6 +118,13 @@ h3::before {
   margin-top: 10px;
   text-align: right;
 }
+#home-buckets {
+  padding: 20px 0;
+}
+.home-bucket {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .home-bucket .supporter .thumbnail {
   background: none;
 }

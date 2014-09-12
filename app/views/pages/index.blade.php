@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<div class="section-bg-primary">
+<div id="home-buckets" class="section-bg-primary">
     <div class="container">
         <div class="row">
             @include('buckets.recent-video')
@@ -22,7 +22,12 @@
 
 <div class="container">
     <div class="row">
+        <div class="col-lg-6">
 
+        </div>
+        <div class="col-lg-6">
+
+        </div>
     </div>
 </div>
 
