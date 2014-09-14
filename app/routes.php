@@ -6,7 +6,11 @@ Route::when('admin/*', 'admin');
 // Routes
 Route::get('/', ['before' => 'cache', 'after' => 'cache', 'uses' => 'PageController@index']);
 
-Route::group(['prefix' => 'admin'], function()
+Route::get('login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
+Route::post('login', ['as' => 'login.post', 'uses' => 'AuthController@login']);
+Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@logout']);
+
+Route::group(['prefix' => 'admin', 'before' => 'auth'], function()
 {
     Route::get('events', ['as' => 'admin.events.index', 'uses' => 'EventsController@adminIndex']);
     Route::get('events/create', ['as' => 'admin.events.create', 'uses' => 'EventsController@create']);

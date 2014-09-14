@@ -9,7 +9,7 @@
 
 <body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div id="site-header" class="navbar navbar-default navbar-static-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <a href="/" id="main-brand" class="navbar-brand">
@@ -18,11 +18,5 @@
                 </a>
             </div>
             @include('partials.menu')
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-
         </div>
     </div>

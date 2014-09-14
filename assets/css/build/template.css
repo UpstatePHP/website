@@ -8,6 +8,13 @@ h3::before {
   content: '//';
   margin-right: 10px;
 }
+#page-container {
+  padding-top: 92px;
+  padding-bottom: 54px;
+  margin-top: -92px;
+  margin-bottom: -54px;
+  min-height: 100%;
+}
 .section-bg-primary {
   background-color: #455c7a;
   color: #fff;
@@ -21,11 +28,17 @@ h3::before {
 .home-bucket .bucket-title {
   margin-bottom: 25px;
 }
-.navbar {
+#site-header.navbar {
   font-family: 'Droid Sans Mono';
+  min-height: 70px;
 }
-.navbar.navbar-default.navbar-static-top {
-  margin-bottom: 32px;
+#site-header.navbar .navbar-brand {
+  height: 60px;
+  padding: 19px;
+}
+#site-header.navbar .navbar-nav > li > a {
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 .navbar-default {
   background: #2e3641;
@@ -40,7 +53,7 @@ h3::before {
 }
 #main-brand {
   color: #fff;
-  padding-left: 150px;
+  padding-left: 150px !important;
   position: relative;
 }
 #header-logo {
@@ -48,6 +61,68 @@ h3::before {
   position: absolute;
   top: 6px;
   width: 143px;
+}
+#site-footer {
+  background: #2e3641;
+  height: 54px;
+}
+#site-footer .social-link {
+  color: #2e3641;
+  display: inline-block;
+  height: 40px;
+  margin-left: 3px;
+  margin-top: 7px;
+  position: relative;
+}
+#site-footer .social-link svg {
+  display: block;
+  fill: #2e3641;
+  height: 52%;
+  left: 2px;
+  position: absolute;
+  top: 9px;
+  z-index: 2;
+}
+#site-footer .social-link svg g {
+  fill: #2e3641;
+}
+#site-footer .social-link:hover .hexagon {
+  background: #cccccc;
+}
+#site-footer .social-link:hover .hexagon:before {
+  border-bottom-color: #cccccc;
+}
+#site-footer .social-link:hover .hexagon:after {
+  border-top-color: #cccccc;
+}
+#site-footer .hexagon {
+  width: 36px;
+  height: 22px;
+  background: #fff;
+  position: relative;
+  top: 9px;
+}
+#site-footer .hexagon:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 9px solid #fff;
+}
+#site-footer .hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 9px solid #fff;
 }
 .event {
   overflow: hidden;
