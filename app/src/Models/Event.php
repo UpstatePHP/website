@@ -9,7 +9,7 @@ class Event extends \Eloquent {
 
     protected $dates = ['begins_at', 'ends_at'];
 
-	protected $fillable = ['title', 'description', 'link', 'begins_at', 'ends_at', 'venue_id'];
+	protected $fillable = ['title', 'description', 'registration_link', 'begins_at', 'ends_at', 'venue_id'];
 
     public static function next()
     {
