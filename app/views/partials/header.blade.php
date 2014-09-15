@@ -10,7 +10,7 @@
     <meta property="og:title" content="UpstatePHP" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="http://upstatephp.com/" />
-    <meta property="og:image" content="http://upstatephp.com/images/upstatephp-logo.jpg" />
+    <meta property="og:image" content="http://upstatephp.com/images/upstatephp-logo.png" />
     <meta property="og:description" content="UpstatePHP is a group of like minded professionals helping to build a better community, specifically in the Upstate of South Carolina." />
 
     {{ Orchestra\Asset::styles() }}
