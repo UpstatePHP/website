@@ -9,6 +9,11 @@ class NextEventComposer
     {
         $next = Models\Event::next();
 
+        if (is_null($next)) {
+            $view->nextEvent = null;
+            return;
+        }
+
         $venueConfig = json_encode([
             'latitude' => $next->venue->latitude,
             'longitude' => $next->venue->longitude,
