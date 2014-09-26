@@ -12,10 +12,10 @@ class Venue extends \Eloquent
 
         self::saving(function($venue)
         {
-            $response = Geocode::make()->address($venue->address);
-
-            $venue->latitude = $response->latitude();
-            $venue->longitude = $response->longitude();
+            if ($response = Geocode::make()->address($venue->address)) {
+                $venue->latitude = $response->latitude();
+                $venue->longitude = $response->longitude();
+            }
         });
     }
 

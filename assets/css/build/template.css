@@ -167,6 +167,9 @@ h3::before {
   position: absolute;
   right: 0;
 }
+.event .event-actions {
+  overflow: hidden;
+}
 .event-meta-line {
   overflow: hidden;
 }
