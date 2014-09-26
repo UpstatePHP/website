@@ -21,7 +21,7 @@
 <!--                    <div>OpenWorks, MoonClerk, Laracasts, PhpStorm</div>-->
 <!--                </div>-->
             </div>
-            <div>
+            <div class="event-actions">
 <!--                <a href="--><?php ////echo $permalink; ?><!--" target="_blank">-->
 <!--                    <button type="button" class="btn btn-primary btn-lg">Learn More</button>-->
 <!--                </a>-->
