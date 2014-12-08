@@ -1,9 +1,23 @@
 <?php
 
+use Laracasts\Commander\CommanderTrait;
+use UpstatePHP\Website\Events\EventRepository;
 use UpstatePHP\Website\Models;
 
 class EventsController extends PageController
 {
+    use CommanderTrait;
+
+    /**
+     * @var EventRepository
+     */
+    private $eventRepository;
+
+    public function __construct(EventRepository $eventRepository)
+    {
+        $this->eventRepository = $eventRepository;
+    }
+
     public function adminIndex()
     {
         $data = [
@@ -48,6 +62,18 @@ class EventsController extends PageController
         Models\Event::find($id)->update(Input::except('_token', '_method'));
 
         return Redirect::route('admin.events.index');
+    }
+
+    public function import()
+    {
+        $newEvents = $this->eventRepository->importNewRemoteEvents();
+
+        $this->execute(
+            '\UpstatePHP\Website\Events\Commands\ImportNewEventsCommand',
+            ['events' => $newEvents]
+        );
+
+        return 'all is well!';
     }
 
     public function destroy($id)

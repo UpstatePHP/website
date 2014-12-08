@@ -125,11 +125,12 @@ return array(
         'Orchestra\Asset\AssetServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
         'Intervention\Image\ImageServiceProvider',
-        'Jcf\Geocode\GeocodeServiceProvider',
         'Thujohn\Twitter\TwitterServiceProvider',
+        'Laracasts\Commander\CommanderServiceProvider',
 
         'UpstatePHP\Website\ServiceProviders\ViewComposerServiceProvider',
         'UpstatePHP\Website\ServiceProviders\MenuServiceProvider',
+        'UpstatePHP\Website\Events\EventServiceProvider'
     ),
 
     /*
@@ -199,7 +200,6 @@ return array(
 
         'Orchestra\Asset' => 'Orchestra\Support\Facades\Asset',
         'Image' => 'Intervention\Image\Facades\Image',
-        'Geocode' => 'Jcf\Geocode\Facades\Geocode',
         'Twitter' => 'Thujohn\Twitter\TwitterFacade',
     ),
 

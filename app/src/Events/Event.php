@@ -1,15 +1,15 @@
-<?php namespace UpstatePHP\Website\Models;
+<?php namespace UpstatePHP\Website\Events;
 
 use Carbon\Carbon;
-use UpstatePHP\Website\Traits\SluggableTrait;
+use Illuminate\Database\Eloquent\Model;
 
-class Event extends \Eloquent {
-
-    use SluggableTrait;
+class Event extends Model
+{
+    protected $table = 'events';
 
     protected $dates = ['begins_at', 'ends_at'];
 
-	protected $fillable = ['title', 'description', 'registration_link', 'begins_at', 'ends_at', 'venue_id'];
+    protected $fillable = ['title', 'description', 'registration_link', 'begins_at', 'ends_at', 'venue_id', 'remote_id'];
 
     public static function next()
     {
@@ -24,12 +24,6 @@ class Event extends \Eloquent {
     public function setEndsAtAttribute($value)
     {
         $this->attributes['ends_at'] = new Carbon($value);
-    }
-
-    public function setTitleAttribute($value)
-    {
-        $this->attributes['title'] = $value;
-        $this->attributes['slug'] = $this->makeSlugFromDatabase($value);
     }
 
     public function venue()
