@@ -81,7 +81,7 @@ class EventsController extends PageController
         );
     }
 
-    public function destroy($id)
+    public function delete($id)
     {
         EventModel::find($id)->delete();
 
