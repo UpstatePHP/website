@@ -14,7 +14,7 @@ class AddRemoteIdFieldToEventsTable extends Migration {
 	{
 		Schema::table('events', function(Blueprint $table)
 		{
-			$table->integer('remote_id')->after('id')->nullable();
+			$table->bigInteger('remote_id')->unsigned()->after('id')->nullable();
 		});
 	}
 

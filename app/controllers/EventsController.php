@@ -21,7 +21,7 @@ class EventsController extends PageController
     public function adminIndex()
     {
         $data = [
-            'events' => Models\Event::all()
+            'events' => $this->eventRepository->allEvents(20)
         ];
 
         $this->layout->body = View::make('events.admin.index', $data);
@@ -73,7 +73,13 @@ class EventsController extends PageController
             ['events' => $newEvents]
         );
 
-        return 'all is well!';
+        return Redirect::route('admin.events.index')->with(
+            'message',
+            sprintf(
+                'success::%s new events imported',
+                count($newEvents)
+            )
+        );
     }
 
     public function destroy($id)

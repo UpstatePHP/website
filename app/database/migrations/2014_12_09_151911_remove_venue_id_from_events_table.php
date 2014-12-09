@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class RemoveSlugFromEventsTable extends Migration {
+class RemoveVenueIdFromEventsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,7 +14,7 @@ class RemoveSlugFromEventsTable extends Migration {
 	{
 		Schema::table('events', function(Blueprint $table)
 		{
-			$table->dropColumn('slug');
+			$table->dropColumn('venue_id');
 		});
 	}
 
@@ -28,7 +28,7 @@ class RemoveSlugFromEventsTable extends Migration {
 	{
 		Schema::table('events', function(Blueprint $table)
 		{
-            $table->string('slug');
+            $table->integer('venue_id')->unsigned()->nullable();
 		});
 	}
 

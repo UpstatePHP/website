@@ -1,23 +1,23 @@
 (function($, window, document, undefined){
 
-    if ($('#venue-map').length > 0) {
-        var venue = $('#venue-info').data('venue');
+    if ($('#event-location-map').length > 0) {
+        var eventLocation = $('#event-location-info').data('location');
 
         var map = new GMaps({
-            div: '#venue-map',
-            lat: venue.latitude,
-            lng: venue.longitude,
+            div: '#event-location-map',
+            lat: eventLocation.latitude,
+            lng: eventLocation.longitude,
             disableDefaultUI: true
         });
         var marker = map.addMarker({
-            lat: venue.latitude,
-            lng: venue.longitude,
-            title: venue.name,
+            lat: eventLocation.latitude,
+            lng: eventLocation.longitude,
+            title: eventLocation.name,
             click: function(e) {
 
             },
             infoWindow: {
-                content: venue.popup
+                content: eventLocation.popup
             }
         });
 

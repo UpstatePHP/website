@@ -6,7 +6,7 @@ use Illuminate\Foundation\Application;
 use UpstatePHP\Website\Events\EventRepository;
 use UpstatePHP\Website\Events\Mappers\Eventbrite\Event as EventMapper;
 
-class EventbriteProvider implements EventRepository
+class EventbriteProvider extends EloquentProvider implements EventRepository
 {
 
     /**
@@ -54,7 +54,12 @@ class EventbriteProvider implements EventRepository
     {
         $query = (new Event)->newQuery();
         $query->select('remote_id')->orderBy('remote_id', 'desc');
-        $sinceId = array_get((array) $query->first(), 'remote_id', null);
+        $latestEvent = $query->first();
+        $sinceId = array_get(
+            ($latestEvent ? $latestEvent->toArray() : []),
+            'remote_id',
+            null
+        );
 
         return $this->fetchRemoteEvents($sinceId);
     }

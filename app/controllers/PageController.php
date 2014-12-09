@@ -1,5 +1,6 @@
 <?php
 
+use UpstatePHP\Website\Events\EventRepository;
 use UpstatePHP\Website\Models\Organization;
 
 class PageController extends BaseController

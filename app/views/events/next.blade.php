@@ -3,7 +3,7 @@
     <div class="event-details">
         <div class="col-lg-8">
             <div class="event-title page-header">
-                <h1>Next Event</h1>
+                <h1>{{ $nextEvent->title or 'Next Event' }}</h1>
             </div>
             <div class="event-body">
                 <div class="event-datetime">
@@ -32,9 +32,9 @@
         </div>
         <div class="col-lg-4">
             <div class="thumbnail map-thumbnail">
-                <div id="venue-map"></div>
-                <div id="venue-info" data-venue='{{ $nextEvent->venueConfig }}'>
-                    <h4>{{ $nextEvent->venue->name }}></h4>
+                <div id="event-location-map"></div>
+                <div id="event-location-info" data-location='{{ $nextEvent->eventLocation }}'>
+                    <h4>{{ $nextEvent->location_name }}</h4>
                 </div>
             </div>
 

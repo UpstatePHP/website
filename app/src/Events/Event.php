@@ -9,7 +9,7 @@ class Event extends Model
 
     protected $dates = ['begins_at', 'ends_at'];
 
-    protected $fillable = ['title', 'description', 'registration_link', 'begins_at', 'ends_at', 'venue_id', 'remote_id'];
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public static function next()
     {
@@ -24,10 +24,5 @@ class Event extends Model
     public function setEndsAtAttribute($value)
     {
         $this->attributes['ends_at'] = new Carbon($value);
-    }
-
-    public function venue()
-    {
-        return $this->belongsTo('\UpstatePHP\Website\Models\Venue');
     }
 }

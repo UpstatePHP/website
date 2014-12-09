@@ -19,7 +19,14 @@ class HostEventCommandHandler implements CommandHandler
             'registration_link' => $command->registration_link,
             'remote_id' => $command->remote_id,
             'begins_at' => $command->begins_at,
-            'ends_at' => $command->ends_at
+            'ends_at' => $command->ends_at,
+            'location_name' => $command->location_name,
+            'street' => $command->street,
+            'city' => $command->city,
+            'state' => $command->state,
+            'zipcode' => $command->zipcode,
+            'latitude' => $command->latitude,
+            'longitude' => $command->longitude
         ]);
 
         $event->save();

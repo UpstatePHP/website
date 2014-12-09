@@ -155,10 +155,10 @@ h3::before {
   margin-top: 20px;
   position: relative;
 }
-.event #venue-map {
+.event #event-location-map {
   height: 225px;
 }
-.event #venue-info {
+.event #event-location-info {
   background: rgba(255, 255, 255, 0.8);
   bottom: 0;
   display: none;
