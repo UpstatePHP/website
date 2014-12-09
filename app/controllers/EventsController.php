@@ -2,7 +2,7 @@
 
 use Laracasts\Commander\CommanderTrait;
 use UpstatePHP\Website\Events\EventRepository;
-use UpstatePHP\Website\Models;
+use UpstatePHP\Website\Events\Event as EventModel;
 
 class EventsController extends PageController
 {
@@ -30,14 +30,14 @@ class EventsController extends PageController
     public function create()
     {
         $data = [
-            'event' => new Models\Event
+            'event' => new EventModel
         ];
         $this->layout->body = View::make('events.admin.form', $data);
     }
 
     public function store()
     {
-        Models\Event::create(Input::except('_token'));
+        EventModel::create(Input::except('_token'));
 
         return Redirect::route('admin.events.index');
     }
@@ -50,8 +50,7 @@ class EventsController extends PageController
     public function edit($id)
     {
         $data = [
-            'event' => Models\Event::find($id),
-            'venues' => Models\Venue::all()
+            'event' => EventModel::find($id)
         ];
 
         $this->layout->body = View::make('events.admin.form', $data);
@@ -59,7 +58,7 @@ class EventsController extends PageController
 
     public function update($id)
     {
-        Models\Event::find($id)->update(Input::except('_token', '_method'));
+        EventModel::find($id)->update(Input::except('_token', '_method'));
 
         return Redirect::route('admin.events.index');
     }
