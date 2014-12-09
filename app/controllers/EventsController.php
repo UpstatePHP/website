@@ -83,7 +83,7 @@ class EventsController extends PageController
 
     public function destroy($id)
     {
-        Models\Event::find($id)->delete();
+        EventModel::find($id)->delete();
 
         return Redirect::route('admin.events.index');
     }
