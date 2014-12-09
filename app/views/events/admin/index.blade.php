@@ -8,10 +8,15 @@
 <!--                <li><a href="#">Library</a></li>-->
 <!--                <li class="active">Data</li>-->
 <!--            </ol>-->
-            <a href="{{ route('admin.events.create') }}" class="btn btn-success pull-right">
-                <span class="glyphicon glyphicon-plus-sign"></span> New Event
-            </a>
-            <br><br>
+            <div class="pull-right">
+                <a href="{{ route('admin.events.create') }}" class="btn btn-success">
+                    <span class="glyphicon glyphicon-plus-sign"></span> New Event
+                </a>
+                <a href="{{ route('admin.events.import') }}" class="btn btn-default">
+                    <span class="glyphicon glyphicon-import"></span> Import Events
+                </a>
+                <br><br>
+            </div>
         </div>
     </div>
 </div>
