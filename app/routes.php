@@ -14,6 +14,7 @@ Route::group(['prefix' => 'admin', 'before' => 'auth'], function()
 {
     Route::get('events', ['as' => 'admin.events.index', 'uses' => 'EventsController@adminIndex']);
     Route::get('events/create', ['as' => 'admin.events.create', 'uses' => 'EventsController@create']);
+    Route::get('events/import', ['as' => 'admin.events.import', 'uses' => 'EventsController@import']);
     Route::post('events', ['as' => 'admin.events.store', 'uses' => 'EventsController@store']);
     Route::get('events/edit/{id}', ['as' => 'admin.events.edit', 'uses' => 'EventsController@edit']);
     Route::post('events/{id}', ['as' => 'admin.events.update', 'uses' => 'EventsController@update']);

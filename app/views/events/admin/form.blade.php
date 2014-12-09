@@ -26,10 +26,6 @@
         </div>
         <div class="col-lg-4">
             <div class="form-group">
-                {{ Form::label('venue') }}
-                {{ Form::select('venue_id', $venues, null, ['class' => 'form-control']) }}
-            </div>
-            <div class="form-group">
                 {{ Form::label('begins_at') }}
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-time"></i></span>
@@ -49,6 +45,35 @@
                     <span class="input-group-addon"><i class="glyphicon glyphicon-link"></i></span>
                     {{ Form::text('registration_link', null, ['class' => 'form-control']) }}
                 </div>
+            </div>
+
+            <hr/>
+
+            <div class="form-group">
+                {{ Form::label('location_name') }}
+                {{ Form::text('location_name', null, ['class' => 'form-control']) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('street') }}
+                {{ Form::text('street', null, ['class' => 'form-control']) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('city') }}
+                {{ Form::text('city', null, ['class' => 'form-control']) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('state') }}
+                {{ Form::states('state', null, ['class' => 'form-control']) }}
+            </div>
+            <div class="form-group">
+                {{ Form::label('zipcode') }}
+                {{ Form::text('zipcode', null, ['class' => 'form-control']) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+
             </div>
         </div>
     </div>

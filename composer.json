@@ -9,8 +9,9 @@
         "league/flysystem": "0.5.*",
         "intervention/image": "2.0.9",
         "michelf/php-markdown": "1.4.1",
-        "jcf/geocode": "1.0.*",
-        "thujohn/twitter": "1.2.*"
+        "thujohn/twitter": "1.2.*",
+        "guzzlehttp/guzzle": "5.0.3",
+        "laracasts/commander": "~1.0"
 	},
     "require-dev": {
         "way/generators": "2.*",
