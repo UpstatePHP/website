@@ -130,7 +130,8 @@ return array(
 
         'UpstatePHP\Website\ServiceProviders\ViewComposerServiceProvider',
         'UpstatePHP\Website\ServiceProviders\MenuServiceProvider',
-        'UpstatePHP\Website\Events\EventServiceProvider'
+        'UpstatePHP\Website\Events\EventServiceProvider',
+        'UpstatePHP\Website\Filesystem\Image\ImageServiceProvider',
     ),
 
     /*

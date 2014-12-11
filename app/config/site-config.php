@@ -2,8 +2,7 @@
 
 return [
 
-    'organization-types' => [
-        'Friend',
+    'sponsor-types' => [
         'Supporter',
         'Sponsor'
     ],

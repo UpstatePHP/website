@@ -27,11 +27,11 @@ Route::group(['prefix' => 'admin', 'before' => 'auth'], function()
     Route::post('venues/{id}', ['as' => 'admin.venues.update', 'uses' => 'VenuesController@update']);
     Route::get('venues/delete/{id}', ['as' => 'admin.venues.delete', 'uses' => 'VenuesController@delete']);
 
-    Route::get('organizations', ['as' => 'admin.organizations.index', 'uses' => 'OrganizationsController@adminIndex']);
-    Route::get('organizations/create', ['as' => 'admin.organizations.create', 'uses' => 'OrganizationsController@create']);
-    Route::post('organizations', ['as' => 'admin.organizations.store', 'uses' => 'OrganizationsController@store']);
-    Route::get('organizations/edit/{id}', ['as' => 'admin.organizations.edit', 'uses' => 'OrganizationsController@edit']);
-    Route::post('organizations/{id}', ['as' => 'admin.organizations.update', 'uses' => 'OrganizationsController@update']);
-    Route::get('organizations/delete/{id}', ['as' => 'admin.organizations.delete', 'uses' => 'OrganizationsController@delete']);
+    Route::get('sponsors', ['as' => 'admin.sponsors.index', 'uses' => 'SponsorsController@adminIndex']);
+    Route::get('sponsors/create', ['as' => 'admin.sponsors.create', 'uses' => 'SponsorsController@create']);
+    Route::post('sponsors', ['as' => 'admin.sponsors.store', 'uses' => 'SponsorsController@store']);
+    Route::get('sponsors/edit/{id}', ['as' => 'admin.sponsors.edit', 'uses' => 'SponsorsController@edit']);
+    Route::post('sponsors/{id}', ['as' => 'admin.sponsors.update', 'uses' => 'SponsorsController@update']);
+    Route::get('sponsors/delete/{id}', ['as' => 'admin.sponsors.delete', 'uses' => 'SponsorsController@delete']);
 
 });

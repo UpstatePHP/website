@@ -3,8 +3,8 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-11 col-lg-offset-1">
-            <a href="{{ route('admin.organizations.create') }}" class="btn btn-success pull-right">
-                <span class="glyphicon glyphicon-plus-sign"></span> New Organization
+            <a href="{{ route('admin.sponsors.create') }}" class="btn btn-success pull-right">
+                <span class="glyphicon glyphicon-plus-sign"></span> New Sponsor
             </a>
             <br><br>
         </div>
@@ -25,23 +25,23 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($organizations as $organization)
+                @foreach($sponsors as $sponsor)
                 <tr>
-                    <td>{{ $organization->name }}</td>
-                    <td><a href="{{ $organization->url }}">{{ $organization->url }}</a></td>
-                    <td>{{ ucwords(str_replace('-', ' ', $organization->type)) }}</td>
+                    <td>{{ $sponsor->name }}</td>
+                    <td><a href="{{ $sponsor->url }}">{{ $sponsor->url }}</a></td>
+                    <td>{{ ucwords(str_replace('-', ' ', $sponsor->type)) }}</td>
                     <td>
-                        @if (! is_null($organization->logo))
-                        <a href="{{ asset('uploads/'.$organization->logo) }}" class="btn btn-default btn-xs" target="_blank">
+                        @if (! is_null($sponsor->logo))
+                        <a href="{{ asset('uploads/'.$sponsor->logo) }}" class="btn btn-default btn-xs" target="_blank">
                             <span class="glyphicon glyphicon-picture"></span> View Logo
                         </a>
                         @endif
                     </td>
                     <td>
-                        <a href="{{ route('admin.organizations.edit', ['id' => $organization->id]) }}" class="btn btn-primary btn-xs">
+                        <a href="{{ route('admin.sponsors.edit', ['id' => $sponsor->id]) }}" class="btn btn-primary btn-xs">
                             <span class="glyphicon glyphicon-pencil"></span> Edit
                         </a>
-                        <a href="{{ route('admin.organizations.delete', ['id' => $organization->id]) }}" class="btn btn-danger btn-xs">
+                        <a href="{{ route('admin.sponsors.delete', ['id' => $sponsor->id]) }}" class="btn btn-danger btn-xs">
                             <span class="glyphicon glyphicon-remove"></span> Delete
                         </a>
                     </td>

@@ -1,7 +1,7 @@
 <?php
 
 use UpstatePHP\Website\Events\EventRepository;
-use UpstatePHP\Website\Models\Organization;
+use UpstatePHP\Website\Sponsors\Sponsor;
 
 class PageController extends BaseController
 {
@@ -10,7 +10,7 @@ class PageController extends BaseController
     public function index()
     {
         $data = [
-            'supporters' => Organization::supportersAndSponsors()->take(4)->get()
+            'supporters' => Sponsor::supportersAndSponsors()->take(4)->get()
         ];
 
         $this->layout->body = View::make('pages.index', $data);
