@@ -8,7 +8,7 @@ class ViewComposerServiceProvider extends ServiceProvider
     {
         $this->add('events.next', 'NextEventComposer');
         $this->add('partials.menu', 'MenuComposer');
-        $this->add('organizations.admin.form', 'OrganizationTypesComposer');
+        $this->add('sponsors.admin.form', 'SponsorTypesComposer');
         $this->add('buckets.recent-tweets', 'RecentTweetsComposer');
     }
 

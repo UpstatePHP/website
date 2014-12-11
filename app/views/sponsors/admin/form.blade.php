@@ -9,7 +9,7 @@
     </div>
 </div>
 
-{{ Form::model($organization, ['route' => ['admin.organizations.update', $organization->id], 'files' => true]) }}
+{{ Form::model($sponsor, ['route' => ['admin.sponsors.update', $sponsor->id], 'files' => true]) }}
 
 <div class="container">
     <div class="row">
@@ -28,17 +28,19 @@
             <div class="form-group">
                 {{ Form::label('logo') }}
 
-                @if (! is_null($organization->logo))
-                <a href="{{ asset('uploads/'.$organization->logo) }}" class="btn btn-default btn-xs pull-right" target="_blank">
+                @if (! is_null($sponsor->logo))
+                <a href="{{ asset('uploads/'.$sponsor->logo) }}" class="btn btn-default btn-xs pull-right" target="_blank">
                     <span class="glyphicon glyphicon-picture"></span> View Logo
                 </a>
                 @endif
-
-                {{ Form::file('logo') }}
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-paperclip"></i></span>
+                    {{ Form::file('logo', ['class' => 'form-control']) }}
+                </div>
             </div>
             <div class="form-group">
                 {{ Form::label('type') }}
-                {{ Form::select('type', $organizationTypes, null, ['class' => 'form-control']) }}
+                {{ Form::select('type', $sponsorTypes, null, ['class' => 'form-control']) }}
             </div>
         </div>
     </div>

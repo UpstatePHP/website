@@ -1,17 +1,17 @@
 <?php namespace UpstatePHP\Website\Composers;
 
-class OrganizationTypesComposer
+class SponsorTypesComposer
 {
     public function compose($view)
     {
         $types = [];
 
-        foreach (\Config::get('site-config.organization-types') as $type) {
+        foreach (\Config::get('site-config.sponsor-types') as $type) {
             $types[strtolower(str_replace(' ', '-', $type))] = $type;
         }
 
         asort($types);
 
-        $view->organizationTypes = $types;
+        $view->sponsorTypes = $types;
     }
 }
