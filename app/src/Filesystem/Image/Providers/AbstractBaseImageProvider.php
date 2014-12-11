@@ -16,4 +16,9 @@ abstract class AbstractBaseImageProvider implements ImageRepository
         return md5(microtime()).'.jpg';
     }
 
+    public function removeOldFile($fileName)
+    {
+        @unlink(static::$destination . '/' . $fileName);
+    }
+
 }

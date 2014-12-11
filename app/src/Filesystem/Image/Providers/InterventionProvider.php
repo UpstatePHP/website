@@ -31,6 +31,7 @@ class InterventionProvider extends AbstractBaseImageProvider implements ImageRep
             && $file->getClientMimeType() === 'application/postscript'
         ) {
             $imagick->setResolution(300, 300);
+            $imagick->setColorspace(\Imagick::COLORSPACE_RGB);
         }
 
         $imagick->readImage($file->getRealPath());

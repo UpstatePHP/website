@@ -1,6 +1,6 @@
 <?php namespace UpstatePHP\Website\Sponsors\Commands;
 
-class RegisterSponsorCommand
+class UpdateSponsorInfoCommand
 {
     public $name;
 
@@ -10,8 +10,11 @@ class RegisterSponsorCommand
 
     public $logo;
 
-    public function __construct($name, $url, $type, $logo = null)
+    public $id;
+
+    public function __construct($id, $name, $url, $type, $logo = null)
     {
+        $this->id = $id;
         $this->name = $name;
         $this->url = $url;
         $this->type = $type;

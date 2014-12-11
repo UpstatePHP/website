@@ -49,29 +49,10 @@ class SponsorsController extends PageController
 
     public function update($id)
     {
-        $sponsor = Sponsor::find($id);
-
-        $input = Input::except('_token');
-
-        if (Input::hasFile('logo')) {
-            $filename = md5(microtime()).'.jpg';
-
-            $path = Input::file('logo')->getRealPath();
-            $logo = Image::make($path);
-            $logo->resize(300, null, function($constraint)
-            {
-                $constraint->aspectRatio();
-            });
-            $logo->save(public_path().'/uploads/'.$filename);
-
-            $input['logo'] = $filename;
-
-            if (! is_null($sponsor->logo)) {
-                File::delete(public_path().'/uploads/'.$sponsor->logo);
-            }
-        }
-
-        $sponsor->update($input);
+        $this->execute(
+            '\UpstatePHP\Website\Sponsors\Commands\UpdateSponsorInfoCommand',
+            array_add(Input::all(), 'id', $id)
+        );
 
         return Redirect::route('admin.sponsors.index');
     }

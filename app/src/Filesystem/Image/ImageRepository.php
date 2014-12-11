@@ -22,6 +22,8 @@ interface ImageRepository
 
     public function save();
 
+    public function removeOldFile($fileName);
+
     /**
      * @return string
      */

@@ -4,7 +4,7 @@ use Laracasts\Commander\CommandHandler;
 use UpstatePHP\Website\Filesystem\Image\ImageRepository;
 use UpstatePHP\Website\Sponsors\Sponsor;
 
-class RegisterSponsorCommandHandler implements CommandHandler
+class UpdateSponsorInfoCommandHandler implements CommandHandler
 {
     /**
      * @var ImageRepository
@@ -26,21 +26,30 @@ class RegisterSponsorCommandHandler implements CommandHandler
     {
         // validate
 
-        // create file
-        $this->imageRepository->setFile($command->logo)
-            ->resize(600)->save();
+        // find sponsor
+        $sponsor = Sponsor::find($command->id);
 
-        // create sponsor
-        $sponsor = new Sponsor([
+        // create file
+        if (! is_null($command->logo)) {
+            $oldFile = $sponsor->logo;
+
+            $this->imageRepository->setFile($command->logo)
+                ->resize(600)->save();
+
+            $sponsor->logo = $this->imageRepository->imageName;
+
+            $this->imageRepository->removeOldFile($oldFile);
+        }
+
+        // update sponsor
+        $sponsor->fill([
             'name' => $command->name,
             'url' => $command->url,
             'type' => $command->type,
-            'logo' => $this->imageRepository->imageName
         ]);
 
         $sponsor->save();
 
         return $sponsor;
     }
-
 }
