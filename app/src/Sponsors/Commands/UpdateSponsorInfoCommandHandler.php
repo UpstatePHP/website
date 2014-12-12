@@ -34,7 +34,7 @@ class UpdateSponsorInfoCommandHandler implements CommandHandler
             $oldFile = $sponsor->logo;
 
             $this->imageRepository->setFile($command->logo)
-                ->resize(600)->save();
+                ->resize(600, 341)->save();
 
             $sponsor->logo = $this->imageRepository->imageName;
 

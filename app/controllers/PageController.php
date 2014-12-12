@@ -15,4 +15,11 @@ class PageController extends BaseController
 
         $this->layout->body = View::make('pages.index', $data);
     }
+
+    public function sponsors()
+    {
+        $sponsors = Sponsor::orderBy('name', 'asc')->get();
+
+        $this->layout->body = View::make('pages.sponsors', compact('sponsors'));
+    }
 }

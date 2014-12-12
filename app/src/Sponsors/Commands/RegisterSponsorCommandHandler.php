@@ -28,7 +28,7 @@ class RegisterSponsorCommandHandler implements CommandHandler
 
         // create file
         $this->imageRepository->setFile($command->logo)
-            ->resize(600)->save();
+            ->resize(600, 341)->save();
 
         // create sponsor
         $sponsor = new Sponsor([

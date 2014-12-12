@@ -5,6 +5,7 @@ Route::when('admin/*', 'admin');
 
 // Routes
 Route::get('/', ['before' => 'cache', 'after' => 'cache', 'uses' => 'PageController@index']);
+Route::get('sponsors', 'PageController@sponsors');
 
 Route::get('login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
 Route::post('login', ['as' => 'login.post', 'uses' => 'AuthController@login']);

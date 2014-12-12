@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-11 col-lg-offset-1">
             <a href="{{ route('admin.sponsors.create') }}" class="btn btn-success pull-right">
-                <span class="glyphicon glyphicon-plus-sign"></span> New Sponsor
+                <span class="glyphicon glyphicon-plus-sign"></span> Add Sponsor
             </a>
             <br><br>
         </div>
@@ -42,7 +42,7 @@
                             <span class="glyphicon glyphicon-pencil"></span> Edit
                         </a>
                         <a href="{{ route('admin.sponsors.delete', ['id' => $sponsor->id]) }}" class="btn btn-danger btn-xs">
-                            <span class="glyphicon glyphicon-remove"></span> Delete
+                            <span class="glyphicon glyphicon-remove"></span> Remove
                         </a>
                     </td>
                 </tr>
