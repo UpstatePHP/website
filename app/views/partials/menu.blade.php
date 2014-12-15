@@ -26,7 +26,11 @@
 
         @else
 
-        <li class="active"><a href="{{ $attr }}"></a>{{ ucwords(preg_replace('/\_|\-/', ' ', $name)) }}</li>
+        <li {{ URL::current() === $attr ? 'class="active"' : '' }}>
+            <a href="{{ $attr }}">
+                {{ ucwords(preg_replace('/\_|\-/', ' ', $name)) }}
+            </a>
+        </li>
 
         @endif
     @endforeach

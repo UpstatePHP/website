@@ -51,6 +51,14 @@ h3::before {
   background-color: #455c7a;
   color: #fff;
 }
+.navbar-default .navbar-nav > li.active > a {
+  background-color: #455c7a;
+  color: #fff;
+}
+.navbar-default .navbar-nav > li.active > a:hover {
+  background-color: #455c7a;
+  color: #fff;
+}
 #main-brand {
   color: #fff;
   padding-left: 150px !important;
