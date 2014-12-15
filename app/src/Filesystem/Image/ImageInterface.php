@@ -38,6 +38,24 @@ interface ImageInterface
     public function resizeCanvas($width, $height, $anchor = 'center', $relative = false, $bgColor = '#ffffff');
 
     /**
+     * @param int $x
+     * @param int $y
+     * @param string $format array\rgb\rgba\hex\int
+     * @return mixed
+     */
+    public function pickColor($x, $y, $format = 'rgb');
+
+    /**
+     * @return int
+     */
+    public function width();
+
+    /**
+     * @return int
+     */
+    public function height();
+
+    /**
      * @return string
      */
     public function hashName();

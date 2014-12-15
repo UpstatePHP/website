@@ -63,6 +63,34 @@ class InterventionAdapter extends AbstractBaseImageAdapter implements ImageInter
         return $this;
     }
 
+    /**
+     * @param int $x
+     * @param int $y
+     * @param string $format array\rgb\rgba\hex\int
+     * @return mixed
+     */
+    public function pickColor($x, $y, $format = 'rgb')
+    {
+        return $this->image->pickColor($x, $y, $format);
+    }
+
+    /**
+     * @return int
+     */
+    public function width()
+    {
+        return $this->image->width();
+    }
+
+    /**
+     * @return int
+     */
+    public function height()
+    {
+        return $this->image->height();
+    }
+
+
     public function save()
     {
         $this->imageName = $this->hashName();
