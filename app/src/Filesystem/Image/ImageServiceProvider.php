@@ -1,8 +1,8 @@
 <?php namespace UpstatePHP\Website\Filesystem\Image;
 
 use Illuminate\Support\ServiceProvider;
-use UpstatePHP\Website\Filesystem\Image\Providers\AbstractBaseImageProvider;
-use UpstatePHP\Website\Filesystem\Image\Providers\InterventionProvider;
+use UpstatePHP\Website\Filesystem\Image\Adapters\AbstractBaseImageAdapter;
+use UpstatePHP\Website\Filesystem\Image\Adapters\InterventionAdapter;
 
 class ImageServiceProvider extends ServiceProvider
 {
@@ -16,11 +16,11 @@ class ImageServiceProvider extends ServiceProvider
     {
         $this->setImagineDriver();
 
-        AbstractBaseImageProvider::$destination = public_path() . '/uploads';
+        AbstractBaseImageAdapter::$destination = public_path() . '/uploads';
 
-        $this->app->bind('\UpstatePHP\Website\Filesystem\Image\ImageRepository', function($app)
+        $this->app->bind('\UpstatePHP\Website\Filesystem\Image\ImageInterface', function($app)
         {
-            return new InterventionProvider($app['image']);
+            return new InterventionAdapter($app['image']);
         });
     }
 

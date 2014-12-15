@@ -2,9 +2,8 @@
 
 
 use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-interface ImageRepository
+interface ImageInterface
 {
     /**
      * @param File $file
@@ -22,7 +21,21 @@ interface ImageRepository
 
     public function save();
 
+    /**
+     * @param string $fileName
+     * @return mixed
+     */
     public function removeOldFile($fileName);
+
+    /**
+     * @param int $width
+     * @param int $height
+     * @param string $anchor
+     * @param bool $relative
+     * @param string $bgColor
+     * @return mixed
+     */
+    public function resizeCanvas($width, $height, $anchor = 'center', $relative = false, $bgColor = '#ffffff');
 
     /**
      * @return string

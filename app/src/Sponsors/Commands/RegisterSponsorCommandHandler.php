@@ -1,17 +1,18 @@
 <?php namespace UpstatePHP\Website\Sponsors\Commands;
 
 use Laracasts\Commander\CommandHandler;
-use UpstatePHP\Website\Filesystem\Image\ImageRepository;
+use UpstatePHP\Website\Filesystem\Image\ImageInterface;
+use UpstatePHP\Website\Sponsors\Logo;
 use UpstatePHP\Website\Sponsors\Sponsor;
 
 class RegisterSponsorCommandHandler implements CommandHandler
 {
     /**
-     * @var ImageRepository
+     * @var ImageInterface
      */
     private $imageRepository;
 
-    public function __construct(ImageRepository $imageRepository)
+    public function __construct(ImageInterface $imageRepository)
     {
         $this->imageRepository = $imageRepository;
     }
@@ -26,10 +27,6 @@ class RegisterSponsorCommandHandler implements CommandHandler
     {
         // validate
 
-        // create file
-        $this->imageRepository->setFile($command->logo)
-            ->resize(600, 341)->save();
-
         // create sponsor
         $sponsor = new Sponsor([
             'name' => $command->name,
@@ -37,6 +34,8 @@ class RegisterSponsorCommandHandler implements CommandHandler
             'type' => $command->type,
             'logo' => $this->imageRepository->imageName
         ]);
+
+        $sponsor->logo = (string) new Logo($command->logo);
 
         $sponsor->save();
 

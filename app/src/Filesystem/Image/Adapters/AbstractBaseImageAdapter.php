@@ -1,8 +1,8 @@
-<?php namespace UpstatePHP\Website\Filesystem\Image\Providers;
+<?php namespace UpstatePHP\Website\Filesystem\Image\Adapters;
 
-use UpstatePHP\Website\Filesystem\Image\ImageRepository;
+use UpstatePHP\Website\Filesystem\Image\ImageInterface;
 
-abstract class AbstractBaseImageProvider implements ImageRepository
+abstract class AbstractBaseImageAdapter implements ImageInterface
 {
     public static $destination;
 

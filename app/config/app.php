@@ -132,6 +132,7 @@ return array(
         'UpstatePHP\Website\ServiceProviders\MenuServiceProvider',
         'UpstatePHP\Website\Events\EventServiceProvider',
         'UpstatePHP\Website\Filesystem\Image\ImageServiceProvider',
+        'UpstatePHP\Website\Sponsors\SponsorServiceProvider'
     ),
 
     /*

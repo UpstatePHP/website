@@ -1,11 +1,11 @@
-<?php namespace UpstatePHP\Website\Filesystem\Image\Providers;
+<?php namespace UpstatePHP\Website\Filesystem\Image\Adapters;
 
 use Intervention\Image\ImageManager;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
-use UpstatePHP\Website\Filesystem\Image\ImageRepository;
+use UpstatePHP\Website\Filesystem\Image\ImageInterface;
 
-class InterventionProvider extends AbstractBaseImageProvider implements ImageRepository
+class InterventionAdapter extends AbstractBaseImageAdapter implements ImageInterface
 {
     protected $image;
 
@@ -20,7 +20,7 @@ class InterventionProvider extends AbstractBaseImageProvider implements ImageRep
 
     /**
      * @param File $file
-     * @return $this|ImageRepository
+     * @return $this|ImageInterface
      */
     public function setFile(File $file)
     {
@@ -45,13 +45,20 @@ class InterventionProvider extends AbstractBaseImageProvider implements ImageRep
      * @param int $width
      * @param null $height
      * @param bool $constrainAspect
-     * @return $this|ImageRepository
+     * @return $this|ImageInterface
      */
     public function resize($width, $height = null, $constrainAspect = true)
     {
         $this->image->resize($width, $height, function($constraint) use ($constrainAspect) {
             if ($constrainAspect) $constraint->aspectRatio();
         });
+
+        return $this;
+    }
+
+    public function resizeCanvas($width, $height, $anchor, $relative, $bgColor)
+    {
+        $this->image->resizeCanvas($width, $height, $anchor, $relative, $bgColor);
 
         return $this;
     }

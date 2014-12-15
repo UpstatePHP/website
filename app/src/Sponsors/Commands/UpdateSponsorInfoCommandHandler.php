@@ -1,17 +1,18 @@
 <?php namespace UpstatePHP\Website\Sponsors\Commands;
 
 use Laracasts\Commander\CommandHandler;
-use UpstatePHP\Website\Filesystem\Image\ImageRepository;
+use UpstatePHP\Website\Filesystem\Image\ImageInterface;
+use UpstatePHP\Website\Sponsors\Logo;
 use UpstatePHP\Website\Sponsors\Sponsor;
 
 class UpdateSponsorInfoCommandHandler implements CommandHandler
 {
     /**
-     * @var ImageRepository
+     * @var ImageInterface
      */
     private $imageRepository;
 
-    public function __construct(ImageRepository $imageRepository)
+    public function __construct(ImageInterface $imageRepository)
     {
         $this->imageRepository = $imageRepository;
     }
@@ -33,10 +34,7 @@ class UpdateSponsorInfoCommandHandler implements CommandHandler
         if (! is_null($command->logo)) {
             $oldFile = $sponsor->logo;
 
-            $this->imageRepository->setFile($command->logo)
-                ->resize(600, 341)->save();
-
-            $sponsor->logo = $this->imageRepository->imageName;
+            $sponsor->logo = (string) new Logo($command->logo);
 
             $this->imageRepository->removeOldFile($oldFile);
         }
