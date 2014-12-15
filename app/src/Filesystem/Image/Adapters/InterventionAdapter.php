@@ -56,7 +56,7 @@ class InterventionAdapter extends AbstractBaseImageAdapter implements ImageInter
         return $this;
     }
 
-    public function resizeCanvas($width, $height, $anchor, $relative, $bgColor)
+    public function resizeCanvas($width, $height, $anchor = 'center', $relative = false, $bgColor = '#ffffff')
     {
         $this->image->resizeCanvas($width, $height, $anchor, $relative, $bgColor);
 

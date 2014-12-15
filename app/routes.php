@@ -5,7 +5,7 @@ Route::when('admin/*', 'admin');
 
 // Routes
 Route::get('/', ['before' => 'cache', 'after' => 'cache', 'uses' => 'PageController@index']);
-Route::get('sponsors', 'PageController@sponsors');
+Route::get('sponsors', ['as' => 'page.sponsors', 'uses' => 'PageController@sponsors']);
 
 Route::get('login', ['as' => 'login', 'uses' => 'AuthController@showLogin']);
 Route::post('login', ['as' => 'login.post', 'uses' => 'AuthController@login']);
@@ -36,3 +36,5 @@ Route::group(['prefix' => 'admin', 'before' => 'auth'], function()
     Route::get('sponsors/delete/{id}', ['as' => 'admin.sponsors.delete', 'uses' => 'SponsorsController@delete']);
 
 });
+
+App::make('menu')->put('sponsors', URL::route('page.sponsors'));
