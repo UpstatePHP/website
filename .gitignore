@@ -8,3 +8,8 @@ composer.lock
 Thumbs.db
 /.idea
 /public/uploads
+/app/storage/cache
+/app/storage/logs
+/app/storage/sessions
+/app/storage/views
+/app/storage/meta
