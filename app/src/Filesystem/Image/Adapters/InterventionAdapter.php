@@ -35,6 +35,11 @@ class InterventionAdapter extends AbstractBaseImageAdapter implements ImageInter
 
         $imagick->readImage($file->getRealPath());
 
+        if ($imagick->getImageColorspace() === \Imagick::COLORSPACE_CMYK) {
+            $imagick->profileImage('icc', file_get_contents(storage_path() . '/support/color-profiles/USWebUncoated.icc'));
+        }
+
+        $imagick->profileImage('icc', file_get_contents(storage_path() . '/support/color-profiles/AdobeRGB1998.icc'));
         $this->image = $this->imageManager->make($imagick);
 
         return $this;
