@@ -17,7 +17,9 @@
                     @if ($sponsor->type === 'supporter')
                     <div class="supporter-ribbon">Supporter</div>
                     @endif
-                    <img src="/uploads/{{ $sponsor->logo }}">
+                    <a href="{{ $sponsor->url }}" target="_blank">
+                        <img src="/uploads/{{ $sponsor->logo }}" title="{{ $sponsor->name }}">
+                    </a>
                 </div>
             </div>
         @endforeach

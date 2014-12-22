@@ -11,4 +11,17 @@ class Sponsor extends \Eloquent
                      ->orderBy(\DB::raw('RAND()'));
     }
 
+    public function scopeOrderNaturally($query, $direction = 'ASC')
+    {
+        return $query->orderBy(\DB::raw(
+            "TRIM(
+                LEADING 'a ' FROM TRIM(
+                    LEADING 'an ' FROM TRIM(
+                        LEADING 'the ' FROM LOWER(`name`)
+                    )
+                )
+            )"
+        ), $direction);
+    }
+
 }

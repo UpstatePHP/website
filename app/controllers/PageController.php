@@ -18,7 +18,7 @@ class PageController extends BaseController
 
     public function sponsors()
     {
-        $sponsors = Sponsor::orderBy('name', 'asc')->get();
+        $sponsors = Sponsor::orderNaturally()->get();
 
         $this->layout->body = View::make('pages.sponsors', compact('sponsors'));
     }
