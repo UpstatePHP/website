@@ -11,7 +11,8 @@
     <meta property="og:image" content="http://upstatephp.com/images/upstatephp-logo.png" />
     <meta property="og:description" content="UpstatePHP is a group of like minded professionals helping to build a better community, specifically in the Upstate of South Carolina." />
 
-    {{-- Orchestra\Asset::styles() --}}
+    {!! Asset::styles() !!}
+    {!! Asset::container('in-header')->styles() !!}
 
     <!-- Testing an update via Dploy.io -->
 

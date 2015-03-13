@@ -151,6 +151,7 @@ return [
      * Orchestra
      */
     'Orchestra\Asset\AssetServiceProvider',
+    'Orchestra\Html\HtmlServiceProvider',
 
     /*
      * Thujohn Twitter service provider.
@@ -173,6 +174,7 @@ return [
 
 		'App'       => 'Illuminate\Support\Facades\App',
 		'Artisan'   => 'Illuminate\Support\Facades\Artisan',
+    'Asset'     => 'Orchestra\Support\Facades\Asset',
 		'Auth'      => 'Illuminate\Support\Facades\Auth',
 		'Blade'     => 'Illuminate\Support\Facades\Blade',
 		'Bus'       => 'Illuminate\Support\Facades\Bus',

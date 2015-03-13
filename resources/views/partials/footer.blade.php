@@ -25,6 +25,8 @@
     </div>
 </footer>
 
-{{-- Orchestra\Asset::container('before-footer')->scripts() --}}
+{!! Asset::container('before-footer')->scripts() !!}
+
 <script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
-{{-- Orchestra\Asset::container('footer')->scripts() --}}
+
+{!! Asset::container('footer')->scripts() !!}
