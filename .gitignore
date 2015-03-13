@@ -1,0 +1,7 @@
+/vendor
+/node_modules
+.env
+./storage/database.sqlite
+composer.lock
+npm-debug.log
+

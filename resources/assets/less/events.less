@@ -1,0 +1,68 @@
+.event {
+
+    overflow: hidden;
+
+    .event-body {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .event-datetime {
+        border-right: 1px solid @brand-primary;
+        float: left;
+        font-size: 32px;
+        line-height: 35px;
+        margin: 0 15px 15px 0;
+        padding: 10px 15px 10px 0;
+        text-align: center;
+    }
+
+    .event-title {
+        font-size: 22px;
+
+        &.page-header {
+            margin-top: 0;
+        }
+    }
+
+    .event-details {
+        font-size: 18px;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+
+    .map-thumbnail {
+        margin-top: 20px;
+        position: relative;
+    }
+    #event-location-map {
+        height: 225px;
+    }
+    #event-location-info {
+        background: rgba(255,255,255,0.8);
+        bottom: 0;
+        display: none;
+        left: 0;
+        padding: 5px 20px;
+        position: absolute;
+        right: 0;
+    }
+
+    .event-actions {
+        overflow: hidden;
+    }
+}
+
+.event-meta-line {
+    overflow: hidden;
+}
+.meta-line-title {
+    float: left;
+    font-weight: bold;
+    margin-right: 5px;
+    text-transform: capitalize;
+
+    & + div {
+        float: left;
+    }
+}
