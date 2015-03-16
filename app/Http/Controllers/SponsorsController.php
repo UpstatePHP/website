@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 
 class SponsorsController extends Controller {
 
+  /**
+   * Create a new controller instance.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+//		$this->middleware('auth');
+    parent::setupAssets();
+  }
+
 	/**
 	 * Display a listing of the resource.
 	 *

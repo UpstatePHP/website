@@ -2,6 +2,7 @@
 
 use Thujohn\Twitter\TwitterFacade as Twitter;
 use App\Sponsor as Sponsor;
+use Orchestra\Support\Facades\Asset as Asset;
 
 class HomeController extends Controller {
 
@@ -24,6 +25,7 @@ class HomeController extends Controller {
 	public function __construct()
 	{
 //		$this->middleware('auth');
+    parent::setupAssets();
 	}
 
 	/**
@@ -44,7 +46,7 @@ class HomeController extends Controller {
 
     $supporters = Sponsor::get()->take(4);
 
-		return view('index')
+    return view('index')
       ->withTweets($tweets)
       ->withSupporters($supporters)
       ->withMenu($menu);
