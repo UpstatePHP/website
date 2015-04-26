@@ -15,3 +15,14 @@ Route::get('/', 'HomeController@index');
 
 Route::get('sponsors', 'SponsorsController@index');
 
+Route::group(
+    [
+        'prefix' => 'admin',
+        'middleware' => 'backend'
+    ],
+    function()
+    {
+        Route::get('/', 'BackendController@dashboard');
+        Route::get('/dashboard', 'BackendController@dashboard');
+    }
+);

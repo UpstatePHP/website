@@ -1,7 +1,8 @@
 /vendor
 /node_modules
+/bower_components
 .env
 ./storage/database.sqlite
 composer.lock
 npm-debug.log
-
+.idea

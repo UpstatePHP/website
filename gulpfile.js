@@ -11,133 +11,83 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir(function(mix) {
+elixir(function (mix) {
     mix.less('app.less');
-});
-
-/*
- |-------------------------------------------------------------------------
- | Plugin Styles
- |-------------------------------------------------------------------------
- |
-*/
-
-gulp.task('plugin-styles', function() {
-  return gulp.src([
-    'assets/less/upstate-bootstrap.less'
-  ])
-  .pipe(plugins.less())
-  .pipe(gulp.dest('assets/css/build'))
-  .pipe(plugins.rename('plugins.min.css'))
-  .pipe(plugins.minifyCss({ keepSpecialComments: 1 }))
-  .pipe(gulp.dest('public/css'))
-  .pipe(plugins.notify({ message: 'Frontend Plugin Styles task complete' }));
 });
 
 
 // Load plugins
 var gulp = require('gulp'),
-    plugins = require('gulp-load-plugins')({ camelize: true }),
+    plugins = require('gulp-load-plugins')({camelize: true}),
     lr = require('tiny-lr'),
     server = lr();
 
-// Plugin Styles
-gulp.task('plugin-styles', function() {
-    return gulp.src([
-            'assets/less/upstate-bootstrap.less'
-        ])
-        .pipe(plugins.less())
-        .pipe(gulp.dest('assets/css/build'))
-        .pipe(plugins.rename('plugins.min.css'))
-        .pipe(plugins.minifyCss({ keepSpecialComments: 1 }))
-        .pipe(gulp.dest('public/css'))
-        .pipe(plugins.notify({ message: 'Frontend Plugin Styles task complete' }));
-});
 
 // Template Styles
-gulp.task('template-styles', function() {
+gulp.task('template-styles', function () {
     return gulp.src([
-            'assets/less/template.less'
-        ])
+        'assets/less/template.less'
+    ])
         .pipe(plugins.less())
         .pipe(gulp.dest('assets/css/build'))
-        .pipe(plugins.rename('template.min.css'))
-        .pipe(plugins.minifyCss({ keepSpecialComments: 1 }))
-        .pipe(gulp.dest('public/css'))
-        .pipe(plugins.notify({ message: 'Template Styles task complete' }));
+        .pipe(plugins.rename('app.min.css'))
+        .pipe(plugins.minifyCss({keepSpecialComments: 1}))
+        .pipe(gulp.dest('public/css'));
 });
 
-// Frontend Plugin Scripts
-gulp.task('plugins', function() {
+// Admin Styles
+gulp.task('admin-styles', function () {
     return gulp.src([
-            'assets/js/vendor/gmaps.js',
-            'bower_components/bootstrap/js/transition.js',
-            'bower_components/bootstrap/js/alert.js',
-            'bower_components/bootstrap/js/button.js',
-            'bower_components/bootstrap/js/carousel.js',
-            'bower_components/bootstrap/js/collapse.js',
-            'bower_components/bootstrap/js/dropdown.js',
-            'bower_components/bootstrap/js/modal.js',
-            'bower_components/bootstrap/js/tooltip.js',
-            'bower_components/bootstrap/js/popover.js',
-            'bower_components/bootstrap/js/scrollspy.js',
-            'bower_components/bootstrap/js/tab.js',
-            'bower_components/bootstrap/js/affix.js'
-        ])
-        .pipe(plugins.concat('plugins.js'))
-        .pipe(gulp.dest('assets/js/build'))
-        .pipe(plugins.rename('plugins.min.js'))
-        .pipe(plugins.uglify())
-        .pipe(gulp.dest('public/js'))
-        .pipe(plugins.notify({ message: 'Plugin Scripts task complete' }));
+        'resources/assets/plugins/bootstrap/dist/css/bootstrap.css',
+        'resources/assets/plugins/datatables/dataTables.bootstrap.css',
+        'resources/assets/plugins/datepicker/datepicker3.css',
+        'resources/assets/plugins/morris/morris.css',
+        'resources/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css',
+        'resources/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css',
+        'resources/assets/plugins/iCheck/all.css',
+        'resources/assets/admin-lte/AdminLTE.css',
+        'resources/assets/admin-lte/skins/skin-purple.css'
+    ])
+        .pipe(plugins.concat('admin.min.css'))
+        .pipe(plugins.minifyCss({keepSpecialComments: 1}))
+        .pipe(gulp.dest('public/css'));
 });
+
 
 // Frontend Main Script
-gulp.task('main', function() {
+gulp.task('main', function () {
     return gulp.src([
-            'assets/js/main.js'
-        ])
+        'assets/js/main.js'
+    ])
         .pipe(plugins.rename('main.min.js'))
         .pipe(plugins.uglify())
         .pipe(gulp.dest('public/js'))
-        .pipe(plugins.notify({ message: 'Main Scripts task complete' }));
-});
-
-// Admin Plugin Styles
-gulp.task('admin-plugin-styles', function() {
-    return gulp.src([
-            'assets/css/vendor/jquery.datetimepicker.css'
-        ])
-        .pipe(gulp.dest('assets/css/build'))
-        .pipe(plugins.rename('admin-plugins.min.css'))
-        .pipe(plugins.minifyCss({ keepSpecialComments: 1 }))
-        .pipe(gulp.dest('public/css'))
-        .pipe(plugins.notify({ message: 'Admin Plugin Styles task complete' }));
-});
-
-// Admin Plugin Scripts
-gulp.task('admin-plugins', function() {
-    return gulp.src([
-            'assets/js/vendor/jquery.datetimepicker.js'
-        ])
-        .pipe(plugins.concat('admin-plugins.js'))
-        .pipe(gulp.dest('assets/js/build'))
-        .pipe(plugins.rename('admin-plugins.min.js'))
-        .pipe(plugins.uglify())
-        .pipe(gulp.dest('public/js'))
-        .pipe(plugins.notify({ message: 'Admin Plugin Scripts task complete' }));
+        .pipe(plugins.notify({message: 'Main Scripts task complete'}));
 });
 
 // Admin Scripts
-gulp.task('admin', function() {
+gulp.task('admin', function () {
     return gulp.src([
-            'assets/js/admin.js'
-        ])
-        .pipe(plugins.rename('admin.min.js'))
+        'resources/assets/plugins/bootstrap/dist/js/bootstrap.js',
+        'resources/assets/plugins/datatables/jquery.dataTables.js',
+        'resources/assets/plugins/datatables/dataTables.bootstrap.js',
+        'resources/assets/plugins/datepicker/bootstrap-datepicker.js',
+        'resources/assets/plugins/morris/morris.js',
+        'resources/assets/plugins/sparkline/jquery.sparkline.js',
+        'resources/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
+        'resources/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js',
+        'resources/assets/plugins/knob/jquery.knob.js',
+        'resources/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
+        'resources/assets/plugins/iCheck/icheck.min.js',
+        'resources/assets/plugins/slimScroll/jquery.slimscroll.min.js',
+        'resources/assets/plugins/fastclick/fastclick.min.js',
+        'resources/assets/js/admin-lte.js'
+    ])
+        .pipe(plugins.concat('admin.min.js'))
         .pipe(plugins.uglify())
-        .pipe(gulp.dest('public/js'))
-        .pipe(plugins.notify({ message: 'Admin Scripts task complete' }));
+        .pipe(gulp.dest('public/js'));
 });
 
-gulp.task('default', ['plugin-styles', 'template-styles', 'plugins', 'main']);
-gulp.task('backend', ['admin-plugin-styles', 'admin-plugins', 'admin']);
+
+gulp.task('default', ['template-styles', 'main', 'admin']);
+gulp.task('backend', ['admin', 'admin-styles']);
