@@ -18,11 +18,21 @@ Route::get('sponsors', 'SponsorsController@index');
 Route::group(
     [
         'prefix' => 'admin',
-        'middleware' => 'backend'
+        'middleware' => 'backend',
+        'namespace' => 'Backend'
     ],
     function()
     {
-        Route::get('/', 'BackendController@dashboard');
-        Route::get('/dashboard', 'BackendController@dashboard');
+        Route::get('/', 'DashboardController@dashboard');
+        Route::get('/dashboard', 'DashboardController@dashboard');
+
+        Route::get('events', ['as' => 'admin.events.index', 'uses' => 'EventsController@index']);
+        Route::get('events/create', ['as' => 'admin.events.create', 'uses' => 'EventsController@create']);
+        Route::get('events/import', ['as' => 'admin.events.import', 'uses' => 'EventsController@import']);
+        Route::post('events', ['as' => 'admin.events.store', 'uses' => 'EventsController@store']);
+        Route::get('events/edit/{id}', ['as' => 'admin.events.edit', 'uses' => 'EventsController@edit']);
+        Route::post('events/{id}', ['as' => 'admin.events.update', 'uses' => 'EventsController@update']);
+        Route::get('events/delete/{id}', ['as' => 'admin.events.delete', 'uses' => 'EventsController@delete']);
+
     }
 );

@@ -1,4 +1,4 @@
-<?php namespace App\Http;
+<?php namespace UpstatePHP\Website\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -15,8 +15,8 @@ class Kernel extends HttpKernel {
 		'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
 		'Illuminate\Session\Middleware\StartSession',
 		'Illuminate\View\Middleware\ShareErrorsFromSession',
-		'App\Http\Middleware\VerifyCsrfToken',
-        'App\Http\Middleware\Assets'
+		'UpstatePHP\Website\Http\Middleware\VerifyCsrfToken',
+        'UpstatePHP\Website\Http\Middleware\Assets'
 	];
 
 	/**
@@ -25,10 +25,10 @@ class Kernel extends HttpKernel {
 	 * @var array
 	 */
 	protected $routeMiddleware = [
-		'auth' => 'App\Http\Middleware\Authenticate',
+		'auth' => 'UpstatePHP\Website\Http\Middleware\Authenticate',
 		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-		'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
-        'backend' => 'App\Http\Middleware\Backend'
+		'guest' => 'UpstatePHP\Website\Http\Middleware\RedirectIfAuthenticated',
+        'backend' => 'UpstatePHP\Website\Http\Middleware\Backend'
 	];
 
 }

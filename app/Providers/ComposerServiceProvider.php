@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace UpstatePHP\Website\Providers;
 
 /**
  * Created as per http://laravel.com/docs/5.0/views
@@ -16,7 +16,7 @@ class ComposerServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-	  View::composer('index', 'App\Http\ViewComposers\RecentTweetsComposer');
+	  View::composer('index', 'UpstatePHP\Website\Http\ViewComposers\RecentTweetsComposer');
 	}
 
 	/**

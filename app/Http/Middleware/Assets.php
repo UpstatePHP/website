@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Middleware;
+namespace UpstatePHP\Website\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Foundation\Application;

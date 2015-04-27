@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace UpstatePHP\Website;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

@@ -1,5 +1,5 @@
 suites:
     main:
-        namespace: App
-        psr4_prefix: App
+        namespace: UpstatePHP\Website
+        psr4_prefix: UpstatePHP\Website
         src_path: app

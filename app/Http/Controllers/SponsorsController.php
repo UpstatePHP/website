@@ -1,8 +1,8 @@
-<?php namespace App\Http\Controllers;
+<?php namespace UpstatePHP\Website\Http\Controllers;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Sponsor as Sponsor;
+use UpstatePHP\Website\Http\Requests;
+use UpstatePHP\Website\Http\Controllers\Controller;
+use UpstatePHP\Website\Sponsor as Sponsor;
 
 use Illuminate\Http\Request;
 

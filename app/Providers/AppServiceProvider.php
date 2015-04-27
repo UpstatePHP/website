@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace UpstatePHP\Website\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -27,8 +27,12 @@ class AppServiceProvider extends ServiceProvider {
 	{
 		$this->app->bind(
 			'Illuminate\Contracts\Auth\Registrar',
-			'App\Services\Registrar'
+			'UpstatePHP\Website\Services\Registrar'
 		);
+
+        if ($this->app->environment() == 'local') {
+            $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
+        }
 	}
 
 }

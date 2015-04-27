@@ -41,12 +41,12 @@ gulp.task('admin-styles', function () {
         'resources/assets/plugins/bootstrap/dist/css/bootstrap.css',
         'resources/assets/plugins/datatables/dataTables.bootstrap.css',
         'resources/assets/plugins/datepicker/datepicker3.css',
-        'resources/assets/plugins/morris/morris.css',
         'resources/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css',
         'resources/assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css',
         'resources/assets/plugins/iCheck/all.css',
         'resources/assets/admin-lte/AdminLTE.css',
-        'resources/assets/admin-lte/skins/skin-purple.css'
+        'resources/assets/admin-lte/skins/skin-purple.css',
+        'resources/assets/css/admin.css'
     ])
         .pipe(plugins.concat('admin.min.css'))
         .pipe(plugins.minifyCss({keepSpecialComments: 1}))
@@ -72,7 +72,6 @@ gulp.task('admin', function () {
         'resources/assets/plugins/datatables/jquery.dataTables.js',
         'resources/assets/plugins/datatables/dataTables.bootstrap.js',
         'resources/assets/plugins/datepicker/bootstrap-datepicker.js',
-        'resources/assets/plugins/morris/morris.js',
         'resources/assets/plugins/sparkline/jquery.sparkline.js',
         'resources/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js',
         'resources/assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js',

@@ -1,4 +1,4 @@
-<?php namespace App\Providers;
+<?php namespace UpstatePHP\Website\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

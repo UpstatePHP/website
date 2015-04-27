@@ -1,6 +1,6 @@
-<?php namespace App\Http\Controllers;
+<?php namespace UpstatePHP\Website\Http\Controllers;
 
-use App\Sponsor as Sponsor;
+use UpstatePHP\Website\Sponsor as Sponsor;
 
 class HomeController extends Controller
 {
