@@ -1,32 +1,20 @@
 <?php namespace UpstatePHP\Website\Providers;
 
-/**
- * Created as per http://laravel.com/docs/5.0/views
- */
-
-use View;
 use Illuminate\Support\ServiceProvider;
 
-class ComposerServiceProvider extends ServiceProvider {
+class ComposerServiceProvider extends ServiceProvider
+{
+    public function register()
+    {
+//        $this->add('events.next', 'NextEventComposer');
+//        $this->add('partials.menu', 'MenuComposer');
+//        $this->add('sponsors.admin.form', 'SponsorTypesComposer');
+//        $this->add('buckets.recent-tweets', 'RecentTweetsComposer');
+        $this->add('backend.partials.sidebar-menu', 'AdminMenuComposer');
+    }
 
-	/**
-	 * Register bindings in the container. 
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-	  View::composer('index', 'UpstatePHP\Website\Http\ViewComposers\RecentTweetsComposer');
-	}
-
-	/**
-	 * Register the application services.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-		//
-	}
-
-}
+    protected function add($view, $class)
+    {
+        $this->app->view->composer($view, '\UpstatePHP\Website\Http\Composers\\'.$class);
+    }
+} 

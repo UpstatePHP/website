@@ -1,17 +1,13 @@
 <section class="sidebar">
     <ul class="sidebar-menu">
         <!-- <li class="header">HEADER</li> -->
-        <li class="active">
-            <a href="#">
-                <i class="fa fa-dashboard"></i>
-                <span>Dashboard</span>
-            </a>
-        </li>
-        <li>
-            <a href="/admin/events">
-                <i class="fa fa-calendar"></i>
-                <span>Events</span>
-            </a>
-        </li>
+        @foreach ($menu as $menuItem)
+            <li class="{!! $menuItem['isActive'] ? 'active' : '' !!}">
+                <a href="{!! $menuItem['link'] !!}">
+                    <i class="fa fa-{!! $menuItem['icon'] or '' !!}"></i>
+                    <span>{!! $menuItem['title'] !!}</span>
+                </a>
+            </li>
+        @endforeach
     </ul>
 </section>

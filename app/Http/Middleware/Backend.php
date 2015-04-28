@@ -7,10 +7,15 @@ use Illuminate\Contracts\Foundation\Application;
 class Backend
 {
     protected $asset;
+    /**
+     * @var Application
+     */
+    private $app;
 
     public function __construct(Application $app)
     {
-        $this->asset = $app->make('orchestra.asset');
+        $this->app = $app;
+        $this->asset = $this->app->make('orchestra.asset');
     }
 
 	/**
@@ -23,6 +28,7 @@ class Backend
 	public function handle($request, Closure $next)
 	{
         $this->registerAssets();
+        $this->registerMenu();
 
 		return $next($request);
 	}
@@ -31,6 +37,32 @@ class Backend
     {
         $this->asset->style('admin', 'css/admin.min.css');
         $this->asset->container('footer')->script('admin', 'js/admin.min.js', ['jquery']);
+    }
+
+    private function registerMenu()
+    {
+        $menu = $this->app->make('admin-menu');
+
+        $menu->put('dashboard', [
+            'route' => 'admin.dashboard',
+            'order' => 0,
+            'icon' => 'dashboard'
+        ]);
+        $menu->put('sponsors', [
+            'route' => 'admin.sponsors.index',
+            'order' => 2,
+            'icon' => 'star'
+        ]);
+        $menu->put('users', [
+            'link' => '#',
+            'order' => 3,
+            'icon' => 'users'
+        ]);
+        $menu->put('events', [
+            'route' => 'admin.events.index',
+            'order' => 1,
+            'icon' => 'calendar'
+        ]);
     }
 
 }

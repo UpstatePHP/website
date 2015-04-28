@@ -140,6 +140,7 @@ return [
         'UpstatePHP\Website\Providers\RouteServiceProvider',
         'UpstatePHP\Website\Providers\ComposerServiceProvider',
         'UpstatePHP\Website\Providers\HostedEventServiceProvider',
+        'UpstatePHP\Website\Providers\MenuServiceProvider',
 
         /*
          * Orchestra
