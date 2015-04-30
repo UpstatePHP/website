@@ -4,7 +4,7 @@ interface EventRepository
 {
     public function nextEvent();
 
-    public function allEvents($perPage = null);
+    public function getEvents($perPage = null);
 
     public function fetchRemoteEvents($sinceId = null);
 

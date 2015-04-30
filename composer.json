@@ -10,7 +10,9 @@
         "thujohn/twitter" : "2.0.*",
         "intervention/image": "dev-master#b5350f62f59f8fa24f5d9c1ffbd094a7fd91c0e3",
         "michelf/php-markdown": "1.4.1",
-        "guzzlehttp/guzzle": "5.0.3"
+        "guzzlehttp/guzzle": "5.0.3",
+        "laracasts/presenter": "0.2.*",
+        "laravelcollective/html": "~5.0"
     },
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

@@ -14,7 +14,7 @@ abstract class EloquentProvider implements EventRepository
         return $query->first();
     }
 
-    public function allEvents($perPage = null)
+    public function getEvents($perPage = null)
     {
         $query = $this->newQuery();
         $query->orderBy('begins_at', 'desc');

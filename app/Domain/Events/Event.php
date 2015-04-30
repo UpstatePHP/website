@@ -2,9 +2,14 @@
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Laracasts\Presenter\PresentableTrait;
 
 class Event extends Model
 {
+    use PresentableTrait;
+
+    protected $presenter = 'UpstatePHP\Website\Domain\Events\EventPresenter';
+
     protected $table = 'events';
 
     protected $dates = ['begins_at', 'ends_at'];

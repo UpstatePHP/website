@@ -28,7 +28,11 @@ class AdminMenuComposer
                     : '/'
                 );
             $item['title'] = array_get($item, 'title', Str::title($key));
-            $item['isActive'] = isset($item['route']) && $this->route->getName() === $item['route'];
+            $item['isActive'] = (isset($item['route']) && $this->route->getName() === $item['route'])
+                || strpos(
+                    $this->route->getUri(),
+                    $key
+                ) !== false;
             $menu->put($key, $item);
         }
 

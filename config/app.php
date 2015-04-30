@@ -128,7 +128,6 @@ return [
         'Illuminate\Translation\TranslationServiceProvider',
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
-        'Thujohn\Twitter\TwitterServiceProvider',
 
         /*
          * Application Service Providers...
@@ -141,13 +140,12 @@ return [
         'UpstatePHP\Website\Providers\ComposerServiceProvider',
         'UpstatePHP\Website\Providers\HostedEventServiceProvider',
         'UpstatePHP\Website\Providers\MenuServiceProvider',
+        'UpstatePHP\Website\Providers\FormMacroProvider',
 
-        /*
-         * Orchestra
-         */
         'Orchestra\Asset\AssetServiceProvider',
         'Orchestra\Html\HtmlServiceProvider',
         'Thujohn\Twitter\TwitterServiceProvider',
+        'Orchestra\Html\HtmlServiceProvider'
     ],
     /*
     |--------------------------------------------------------------------------
@@ -194,8 +192,12 @@ return [
         'URL' => 'Illuminate\Support\Facades\URL',
         'Validator' => 'Illuminate\Support\Facades\Validator',
         'View' => 'Illuminate\Support\Facades\View',
+
         'Asset' => 'Orchestra\Support\Facades\Asset',
         'Twitter' => 'Thujohn\Twitter\Facades\Twitter',
+        'Form' => 'Orchestra\Support\Facades\Form',
+        'HTML' => 'Orchestra\Support\Facades\HTML',
+        'Table' => 'Orchestra\Support\Facades\Table',
 
     ],
 
