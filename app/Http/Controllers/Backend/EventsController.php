@@ -1,12 +1,16 @@
 <?php
 namespace UpstatePHP\Website\Http\Controllers\Backend;
 
+use Illuminate\Foundation\Bus\DispatchesCommands;
+use Illuminate\Http\Request;
 use UpstatePHP\Website\Domain\Events\Event as EventModel;
 use UpstatePHP\Website\Domain\Events\EventRepository;
 use UpstatePHP\Website\Http\Controllers\Controller;
 
 class EventsController extends Controller
 {
+    use DispatchesCommands;
+
     /**
      * @var EventRepository
      */
@@ -37,6 +41,12 @@ class EventsController extends Controller
         return view('backend.events.form', $data);
     }
 
+    public function store(Request $request)
+    {
+        $this->dispatchFrom('UpstatePHP\Website\Commands\HostEventCommand', $request);
+        return redirect()->route('admin.events.index');
+    }
+
     public function edit($id)
     {
         $data = [
@@ -44,11 +54,17 @@ class EventsController extends Controller
         ];
         return view('backend.events.form', $data);
     }
-    public function update($id)
+
+    public function update($id, Request $request)
     {
-        EventModel::find($id)->update(Input::except('_token', '_method'));
-        return Redirect::route('admin.events.index');
+        $this->dispatchFrom(
+            'UpstatePHP\Website\Commands\UpdateHostedEventCommand',
+            $request,
+            ['id' => $id]
+        );
+        return redirect()->route('admin.events.index');
     }
+
     public function import()
     {
         $newEvents = $this->eventRepository->importNewRemoteEvents();
@@ -56,7 +72,7 @@ class EventsController extends Controller
             '\UpstatePHP\Website\Events\Commands\ImportNewEventsCommand',
             ['events' => $newEvents]
         );
-        return Redirect::route('admin.events.index')->with(
+        return Redirect::route('backend.events.index')->with(
             'message',
             sprintf(
                 'success::%s new events imported',
@@ -64,9 +80,10 @@ class EventsController extends Controller
             )
         );
     }
+
     public function delete($id)
     {
         EventModel::find($id)->delete();
-        return Redirect::route('admin.events.index');
+        return redirect()->route('admin.events.index');
     }
 }

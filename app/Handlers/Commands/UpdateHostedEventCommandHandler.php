@@ -1,9 +1,9 @@
 <?php namespace UpstatePHP\Website\Handlers\Commands;
 
-use UpstatePHP\Website\Commands\HostEventCommand;
+use UpstatePHP\Website\Commands\UpdateHostedEventCommand;
 use UpstatePHP\Website\Domain\Events\Event as EventModel;
 
-class HostEventCommandHandler
+class UpdateHostedEventCommandHandler
 {
     /**
      * Handle the command
@@ -11,9 +11,10 @@ class HostEventCommandHandler
      * @param $command
      * @return mixed
      */
-    public function handle(HostEventCommand $command)
+    public function handle(UpdateHostedEventCommand $command)
     {
-        $event = new EventModel([
+        $event = EventModel::find($command->id);
+        $event->fill([
             'title' => $command->title,
             'description' => $command->description,
             'registration_link' => $command->registration_link,

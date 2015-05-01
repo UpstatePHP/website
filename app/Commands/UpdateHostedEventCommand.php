@@ -1,6 +1,6 @@
 <?php namespace UpstatePHP\Website\Commands;
 
-class HostEventCommand extends Command
+class UpdateHostedEventCommand extends Command
 {
     public $title;
     public $description;
@@ -15,8 +15,10 @@ class HostEventCommand extends Command
     public $zipcode;
     public $latitude;
     public $longitude;
+    public $id;
 
     public function __construct(
+        $id,
         $title,
         $begins_at,
         $ends_at,
@@ -31,7 +33,7 @@ class HostEventCommand extends Command
         $latitude = null,
         $longitude = null
     ) {
-
+        $this->id = $id;
         $this->title = $title;
         $this->description = $description;
         $this->registration_link = $registration_link;

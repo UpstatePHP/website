@@ -48,6 +48,14 @@
                     {!! Form::label('zipcode') !!}
                     {!! Form::text('zipcode', null, ['class' => 'form-control']) !!}
                 </div>
+                <div class="form-group col-lg-6">
+                    {!! Form::label('latitude') !!}
+                    {!! Form::text('latitude', null, ['class' => 'form-control']) !!}
+                </div>
+                <div class="form-group col-lg-6">
+                    {!! Form::label('longitude') !!}
+                    {!! Form::text('longitude', null, ['class' => 'form-control']) !!}
+                </div>
             </div>
         </div>
     </div>
