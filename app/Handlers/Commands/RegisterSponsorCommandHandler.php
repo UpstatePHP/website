@@ -1,11 +1,11 @@
-<?php namespace UpstatePHP\Website\Sponsors\Commands;
+<?php
+namespace UpstatePHP\Website\Handlers\Commands;
 
-use Laracasts\Commander\CommandHandler;
 use UpstatePHP\Website\Filesystem\Image\ImageInterface;
-use UpstatePHP\Website\Sponsors\Logo;
-use UpstatePHP\Website\Sponsors\Sponsor;
+use UpstatePHP\Website\Domain\Sponsors\Logo;
+use UpstatePHP\Website\Domain\Sponsors\Sponsor;
 
-class RegisterSponsorCommandHandler implements CommandHandler
+class RegisterSponsorCommandHandler
 {
     /**
      * @var ImageInterface

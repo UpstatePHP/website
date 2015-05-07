@@ -8,7 +8,7 @@
         "laravel/framework": "5.0.*",
         "orchestra/asset": "3.0.*",
         "thujohn/twitter" : "2.0.*",
-        "intervention/image": "dev-master#b5350f62f59f8fa24f5d9c1ffbd094a7fd91c0e3",
+        "intervention/image": "2.2.*",
         "michelf/php-markdown": "1.4.1",
         "guzzlehttp/guzzle": "5.0.3",
         "laracasts/presenter": "0.2.*",

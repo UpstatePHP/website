@@ -1,6 +1,7 @@
-<?php namespace UpstatePHP\Website\Sponsors;
+<?php namespace UpstatePHP\Website\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use UpstatePHP\Website\Domain\Sponsors\Logo;
 
 class SponsorServiceProvider extends ServiceProvider
 {

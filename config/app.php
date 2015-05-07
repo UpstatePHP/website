@@ -129,6 +129,12 @@ return [
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
 
+        'Orchestra\Asset\AssetServiceProvider',
+        'Orchestra\Html\HtmlServiceProvider',
+        'Thujohn\Twitter\TwitterServiceProvider',
+        'Orchestra\Html\HtmlServiceProvider',
+        'Intervention\Image\ImageServiceProviderLaravel5',
+
         /*
          * Application Service Providers...
          */
@@ -141,11 +147,8 @@ return [
         'UpstatePHP\Website\Providers\HostedEventServiceProvider',
         'UpstatePHP\Website\Providers\MenuServiceProvider',
         'UpstatePHP\Website\Providers\FormMacroProvider',
-
-        'Orchestra\Asset\AssetServiceProvider',
-        'Orchestra\Html\HtmlServiceProvider',
-        'Thujohn\Twitter\TwitterServiceProvider',
-        'Orchestra\Html\HtmlServiceProvider'
+        'UpstatePHP\Website\Providers\ImageServiceProvider',
+        'UpstatePHP\Website\Providers\SponsorServiceProvider',
     ],
     /*
     |--------------------------------------------------------------------------

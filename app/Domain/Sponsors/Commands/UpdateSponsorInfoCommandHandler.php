@@ -2,8 +2,8 @@
 
 use Laracasts\Commander\CommandHandler;
 use UpstatePHP\Website\Filesystem\Image\ImageInterface;
-use UpstatePHP\Website\Sponsors\Logo;
-use UpstatePHP\Website\Sponsors\Sponsor;
+use UpstatePHP\Website\Domain\Sponsors\Logo;
+use UpstatePHP\Website\Domain\Sponsors\Sponsor;
 
 class UpdateSponsorInfoCommandHandler implements CommandHandler
 {

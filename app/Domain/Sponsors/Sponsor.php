@@ -1,6 +1,8 @@
-<?php namespace UpstatePHP\Website\Sponsors;
+<?php namespace UpstatePHP\Website\Domain\Sponsors;
 
-class Sponsor extends \Eloquent
+use Illuminate\Database\Eloquent\Model;
+
+class Sponsor extends Model
 {
 
     protected $guarded = ['id', 'created_at', 'updated_at'];

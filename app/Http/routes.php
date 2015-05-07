@@ -37,7 +37,7 @@ Route::group(
         Route::post('events/{id}', ['as' => 'admin.events.update', 'uses' => 'EventsController@update']);
         Route::get('events/delete/{id}', ['as' => 'admin.events.delete', 'uses' => 'EventsController@delete']);
 
-        Route::get('sponsors', ['as' => 'admin.sponsors.index', 'uses' => 'SponsorsController@adminIndex']);
+        Route::get('sponsors', ['as' => 'admin.sponsors.index', 'uses' => 'SponsorsController@index']);
         Route::get('sponsors/create', ['as' => 'admin.sponsors.create', 'uses' => 'SponsorsController@create']);
         Route::post('sponsors', ['as' => 'admin.sponsors.store', 'uses' => 'SponsorsController@store']);
         Route::get('sponsors/edit/{id}', ['as' => 'admin.sponsors.edit', 'uses' => 'SponsorsController@edit']);

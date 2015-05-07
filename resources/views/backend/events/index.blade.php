@@ -2,7 +2,7 @@
 
 @section('content-header-actions')
 
-<a href="{!! route('admin.events.create') !!}" class="btn btn-block btn-primary">
+<a href="{!! route('admin.events.create') !!}" class="btn btn-block btn-success">
     Create Event <i class="fa fa-fw fa-plus"></i>
 </a>
 

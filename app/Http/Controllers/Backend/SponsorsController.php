@@ -1,98 +1,103 @@
-<?php namespace UpstatePHP\Website\Http\Controllers;
-
-use UpstatePHP\Website\Http\Requests;
-use UpstatePHP\Website\Http\Controllers\Controller;
-use UpstatePHP\Website\Sponsor as Sponsor;
+<?php
+namespace UpstatePHP\Website\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use UpstatePHP\Website\Http\Controllers\Controller;
+use UpstatePHP\Website\Domain\Sponsors\Sponsor;
 
-class SponsorsController extends Controller {
+class SponsorsController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $data = [
+            'sponsors' => Sponsor::all(),
+            'pageHeader' => 'Sponsors'
+        ];
 
-  /**
-   * Create a new controller instance.
-   *
-   * @return void
-   */
-  public function __construct()
-  {
-//		$this->middleware('auth');
-    parent::setupAssets();
-  }
+        return view('backend.sponsors.index', $data);
+    }
 
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
-	{
-    $sponsors = Sponsor::get();
-    return view('sponsors')
-      ->withSponsors($sponsors);
-	}
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        $data = [
+            'sponsor' => new Sponsor,
+            'pageHeader' => 'Create Sponsor'
+        ];
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
+        return view('backend.sponsors.form', $data);
+    }
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        $this->dispatchFromArray(
+            'UpstatePHP\Website\Commands\RegisterSponsorCommand',
+            array_add($request->all(), 'logo', $request->get('logo'))
+        );
+        return redirect()->route('admin.sponsors.index');
+    }
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        //
+    }
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+        //
+    }
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function update($id)
+    {
+        //
+    }
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
-	}
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return Response
+     */
+    public function delete($id)
+    {
+        $sponsor = Sponsor::find($id);
+        if (! is_null($sponsor->logo)) {
+            \File::delete(public_path().'/uploads/'.$sponsor->logo);
+        }
+        $sponsor->delete();
+        return redirect()->route('admin.sponsors.index');
+    }
 
 }

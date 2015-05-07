@@ -1,5 +1,6 @@
 <?php namespace UpstatePHP\Website\Filesystem\Image\Adapters;
 
+use Imagick;
 use Intervention\Image\ImageManager;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -24,7 +25,7 @@ class InterventionAdapter extends AbstractBaseImageAdapter implements ImageInter
      */
     public function setFile(File $file)
     {
-        $imagick = new \Imagick();
+        $imagick = new Imagick();
 
         // Set the resolution if we're dealing with an EPS
         if ($file instanceof UploadedFile
@@ -35,7 +36,7 @@ class InterventionAdapter extends AbstractBaseImageAdapter implements ImageInter
 
         $imagick->readImage($file->getRealPath());
 
-        if ($imagick->getImageColorspace() === \Imagick::COLORSPACE_CMYK) {
+        if ($imagick->getImageColorspace() === Imagick::COLORSPACE_CMYK) {
             $imagick->profileImage('icc', file_get_contents(storage_path() . '/support/color-profiles/USWebUncoated.icc'));
         }
 

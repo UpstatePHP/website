@@ -11,6 +11,7 @@ class ComposerServiceProvider extends ServiceProvider
 //        $this->add('sponsors.admin.form', 'SponsorTypesComposer');
 //        $this->add('buckets.recent-tweets', 'RecentTweetsComposer');
         $this->add('backend.partials.sidebar-menu', 'AdminMenuComposer');
+        $this->add('backend.sponsors.form', 'SponsorTypesComposer');
     }
 
     protected function add($view, $class)

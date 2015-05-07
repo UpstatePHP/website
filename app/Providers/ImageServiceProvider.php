@@ -1,4 +1,4 @@
-<?php namespace UpstatePHP\Website\Filesystem\Image;
+<?php namespace UpstatePHP\Website\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use UpstatePHP\Website\Filesystem\Image\Adapters\AbstractBaseImageAdapter;
@@ -26,6 +26,6 @@ class ImageServiceProvider extends ServiceProvider
 
     protected function setImagineDriver()
     {
-        $this->app['image']->configure(['driver' => 'imagick']);
+       // $this->app['image']->configure(['driver' => 'imagick']);
     }
 }

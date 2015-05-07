@@ -1,4 +1,4 @@
-<?php namespace UpstatePHP\Website\Sponsors;
+<?php namespace UpstatePHP\Website\Domain\Sponsors;
 
 use Symfony\Component\HttpFoundation\File\File;
 
@@ -19,7 +19,6 @@ class Logo
     {
         $this->image()->setFile($file);
         $this->resize();
-        //$this->checkBorderColor();
         $this->save();
     }
 

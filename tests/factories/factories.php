@@ -15,3 +15,10 @@ $factory('UpstatePHP\Website\Domain\Events\Event', [
     'latitude' => $faker->latitude,
     'longitude' => $faker->longitude
 ]);
+
+$factory('UpstatePHP\Website\Domain\Sponsors\Sponsor', [
+    'name' => $faker->company,
+    'type' => $faker->randomElement(['sponsor', 'supporter']),
+    'url' => $faker->url,
+    'logo' => $faker->md5
+]);
