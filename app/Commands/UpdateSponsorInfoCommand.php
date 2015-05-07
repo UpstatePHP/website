@@ -1,4 +1,4 @@
-<?php namespace UpstatePHP\Website\Sponsors\Commands;
+<?php namespace UpstatePHP\Website\Commands;
 
 class UpdateSponsorInfoCommand
 {
