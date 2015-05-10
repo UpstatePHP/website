@@ -92,7 +92,7 @@
 <!-- ./wrapper -->
 
 {!! Asset::container('before-footer')->scripts() !!}
-<script>window.jQuery || document.write('<script src="/js/vendor/jquery.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="/js/gmaps/jquery.min.js"><\/script>')</script>
 {!! Asset::container('footer')->scripts() !!}
 
 </body>

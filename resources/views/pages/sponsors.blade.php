@@ -1,6 +1,6 @@
-@extends ('layouts.main')
+@extends('layouts.main')
 
-@section('content')
+@section('body')
 <div class="container">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
@@ -18,8 +18,8 @@
                     @if ($sponsor->type === 'supporter')
                     <div class="supporter-ribbon">Supporter</div>
                     @endif
-                    <a href="{{ $sponsor->url }}" target="_blank">
-                        <img src="/uploads/{{ $sponsor->logo }}" title="{{ $sponsor->name }}">
+                    <a href="{!! $sponsor->url !!}" target="_blank">
+                        <img src="/uploads/{!! $sponsor->logo !!}" title="{!! $sponsor->name !!}">
                     </a>
                 </div>
             </div>

@@ -11,9 +11,8 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-
-Route::get('sponsors', 'SponsorsController@index');
+Route::get('/', ['as' => 'page.index', 'uses' => 'PagesController@index']);
+Route::get('sponsors', ['as' => 'page.sponsors', 'uses' => 'PagesController@sponsors']);
 
 Route::group(
     [

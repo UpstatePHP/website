@@ -16,7 +16,7 @@ class Kernel extends HttpKernel {
 		'Illuminate\Session\Middleware\StartSession',
 		'Illuminate\View\Middleware\ShareErrorsFromSession',
 		'UpstatePHP\Website\Http\Middleware\VerifyCsrfToken',
-        'UpstatePHP\Website\Http\Middleware\Assets'
+        'UpstatePHP\Website\Http\Middleware\Frontend'
 	];
 
 	/**

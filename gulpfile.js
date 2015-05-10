@@ -1,21 +1,5 @@
 var elixir = require('laravel-elixir');
 
-/*
- |--------------------------------------------------------------------------
- | Elixir Asset Management
- |--------------------------------------------------------------------------
- |
- | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Less
- | file for our application, as well as publishing vendor resources.
- |
- */
-
-elixir(function (mix) {
-    mix.less('app.less');
-});
-
-
 // Load plugins
 var gulp = require('gulp'),
     plugins = require('gulp-load-plugins')({camelize: true}),
@@ -26,7 +10,7 @@ var gulp = require('gulp'),
 // Template Styles
 gulp.task('template-styles', function () {
     return gulp.src([
-        'assets/less/template.less'
+        'resources/assets/less/template.less'
     ])
         .pipe(plugins.less())
         .pipe(gulp.dest('resources/assets/css/build'))
@@ -54,15 +38,27 @@ gulp.task('admin-styles', function () {
 });
 
 
-// Frontend Main Script
+// Frontend Scripts
 gulp.task('main', function () {
     return gulp.src([
-        'assets/js/main.js'
+        'resources/assets/plugins/bootstrap/js/transition.js',
+        'resources/assets/plugins/bootstrap/js/alert.js',
+        'resources/assets/plugins/bootstrap/js/button.js',
+        'resources/assets/plugins/bootstrap/js/carousel.js',
+        'resources/assets/plugins/bootstrap/js/collapse.js',
+        'resources/assets/plugins/bootstrap/js/dropdown.js',
+        'resources/assets/plugins/bootstrap/js/modal.js',
+        'resources/assets/plugins/bootstrap/js/tooltip.js',
+        'resources/assets/plugins/bootstrap/js/popover.js',
+        'resources/assets/plugins/bootstrap/js/scrollspy.js',
+        'resources/assets/plugins/bootstrap/js/tab.js',
+        'resources/assets/plugins/bootstrap/js/affix.js',
+        'resources/assets/plugins/gmaps/gmaps.js',
+        'resources/assets/js/main.js'
     ])
-        .pipe(plugins.rename('main.min.js'))
+        .pipe(plugins.concat('main.min.js'))
         .pipe(plugins.uglify())
-        .pipe(gulp.dest('public/js'))
-        .pipe(plugins.notify({message: 'Main Scripts task complete'}));
+        .pipe(gulp.dest('public/js'));
 });
 
 // Admin Scripts

@@ -11,7 +11,7 @@
                 <span id="header-name">UpstatePHP</span>
             </a>
         </div>
-        {{-- @include('partials.menu') --}}
+        @include('partials.menu')
     </div>
 </div>
 
@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    @yield('content')
+    @yield('body')
 
 </div>
 
