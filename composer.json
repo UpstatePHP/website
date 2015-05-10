@@ -3,31 +3,35 @@
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
+	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*",
-        "orchestra/asset": "2.2.*",
-        "league/flysystem": "0.5.*",
-        "intervention/image": "dev-master#b5350f62f59f8fa24f5d9c1ffbd094a7fd91c0e3",
+        "laravel/framework": "5.0.*",
+        "orchestra/asset": "3.0.*",
+        "thujohn/twitter" : "2.0.*",
+        "intervention/image": "2.2.*",
         "michelf/php-markdown": "1.4.1",
-        "thujohn/twitter": "1.2.*",
         "guzzlehttp/guzzle": "5.0.3",
-        "laracasts/commander": "~1.0"
-	},
-    "require-dev": {
-        "way/generators": "2.*",
-        "fzaninotto/faker": "v1.3.0"
+        "laracasts/presenter": "0.2.*",
+        "laravelcollective/html": "~5.0"
     },
+	"require-dev": {
+		"phpunit/phpunit": "~4.0",
+		"phpspec/phpspec": "~2.1",
+		"laracasts/generators": "~1.1",
+        "laracasts/testdummy": "~2.0"
+	},
 	"autoload": {
 		"classmap": [
-			"app/commands",
-			"app/controllers",
-			"app/database/migrations",
-			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"database"
 		],
-        "psr-4": {
-            "UpstatePHP\\Website\\": "app/src"
-        }
+		"psr-4": {
+			"UpstatePHP\\Website\\": "app/"
+		}
+	},
+	"autoload-dev": {
+		"classmap": [
+			"tests/TestCase.php"
+		]
 	},
 	"scripts": {
 		"post-install-cmd": [
@@ -39,11 +43,11 @@
 			"php artisan optimize"
 		],
 		"post-create-project-cmd": [
+			"php -r \"copy('.env.example', '.env');\"",
 			"php artisan key:generate"
 		]
 	},
 	"config": {
 		"preferred-install": "dist"
-	},
-	"minimum-stability": "stable"
+	}
 }
