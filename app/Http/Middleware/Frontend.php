@@ -51,6 +51,14 @@ class Frontend
             'order' => 2,
             'icon' => 'star'
         ]);
+
+        if ($this->app['auth']->check()) {
+            $menu->put('admin', [
+                'route' => 'admin.dashboard',
+                'order' => 3,
+                'icon' => 'dashboard'
+            ]);
+        }
     }
 
 }

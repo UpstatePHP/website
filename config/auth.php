@@ -28,7 +28,7 @@ return [
 	|
 	*/
 
-	'model' => 'UpstatePHP\Website\User',
+	'model' => 'UpstatePHP\Website\Domain\Users\User',
 
 	/*
 	|--------------------------------------------------------------------------

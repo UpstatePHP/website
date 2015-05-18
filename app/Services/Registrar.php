@@ -1,6 +1,6 @@
 <?php namespace UpstatePHP\Website\Services;
 
-use UpstatePHP\Website\User;
+use UpstatePHP\Website\Domain\Users\User;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 

@@ -14,10 +14,14 @@
 Route::get('/', ['as' => 'page.index', 'uses' => 'PagesController@index']);
 Route::get('sponsors', ['as' => 'page.sponsors', 'uses' => 'PagesController@sponsors']);
 
+Route::get('/login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login']);
+Route::post('/login', ['as' => 'auth.login.do', 'uses' => 'Auth\AuthController@doLogin']);
+Route::get('/logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logout']);
+
 Route::group(
     [
         'prefix' => 'admin',
-        'middleware' => 'backend',
+        'middleware' => ['backend', 'auth'],
         'namespace' => 'Backend'
     ],
     function()

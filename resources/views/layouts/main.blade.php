@@ -1,8 +1,5 @@
-<html>
-
 @include('partials.header')
 
-<body>
 <div id="site-header" class="navbar navbar-default navbar-static-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -26,7 +23,6 @@
 
 </div>
 
-@include('partials.footer')
+@include('partials.site-footer')
 
-</body>
-</html>
+@include('partials.footer')

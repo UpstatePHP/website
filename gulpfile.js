@@ -37,7 +37,6 @@ gulp.task('admin-styles', function () {
         .pipe(gulp.dest('public/css'));
 });
 
-
 // Frontend Scripts
 gulp.task('main', function () {
     return gulp.src([
@@ -88,5 +87,5 @@ gulp.task('admin', function () {
 });
 
 
-gulp.task('default', ['template-styles', 'main', 'admin']);
+gulp.task('default', ['template-styles', 'main', 'admin', 'admin-styles']);
 gulp.task('backend', ['admin', 'admin-styles']);
