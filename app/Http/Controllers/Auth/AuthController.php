@@ -1,5 +1,6 @@
 <?php namespace UpstatePHP\Website\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use UpstatePHP\Website\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\Auth\Registrar;

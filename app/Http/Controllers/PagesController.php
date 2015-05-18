@@ -1,5 +1,6 @@
 <?php namespace UpstatePHP\Website\Http\Controllers;
 
+use UpstatePHP\Website\Domain\Pages\Page;
 use UpstatePHP\Website\Domain\Sponsors\Sponsor;
 
 class PagesController extends Controller
@@ -17,6 +18,13 @@ class PagesController extends Controller
     {
         $sponsors = Sponsor::orderNaturally()->get();
         return view('pages.sponsors', compact('sponsors'));
+    }
+
+    public function catchAll($path)
+    {
+        $page = Page::findByPath($path);
+
+        return view('pages.shell', compact('page'));
     }
 
 }

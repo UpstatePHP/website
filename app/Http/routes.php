@@ -47,5 +47,14 @@ Route::group(
         Route::post('sponsors/{id}', ['as' => 'admin.sponsors.update', 'uses' => 'SponsorsController@update']);
         Route::get('sponsors/delete/{id}', ['as' => 'admin.sponsors.delete', 'uses' => 'SponsorsController@delete']);
 
+        Route::get('pages', ['as' => 'admin.pages.index', 'uses' => 'PagesController@index']);
+        Route::get('pages/create', ['as' => 'admin.pages.create', 'uses' => 'PagesController@create']);
+        Route::post('pages', ['as' => 'admin.pages.store', 'uses' => 'PagesController@store']);
+        Route::get('pages/edit/{id}', ['as' => 'admin.pages.edit', 'uses' => 'PagesController@edit']);
+        Route::post('pages/{id}', ['as' => 'admin.pages.update', 'uses' => 'PagesController@update']);
+        Route::get('pages/delete/{id}', ['as' => 'admin.pages.delete', 'uses' => 'PagesController@delete']);
+
     }
 );
+
+Route::get('{path?}', 'PagesController@catchAll')->where('path', '.+');

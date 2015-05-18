@@ -53,15 +53,20 @@ class Backend
             'order' => 2,
             'icon' => 'star'
         ]);
-        $menu->put('users', [
-            'link' => '#',
-            'order' => 3,
-            'icon' => 'users'
-        ]);
+//        $menu->put('users', [
+//            'link' => '#',
+//            'order' => 4,
+//            'icon' => 'users'
+//        ]);
         $menu->put('events', [
             'route' => 'admin.events.index',
             'order' => 1,
             'icon' => 'calendar'
+        ]);
+        $menu->put('pages', [
+            'route' => 'admin.pages.index',
+            'order' => 3,
+            'icon' => 'file-text-o'
         ]);
     }
 

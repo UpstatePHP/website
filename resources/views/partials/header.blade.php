@@ -2,7 +2,7 @@
 <head>
     <meta name="viewport" content="width=device-width" /></title>
 
-    <title>UpstatePHP</title>
+    <title>UpstatePHP {!! isset($pageTitle) ? ' - ' . $pageTitle : '' !!}</title>
     <meta name="description" content="UpstatePHP is a group of like minded professionals helping to build a better community, specifically in the Upstate of South Carolina." />
 
     <!-- Open Graph data -->
