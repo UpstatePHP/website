@@ -1,13 +1,13 @@
 <?php
 namespace UpstatePHP\Website\Http\Composers;
 
-use Michelf\Markdown;
+use Cache;
 
 class ShellPageComposer
 {
     public function compose($view)
     {
         $view->pageHeader = $view->pageTitle = $view->page->title;
-        $view->bodyContent = Markdown::defaultTransform($view->page->content);
+        $view->bodyContent = Cache::get($view->page->path);
     }
 }
