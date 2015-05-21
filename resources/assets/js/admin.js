@@ -25,6 +25,9 @@
             url: import_url,
             success: function() {
                 $this.button('reset');
+                setTimeout(function(){
+                    location.reload();
+                }, 1000);
             },
             error: function() {
                 $this.button('reset');

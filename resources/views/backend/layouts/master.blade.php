@@ -76,6 +76,8 @@
         <!-- Main content -->
         <section class="content">
 
+            @include('flash::message')
+
             @yield('main-content')
 
         </section>

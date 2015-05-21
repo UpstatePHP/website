@@ -135,6 +135,7 @@ return [
         'Orchestra\Html\HtmlServiceProvider',
         'Intervention\Image\ImageServiceProviderLaravel5',
         'Alaouy\Youtube\YoutubeServiceProvider',
+        'Laracasts\Flash\FlashServiceProvider',
 
         /*
          * Application Service Providers...
@@ -202,6 +203,7 @@ return [
         'Form' => 'Orchestra\Support\Facades\Form',
         'HTML' => 'Orchestra\Support\Facades\HTML',
         'Table' => 'Orchestra\Support\Facades\Table',
+        'Flash' => 'Laracasts\Flash\Flash',
 
     ],
 

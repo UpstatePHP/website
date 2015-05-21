@@ -16,6 +16,9 @@ class VideoRepository
         $this->youtube = $app['youtube'];
     }
 
+    /**
+     * @return Collection
+     */
     public function importFromYouTube()
     {
         $pageToken = true;
@@ -39,9 +42,13 @@ class VideoRepository
 
         $existingVideos = Video::all()->keyBy('video_id')->toArray();
 
+        $imported = new Collection;
+
         foreach (array_diff_key($videos->keyBy('video_id')->toArray(), $existingVideos) as $video) {
-            Video::create($video);
+            $imported->push(Video::create($video));
         }
+
+        return $imported;
     }
 
     public function getVideoList()
