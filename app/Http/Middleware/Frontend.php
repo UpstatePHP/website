@@ -49,13 +49,16 @@ class Frontend
         $menu->put('sponsors', [
             'route' => 'page.sponsors',
             'order' => 2,
-            'icon' => 'star'
+        ]);
+        $menu->put('videos', [
+            'route' => 'page.videos',
+            'order' => 3,
         ]);
 
         if ($this->app['auth']->check()) {
             $menu->put('admin', [
                 'route' => 'admin.dashboard',
-                'order' => 3,
+                'order' => 100,
                 'icon' => 'dashboard'
             ]);
         }

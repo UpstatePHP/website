@@ -68,6 +68,11 @@ class Backend
             'order' => 3,
             'icon' => 'file-text-o'
         ]);
+        $menu->put('videos', [
+            'route' => 'admin.videos.index',
+            'order' => 4,
+            'icon' => 'video-camera'
+        ]);
     }
 
 }

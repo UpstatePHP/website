@@ -6164,13 +6164,12 @@ button.close {
     display: none !important;
   }
 }
-h2,
-h3 {
+.slash-title,
+.home-bucket {
   font-family: 'Droid Sans Mono';
   font-weight: 300;
 }
-h2::before,
-h3::before {
+.slash-title::before {
   content: '//';
   margin-right: 10px;
 }
@@ -6402,4 +6401,66 @@ h3::before {
 .sponsor .thumbnail {
   overflow: hidden;
   position: relative;
+}
+.video .thumbnail {
+  overflow: hidden;
+  position: relative;
+}
+.video .caption {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  margin: 4px;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.video:hover .caption {
+  bottom: -38px;
+  opacity: 0;
+}
+.video .media__body {
+  background: rgba(69, 92, 122, 0.7);
+  /* rgba(41, 128, 185, 0.7);*/
+  bottom: 0;
+  color: white;
+  font-size: 1em;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 20px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 0;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+.video .media__body:hover {
+  opacity: 1;
+}
+.video .media__body h2 {
+  font-size: 20px;
+  margin-top: 0;
+}
+.video .media__body p {
+  margin-bottom: 1.5em;
+}
+.video .media__body p a {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  display: block;
+  font-size: 20px;
+  height: 40px;
+  margin: 15px auto;
+  padding-left: 3px;
+  padding-top: 6px;
+  width: 40px;
+}
+.video .media__body p a:hover {
+  opacity: .8;
 }

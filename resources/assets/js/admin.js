@@ -8,4 +8,28 @@
         }
     });
 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $('#import-videos').on('click', function(){
+        var $this = $(this),
+            import_url = $this.data('import-url');
+
+        $this.button('loading');
+
+        $.ajax({
+            method: 'POST',
+            url: import_url,
+            success: function() {
+                $this.button('reset');
+            },
+            error: function() {
+                $this.button('reset');
+            }
+        });
+    });
+
 })(jQuery, window, document);
