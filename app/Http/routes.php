@@ -13,6 +13,7 @@
 
 Route::get('/', ['as' => 'page.index', 'uses' => 'PagesController@index']);
 Route::get('sponsors', ['as' => 'page.sponsors', 'uses' => 'PagesController@sponsors']);
+Route::get('videos', ['as' => 'page.videos', 'uses' => 'PagesController@videos']);
 
 Route::get('/login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login']);
 Route::post('/login', ['as' => 'auth.login.do', 'uses' => 'Auth\AuthController@doLogin']);
@@ -26,6 +27,8 @@ Route::group(
     ],
     function()
     {
+        Route::pattern('id', '[0-9]+');
+
         Route::get('/', function()
         {
             return Redirect::route('admin.dashboard');
@@ -53,6 +56,12 @@ Route::group(
         Route::get('pages/edit/{id}', ['as' => 'admin.pages.edit', 'uses' => 'PagesController@edit']);
         Route::post('pages/{id}', ['as' => 'admin.pages.update', 'uses' => 'PagesController@update']);
         Route::get('pages/delete/{id}', ['as' => 'admin.pages.delete', 'uses' => 'PagesController@delete']);
+
+        Route::get('videos', ['as' => 'admin.videos.index', 'uses' => 'VideosController@index']);
+        Route::get('videos/edit/{id}', ['as' => 'admin.videos.edit', 'uses' => 'VideosController@edit']);
+        Route::post('videos/{id}', ['as' => 'admin.videos.update', 'uses' => 'VideosController@update']);
+        Route::get('videos/delete/{id}', ['as' => 'admin.videos.delete', 'uses' => 'VideosController@delete']);
+        Route::post('videos/import', ['as' => 'admin.videos.import', 'uses' => 'VideosController@import']);
 
     }
 );

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>UpstatePHP Admin</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="csrf-token" content="{!! csrf_token() !!}" />
 
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"
@@ -74,6 +75,8 @@
 
         <!-- Main content -->
         <section class="content">
+
+            @include('flash::message')
 
             @yield('main-content')
 
