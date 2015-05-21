@@ -51,8 +51,19 @@ class VideoRepository
         return $imported;
     }
 
-    public function getVideoList()
+    public function getVideoList($limit = null)
     {
-        return Video::query()->orderBy('published_at', 'desc')->get();
+        $query = Video::query()->orderBy('published_at', 'desc');
+
+        if ($limit) {
+            $query->take($limit);
+        }
+
+        return $query->get();
+    }
+
+    public function getLatestVideo()
+    {
+        return $this->getVideoList(1)->first();
     }
 }

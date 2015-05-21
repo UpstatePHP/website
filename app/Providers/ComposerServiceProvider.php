@@ -12,6 +12,7 @@ class ComposerServiceProvider extends ServiceProvider
         $this->add('backend.partials.sidebar-menu', 'AdminMenuComposer');
         $this->add('backend.sponsors.form', 'SponsorTypesComposer');
         $this->add('pages.shell', 'ShellPageComposer');
+        $this->add('buckets.recent-video', 'LatestVideoComposer');
     }
 
     protected function add($view, $class)
