@@ -13,6 +13,7 @@
 
 Route::get('/', ['as' => 'page.index', 'uses' => 'PagesController@index']);
 Route::get('sponsors', ['as' => 'page.sponsors', 'uses' => 'PagesController@sponsors']);
+Route::get('videos', ['as' => 'page.videos', 'uses' => 'PagesController@videos']);
 
 Route::get('/login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login']);
 Route::post('/login', ['as' => 'auth.login.do', 'uses' => 'Auth\AuthController@doLogin']);

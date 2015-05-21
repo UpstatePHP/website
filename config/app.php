@@ -134,6 +134,7 @@ return [
         'Thujohn\Twitter\TwitterServiceProvider',
         'Orchestra\Html\HtmlServiceProvider',
         'Intervention\Image\ImageServiceProviderLaravel5',
+        'Alaouy\Youtube\YoutubeServiceProvider',
 
         /*
          * Application Service Providers...

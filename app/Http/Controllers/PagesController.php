@@ -2,6 +2,7 @@
 
 use UpstatePHP\Website\Domain\Pages\Page;
 use UpstatePHP\Website\Domain\Sponsors\Sponsor;
+use UpstatePHP\Website\Domain\Videos\VideoRepository;
 
 class PagesController extends Controller
 {
@@ -18,6 +19,14 @@ class PagesController extends Controller
     {
         $sponsors = Sponsor::orderNaturally()->get();
         return view('pages.sponsors', compact('sponsors'));
+    }
+
+    public function videos(VideoRepository $videoRepository)
+    {
+        $videos = $videoRepository->getVideoList();
+        $pageHeader = 'Videos';
+
+        return view('pages.videos', compact('videos', 'pageHeader'));
     }
 
     public function catchAll($path)
