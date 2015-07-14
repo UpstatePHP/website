@@ -46,7 +46,10 @@
         <div class="event-details">
             <div class="col-lg-8">
                 <div class="event-title page-header">
-                    <h1>Next Event &mdash; Stay Tuned!</h1>
+                    <h1>Join us on {!! $nextScheduledEvent  !!}</h1>
+                </div>
+                <div class="event-body">
+                    Stay tuned for more details!
                 </div>
             </div>
         </div>
