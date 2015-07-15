@@ -4,13 +4,13 @@
 
     <div id="home-content" class="container">
         <div class="row">
-            <div class="col-lg-10 col-lg-offset-1">
+            <div class="col-lg-12">
                 @include('events.next')
             </div>
         </div>
     </div>
 
-    <div id="home-buckets" class="section-bg-primary">
+    <div id="home-buckets" class="section-bg-light">
         <div class="container">
             <div class="row">
                 @include('buckets.recent-video')

@@ -1,5 +1,10 @@
 body {
-    //font-family: 'Droid Sans Mono';
+    color: #141924;
+    font-family: "freightsans_pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    padding: 0;
 }
 
 .slash-title {
@@ -30,10 +35,58 @@ body {
     }
 }
 
+.section-bg-light {
+    background-color: #fff;
+    border-bottom: 1px solid #d7d8da;
+    border-top: 1px solid #d7d8da;
+}
+
 .home-bucket {
     font-weight: 300;
 
     .bucket-title {
         margin-bottom: 25px;
+    }
+}
+
+.card {
+    background: #fff;
+    //border: solid 1px @default-border-color;
+    border-radius: @border-radius-base;
+    .BoxShadowHelper();
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+
+    .card-content {
+        overflow: hidden;
+        padding: 20px;
+
+        &.hero {
+            padding: 40px 48px;
+        }
+
+        .page-header {
+            margin-top: 0;
+
+            h1 {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &.small {
+        height: 350px;
+    }
+}
+
+.btn {
+    border: none;
+    .BoxShadowHelper();
+    transition: box-shadow 0.5s ease,
+                background-color 0.5s ease;
+
+    &:hover {
+        .BoxShadowHelper(2);
     }
 }

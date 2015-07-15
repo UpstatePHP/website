@@ -1,6 +1,7 @@
 (function($, window, document, undefined){
 
     if ($('#event-location-map').length > 0) {
+        $('#event-location-map').height($('#event-location-map').parents('.card').outerHeight());
         var eventLocation = $('#event-location-info').data('location');
 
         var map = new GMaps({

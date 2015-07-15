@@ -20,5 +20,13 @@
     .thumbnail {
         overflow: hidden;
         position: relative;
+        transition: box-shadow 0.3s ease-in-out,
+                    margin-top 0.3s ease-in-out;
+
+        &:hover {
+            .BoxShadowHelper(3);
+            margin-top: -5px;
+        }
     }
+
 }

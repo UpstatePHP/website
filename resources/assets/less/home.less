@@ -29,20 +29,21 @@
 }
 
 .home-bucket {
-
-    &:extend(.slash-title);
-
-    padding-left: (@grid-gutter-width + 10) / 2;
-    padding-right: (@grid-gutter-width + 10) / 2;
+    
+    &:last-child {
+        margin-right: 0;
+    }
 
     .supporter {
 
+        width: 50%;
+
+        img {
+            max-width: 100%;
+        }
+
         .thumbnail {
             background: none;
-
-            img {
-                border-radius: @border-radius-base / 2;
-            }
         }
     }
 }

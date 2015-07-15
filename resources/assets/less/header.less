@@ -1,48 +1,42 @@
+#site-header {
+    margin-bottom: 65px;
+}
+
 #site-header.navbar {
-    font-family: 'Droid Sans Mono';
-    min-height: 70px;
 
     &.navbar-default.navbar-static-top {
         //margin-bottom: 32px;
     }
 
     .navbar-brand {
-        height: 60px;
+        height: @navbar-height;
+        line-height: 34px;
         padding: 19px;
-    }
-
-    .navbar-nav > li > a {
-        padding-bottom: 20px;
-        padding-top: 20px;
     }
 }
 
 .navbar-default {
-    background: @brand-secondary;
-    border-bottom: 12px solid @brand-primary;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #fff;
-
-    &:hover {
-        background-color: @brand-primary;
-        color: #fff;
-    }
+    transition: color 0.2s ease-in-out;
 }
-
-.navbar-default .navbar-nav > li.active > a {
-    background-color: @brand-primary;
-    color: #fff;
-
-    &:hover {
-        background-color: @brand-primary;
-        color: #fff;
-    }
-}
+//
+//.navbar-default .navbar-nav > li.active > a {
+//    background-color: @brand-primary;
+//    color: #fff;
+//
+//    &:hover {
+//        background-color: @brand-primary;
+//        color: #fff;
+//    }
+//}
 
 #main-brand {
-    color: #fff;
+    font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
     padding-left: 150px !important;
     position: relative;
 }
