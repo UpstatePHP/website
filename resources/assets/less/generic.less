@@ -7,6 +7,10 @@ h1 {
     padding: 0;
 }
 
+h1, h2 {
+    line-height: 42px;
+}
+
 .slash-title {
 
     font-family: 'Droid Sans Mono';
@@ -88,5 +92,35 @@ h1 {
 
     &:hover {
         .BoxShadowHelper(2);
+    }
+}
+
+.sidebar-widget {
+    border-bottom: 1px solid #dddfe3;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    
+    &:last-child {
+        border-bottom: none;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+}
+
+.spinner {
+    transition: opacity 0.25s, width 0.25s;
+}
+.icon-spin {
+    animation: spin 2s infinite linear;
+}
+
+.form-control.error {
+    border-color: #db4f50;
+
+    & + label.error {
+        color: #db4f50;
     }
 }

@@ -19,6 +19,17 @@ Route::get('/login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login
 Route::post('/login', ['as' => 'auth.login.do', 'uses' => 'Auth\AuthController@doLogin']);
 Route::get('/logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logout']);
 
+Route::post('/contact', function(
+    Illuminate\Http\Request $request,
+    \UpstatePHP\Website\Services\Contact $contactService
+) {
+    $contactService->send(
+        $request->all()
+    );
+
+    return response(null);
+});
+
 Route::group(
     [
         'prefix' => 'admin',

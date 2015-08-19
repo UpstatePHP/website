@@ -53,6 +53,7 @@ gulp.task('main', function () {
         'resources/assets/plugins/bootstrap/js/tab.js',
         'resources/assets/plugins/bootstrap/js/affix.js',
         'resources/assets/plugins/gmaps/gmaps.js',
+        'resources/assets/plugins/jquery-validation/jquery.validate.js',
         'resources/assets/js/main.js'
     ])
         .pipe(plugins.concat('main.min.js'))

@@ -5,6 +5,8 @@
     <title>UpstatePHP {!! isset($pageTitle) ? ' - ' . $pageTitle : '' !!}</title>
     <meta name="description" content="UpstatePHP is a group of like minded professionals helping to build a better community, specifically in the Upstate of South Carolina." />
 
+    <link rel="shortcut icon" href="/favicon.ico">
+
     <!-- Open Graph data -->
     <meta property="og:title" content="UpstatePHP" />
     <meta property="og:type" content="article" />
