@@ -11,14 +11,12 @@
                     </div>
                     @foreach ($sponsors as $sponsor)
                         <div class="col-lg-4 sponsor">
-                            <div class="thumbnail">
+                            <a href="{!! $sponsor->url !!}" class="thumbnail" target="_blank">
                                 @if ($sponsor->type === 'supporter')
-                                <div class="supporter-ribbon">Supporter</div>
+                                    <div class="supporter-ribbon">Supporter</div>
                                 @endif
-                                <a href="{!! $sponsor->url !!}" target="_blank">
-                                    <img src="/uploads/{!! $sponsor->logo !!}" title="{!! $sponsor->name !!}">
-                                </a>
-                            </div>
+                                <img src="/uploads/{!! $sponsor->logo !!}" title="{!! $sponsor->name !!}">
+                            </a>
                         </div>
                     @endforeach
                 </div>
