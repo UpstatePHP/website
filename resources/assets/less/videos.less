@@ -1,4 +1,8 @@
 .video {
+
+    height: 340px;
+    padding: 0 15px 15px;
+    
     .thumbnail {
         overflow: hidden;
         position: relative;
@@ -45,26 +49,39 @@
             font-size: 20px;
             margin-top: 0;
         }
+            
+        a {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
 
-        p {
-            margin-bottom: 1.5em;
-
-            a {
-                color: #fff;
-                border: 2px solid #fff;
-                border-radius: 20px;
-                display: block;
-                font-size: 20px;
-                height: 40px;
-                margin: 15px auto;
-                padding-left: 3px;
-                padding-top: 6px;
-                width: 40px;
-
-                &:hover {
-                    opacity: .8;
-                }
+            &:hover .play-circle {
+                opacity: .8;
             }
+        }
+
+        .play-circle {
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            display: block;
+            font-size: 32px;
+            height: 64px;
+            //margin: 15px auto;
+            padding-left: 3px;
+            padding-top: 12px;
+            width: 64px;
+
+            left: 50%;
+            margin: -38px 0 0 -32px;
+            position: absolute;
+            top: 50%;
+
+            //&:hover {
+            //    opacity: .8;
+            //}
         }
     }
 }
