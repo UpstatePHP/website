@@ -42,10 +42,10 @@ return [
 			'expire' => 60,
 		],
 
-		'upstatephp' => [
+		'beanstalkd' => [
 			'driver' => 'beanstalkd',
 			'host'   => 'localhost',
-			'queue'  => 'default',
+			'queue'  => 'upstatephp',
 			'ttr'    => 60,
 		],
 
