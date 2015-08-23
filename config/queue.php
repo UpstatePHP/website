@@ -42,7 +42,7 @@ return [
 			'expire' => 60,
 		],
 
-		'beanstalkd' => [
+		'upstatephp' => [
 			'driver' => 'beanstalkd',
 			'host'   => 'localhost',
 			'queue'  => 'default',

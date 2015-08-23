@@ -1,3 +1,4 @@
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <div class="modal fade" id="contact-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -20,6 +21,9 @@
                     <div class="form-group">
                         <label>Comments</label>
                         <textarea name="comments" class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <div class="g-recaptcha" data-sitekey="6LfMmQsTAAAAABoalTw18Ya97OHBcBTOdxUVKgVt"></div>
                     </div>
                 </form>
             </div>

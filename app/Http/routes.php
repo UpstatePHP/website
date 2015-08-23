@@ -21,13 +21,28 @@ Route::get('/logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@log
 
 Route::post('/contact', function(
     Illuminate\Http\Request $request,
-    \UpstatePHP\Website\Services\Contact $contactService
+    \UpstatePHP\Website\Services\ReCaptcha $reCaptcha,
+    \Illuminate\Contracts\Queue\Queue $queue
 ) {
-    $contactService->send(
-        $request->all()
-    );
 
-    return response(null);
+    if ($reCaptcha->verify(
+        env('RECAPTCHA_SECRET'),
+        $request->get('g-recaptcha-response')
+    )) {
+        $queue->push(
+            new \UpstatePHP\Website\Commands\SendContactEmail(
+                $request->get('subject'),
+                $request->get('name'),
+                $request->get('email'),
+                $request->get('comments', null)
+            )
+        );
+
+        return response(null);
+    } else {
+        return response(null, \Illuminate\Http\Response::HTTP_UNAUTHORIZED);
+    }
+
 });
 
 Route::group(
