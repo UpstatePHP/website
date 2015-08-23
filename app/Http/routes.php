@@ -14,36 +14,11 @@
 Route::get('/', ['as' => 'page.index', 'uses' => 'PagesController@index']);
 Route::get('sponsors', ['as' => 'page.sponsors', 'uses' => 'PagesController@sponsors']);
 Route::get('videos', ['as' => 'page.videos', 'uses' => 'PagesController@videos']);
+Route::post('/contact', ['as' => 'contact.post', 'uses' => 'PagesController@postContact']);
 
 Route::get('/login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login']);
 Route::post('/login', ['as' => 'auth.login.do', 'uses' => 'Auth\AuthController@doLogin']);
 Route::get('/logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@logout']);
-
-Route::post('/contact', function(
-    Illuminate\Http\Request $request,
-    \UpstatePHP\Website\Services\ReCaptcha $reCaptcha,
-    \Illuminate\Contracts\Queue\Queue $queue
-) {
-
-    if ($reCaptcha->verify(
-        env('RECAPTCHA_SECRET'),
-        $request->get('g-recaptcha-response')
-    )) {
-        $queue->push(
-            new \UpstatePHP\Website\Commands\SendContactEmail(
-                $request->get('subject'),
-                $request->get('name'),
-                $request->get('email'),
-                $request->get('comments', null)
-            )
-        );
-
-        return response(null);
-    } else {
-        return response(null, \Illuminate\Http\Response::HTTP_UNAUTHORIZED);
-    }
-
-});
 
 Route::group(
     [

@@ -35,7 +35,9 @@
         var $submitter = $(this);
         $contactForm.validate();
 
-        if ($contactForm.valid()) {
+        if ($contactForm.valid()
+            && grecaptcha.getResponse() !== ''
+        ) {
             $submitter.button('loading');
             $.ajax({
                 url: '/contact',
@@ -45,6 +47,7 @@
                     $submitter.html($submitter.attr('data-sent-text'));
                     setTimeout(function(){
                         $contactForm[0].reset();
+                        grecaptcha.reset();
                         $submitter.button('reset');
                         $('#contact-modal').modal('hide');
                     }, 750);
