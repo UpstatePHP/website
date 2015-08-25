@@ -16,10 +16,13 @@ class CreateEventSponsorsPivotTable extends Migration {
 		{
 			$table->integer('event_id')->unsigned();
             $table->integer('sponsor_id')->unsigned();
-
-			$table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
-            $table->foreign('sponsor_id')->references('id')->on('sponsors')->onDelete('cascade');
 		});
+
+        Schema::table('event_sponsors', function($table)
+        {
+            $table->foreign('event_id')->references('id')->on('events')->onDelete('cascade');
+            $table->foreign('sponsor_id')->references('id')->on('sponsors')->onDelete('cascade');
+        });
 	}
 
 	/**
