@@ -35,7 +35,8 @@ class EventsController extends Controller
     {
         $data = [
             'pageHeader' => 'Create Event',
-            'event' => new EventModel
+            'event' => new EventModel,
+            'eventSponsors' => []
         ];
 
         return view('backend.events.form', $data);
@@ -52,6 +53,9 @@ class EventsController extends Controller
         $data = [
             'event' => EventModel::find($id)
         ];
+
+        $data['eventSponsors'] = $data['event']->sponsors->lists('id');
+
         return view('backend.events.form', $data);
     }
 

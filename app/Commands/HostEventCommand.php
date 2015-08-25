@@ -15,6 +15,7 @@ class HostEventCommand extends Command
     public $zipcode;
     public $latitude;
     public $longitude;
+    public $sponsors;
 
     public function __construct(
         $title,
@@ -29,7 +30,8 @@ class HostEventCommand extends Command
         $state = null,
         $zipcode = null,
         $latitude = null,
-        $longitude = null
+        $longitude = null,
+        $sponsors = []
     ) {
 
         $this->title = $title;
@@ -45,5 +47,6 @@ class HostEventCommand extends Command
         $this->zipcode = $zipcode;
         $this->latitude = $latitude;
         $this->longitude = $longitude;
+        $this->sponsors = $sponsors;
     }
 }

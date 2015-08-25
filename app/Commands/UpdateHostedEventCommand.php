@@ -16,6 +16,7 @@ class UpdateHostedEventCommand extends Command
     public $latitude;
     public $longitude;
     public $id;
+    public $sponsors;
 
     public function __construct(
         $id,
@@ -31,7 +32,8 @@ class UpdateHostedEventCommand extends Command
         $state = null,
         $zipcode = null,
         $latitude = null,
-        $longitude = null
+        $longitude = null,
+        $sponsors = []
     ) {
         $this->id = $id;
         $this->title = $title;
@@ -47,5 +49,6 @@ class UpdateHostedEventCommand extends Command
         $this->zipcode = $zipcode;
         $this->latitude = $latitude;
         $this->longitude = $longitude;
+        $this->sponsors = $sponsors;
     }
 }

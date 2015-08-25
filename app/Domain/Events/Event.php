@@ -30,4 +30,14 @@ class Event extends Model
     {
         $this->attributes['ends_at'] = new Carbon($value);
     }
+
+    public function sponsors()
+    {
+        return $this->belongsToMany(
+            'UpstatePHP\Website\Domain\Sponsors\Sponsor',
+            'event_sponsors',
+            'event_id',
+            'sponsor_id'
+        );
+    }
 }

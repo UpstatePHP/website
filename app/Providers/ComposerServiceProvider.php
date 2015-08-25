@@ -13,6 +13,7 @@ class ComposerServiceProvider extends ServiceProvider
         $this->add('backend.sponsors.form', 'SponsorTypesComposer');
         $this->add('pages.shell', 'ShellPageComposer');
         $this->add('buckets.recent-video', 'LatestVideoComposer');
+        $this->add('backend.events.form', 'SponsorsListComposer');
     }
 
     protected function add($view, $class)

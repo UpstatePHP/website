@@ -88,6 +88,17 @@
                 </div>
             </div>
         </div>
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">Location</h3>
+            </div>
+            <div class="box-body row">
+                <div class="form-group col-lg-6">
+                    {!! Form::label('sponsors') !!}
+                    {!! Form::select('sponsors[]', $sponsors, $eventSponsors, ['multiple' => 'multiple', 'class' => 'form-control select2']) !!}
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="row">

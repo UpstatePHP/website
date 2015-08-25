@@ -31,6 +31,8 @@ class HostEventCommandHandler
 
         $event->save();
 
+        $event->sponsors()->sync($command->sponsors);
+
         return $event;
     }
 
