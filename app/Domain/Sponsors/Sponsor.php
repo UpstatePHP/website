@@ -4,7 +4,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Sponsor extends Model
 {
-
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function scopeSupportersAndSponsors($query)
@@ -24,6 +23,16 @@ class Sponsor extends Model
                 )
             )"
         ), $direction);
+    }
+
+    public function events()
+    {
+        return $this->belongsToMany(
+            'UpstatePHP\Website\Domain\Events\Event',
+            'event_sponsors',
+            'sponsor_id',
+            'event_id'
+        );
     }
 
 }

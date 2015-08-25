@@ -27,6 +27,7 @@ gulp.task('admin-styles', function () {
         'resources/assets/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.css',
         'resources/assets/plugins/bootstrap-markdown/bootstrap-markdown.css',
         'resources/assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css',
+        'resources/assets/plugins/select2/select2.css',
         'resources/assets/plugins/iCheck/all.css',
         'resources/assets/admin-lte/AdminLTE.css',
         'resources/assets/admin-lte/skins/skin-purple.css',
@@ -79,6 +80,7 @@ gulp.task('admin', function () {
         'resources/assets/plugins/bootstrap-markdown/markdown.js',
         'resources/assets/plugins/bootstrap-markdown/to-markdown.js',
         'resources/assets/plugins/bootstrap-markdown/bootstrap-markdown.js',
+        'resources/assets/plugins/select2/select2.full.js',
         'resources/assets/admin-lte/app.js',
         'resources/assets/js/admin.js'
     ])

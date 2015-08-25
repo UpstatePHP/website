@@ -29,6 +29,7 @@ class UpdateHostedEventCommandHandler
             'latitude' => $command->latitude,
             'longitude' => $command->longitude
         ]);
+        $event->sponsors()->sync($command->sponsors);
 
         $event->save();
 
