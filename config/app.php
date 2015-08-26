@@ -151,6 +151,7 @@ return [
         'UpstatePHP\Website\Providers\FormMacroProvider',
         'UpstatePHP\Website\Providers\ImageServiceProvider',
         'UpstatePHP\Website\Providers\SponsorServiceProvider',
+        'UpstatePHP\Website\Providers\FilesystemServiceProvider',
     ],
     /*
     |--------------------------------------------------------------------------

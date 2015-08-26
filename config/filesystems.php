@@ -65,6 +65,12 @@ return [
 			'region'    => 'IAD',
 		],
 
+		'dropbox' => [
+			'appKey' => env('DROPBOX_APP_KEY'),
+			'appSecret' => env('DROPBOX_APP_SECRET'),
+			'accessToken' => env('DROPBOX_ACCESS_TOKEN')
+		]
+
 	],
 
 ];
