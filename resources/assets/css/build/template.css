@@ -6609,6 +6609,13 @@ h2 {
   transform: rotate(45deg);
   width: 200px;
 }
+#supporters,
+#sponsors {
+  overflow: hidden;
+}
+#sponsors .sponsor {
+  height: 150px;
+}
 .sponsor .thumbnail {
   background-color: transparent;
   overflow: hidden;
