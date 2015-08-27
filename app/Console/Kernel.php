@@ -11,7 +11,7 @@ class Kernel extends ConsoleKernel {
 	 * @var array
 	 */
 	protected $commands = [
-		'UpstatePHP\Website\Console\Commands\Inspire',
+		'UpstatePHP\Website\Console\Commands\Backup'
 	];
 
 	/**
@@ -22,8 +22,8 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected function schedule(Schedule $schedule)
 	{
-		$schedule->command('inspire')
-				 ->hourly();
+		$schedule->command('upstatephp:backup')
+			->dailyAt('00:01');
 	}
 
 }
