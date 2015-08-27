@@ -9,12 +9,17 @@
                     <div class="page-header">
                         <h1>Sponsors</h1>
                     </div>
+                    @foreach ($supporters as $supporter)
+                        <div class="col-lg-6 sponsor">
+                            <a href="{!! $supporter->url !!}" class="thumbnail" target="_blank">
+                                <div class="supporter-ribbon">Supporter</div>
+                                <img src="/uploads/{!! $supporter->logo !!}" title="{!! $supporter->name !!}">
+                            </a>
+                        </div>
+                    @endforeach
                     @foreach ($sponsors as $sponsor)
                         <div class="col-lg-4 sponsor">
                             <a href="{!! $sponsor->url !!}" class="thumbnail" target="_blank">
-                                @if ($sponsor->type === 'supporter')
-                                    <div class="supporter-ribbon">Supporter</div>
-                                @endif
                                 <img src="/uploads/{!! $sponsor->logo !!}" title="{!! $sponsor->name !!}">
                             </a>
                         </div>

@@ -21,7 +21,19 @@ class PagesController extends Controller
     public function sponsors()
     {
         $sponsors = Sponsor::orderNaturally()->get();
-        return view('pages.sponsors', compact('sponsors'));
+
+        $data = [
+            'sponsors' => $sponsors->filter(function($sponsor)
+            {
+                return $sponsor->type !== 'supporter';
+            }),
+            'supporters' => $sponsors->filter(function($sponsor)
+            {
+                return $sponsor->type === 'supporter';
+            })
+        ];
+
+        return view('pages.sponsors', $data);
     }
 
     public function videos(VideoRepository $videoRepository)
