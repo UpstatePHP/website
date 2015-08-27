@@ -59,6 +59,19 @@ class SystemBackup
         return $backupZip;
     }
 
+    public function sendBackupOffsite($backup, $clearAfterwards = false)
+    {
+        $offsiteBackup = $this->app['offsite-backup'];
+
+        if (file_exists($backup)) {
+            $offsiteBackup->put(basename($backup), file_get_contents($backup));
+
+            if ($clearAfterwards) {
+                @unlink($backup);
+            }
+        }
+    }
+
     private function addUploadsToZip(ZipArchive &$zip)
     {
         $rootPath = public_path('uploads');
@@ -79,19 +92,6 @@ class SystemBackup
 
                 // Add current file to archive
                 $zip->addFile($filePath, 'uploads/' . $relativePath);
-            }
-        }
-    }
-
-    public function sendBackupOffsite($backup, $clearAfterwards = false)
-    {
-        $offsiteBackup = $this->app['offsite-backup'];
-
-        if (file_exists($backup)) {
-            $offsiteBackup->put(basename($backup), file_get_contents($backup));
-
-            if ($clearAfterwards) {
-                @unlink($backup);
             }
         }
     }
@@ -125,5 +125,13 @@ class SystemBackup
     public function __destruct()
     {
         $this->removeBackupDirectory();
+    }
+
+    /**
+     * @return string
+     */
+    public function getBackupName()
+    {
+        return $this->backupName;
     }
 }

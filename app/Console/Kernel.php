@@ -11,7 +11,7 @@ class Kernel extends ConsoleKernel {
 	 * @var array
 	 */
 	protected $commands = [
-		'UpstatePHP\Website\Console\Commands\Inspire',
+		'UpstatePHP\Website\Console\Commands\Backup'
 	];
 
 	/**
