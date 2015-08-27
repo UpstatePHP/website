@@ -18,6 +18,15 @@
                             </a>
                         </div>
                     @endforeach
+                        @if(count($supporters) % 2 != 0)
+                            <div id="supporter-filler" class="col-lg-6 sponsor">
+                                <p>
+                                    There's room for one more!
+                                    <br>
+                                    <a href="#contact-modal" data-toggle="modal">Contact us</a> to become an ongoing supporter now.
+                                </p>
+                            </div>
+                        @endif
                     </div>
                     <div id="sponsors">
                     @foreach ($sponsors as $sponsor)
