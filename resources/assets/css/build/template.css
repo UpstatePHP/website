@@ -6614,6 +6614,10 @@ h2 {
   overflow: hidden;
   position: relative;
 }
+.sponsor .thumbnail img {
+  max-height: 190px;
+  width: 100%;
+}
 .video {
   height: 340px;
   padding: 0 15px 15px;
