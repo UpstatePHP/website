@@ -9,6 +9,7 @@
                     <div class="page-header">
                         <h1>Sponsors</h1>
                     </div>
+                    <div id="supporters">
                     @foreach ($supporters as $supporter)
                         <div class="col-lg-6 sponsor">
                             <a href="{!! $supporter->url !!}" class="thumbnail" target="_blank">
@@ -17,6 +18,8 @@
                             </a>
                         </div>
                     @endforeach
+                    </div>
+                    <div id="sponsors">
                     @foreach ($sponsors as $sponsor)
                         <div class="col-lg-4 sponsor">
                             <a href="{!! $sponsor->url !!}" class="thumbnail" target="_blank">
@@ -24,6 +27,7 @@
                             </a>
                         </div>
                     @endforeach
+                    </div>
                 </div>
             </div>
         </div>
