@@ -18,7 +18,7 @@ class Event implements MapperInterface
     {
         return [
             'title' => $this->data['name']->text,
-            'description' => $this->data['description']->html,
+            'description' => $this->data['description']->html ?: '',
             'registration_link' => $this->data['url'],
             'remote_id' => (int) $this->data['id'],
             'begins_at' => $this->data['start']->local,

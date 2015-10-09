@@ -2,9 +2,11 @@
 
 @section('content-header-actions')
 
-<a href="{!! route('admin.events.create') !!}" class="btn btn-block btn-success">
+<a href="{!! route('admin.events.create') !!}" class="btn btn-success">
     Create Event <i class="fa fa-fw fa-plus"></i>
 </a>
+
+<a href="{!! route('admin.events.import') !!}" class="btn btn-info">Import Events</a>
 
 @stop
 

@@ -1,25 +1,34 @@
-<?php namespace UpstatePHP\Website\Events\Commands;
+<?php namespace UpstatePHP\Website\Handlers\Commands;
 
-use Laracasts\Commander\CommanderTrait;
-use Laracasts\Commander\CommandHandler;
-use UpstatePHP\Website\Events\EventRepository;
+use UpstatePHP\Website\Commands\ImportNewEventsCommand;
 
-class ImportNewEventsCommandHandler implements CommandHandler
+class ImportNewEventsCommandHandler
 {
-    use CommanderTrait;
-
     /**
      * Handle the command
      *
      * @param $command
      * @return mixed
      */
-    public function handle($command)
+    public function handle(ImportNewEventsCommand $command)
     {
         foreach ($command->events as $event) {
-            $event = $this->execute(
-                'UpstatePHP\Website\Events\Commands\HostEventCommand',
-                $event
+            \Bus::dispatch(
+                new \UpstatePHP\Website\Commands\HostEventCommand(
+                    $event['title'],
+                    $event['begins_at'],
+                    $event['ends_at'],
+                    $event['remote_id'],
+                    $event['description'],
+                    $event['registration_link'],
+                    $event['location_name'],
+                    $event['street'],
+                    $event['city'],
+                    $event['state'],
+                    $event['zipcode'],
+                    $event['latitude'],
+                    $event['longitude']
+                )
             );
         }
     }

@@ -1,4 +1,4 @@
-<?php namespace UpstatePHP\Website\Events\Commands;
+<?php namespace UpstatePHP\Website\Commands;
 
 class ImportNewEventsCommand
 {

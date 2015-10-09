@@ -32,8 +32,9 @@ class EventbriteProvider extends EloquentProvider implements EventRepository
     public function fetchRemoteEvents($sinceId = null)
     {
         $query = [
-            'organizer.id' => $this->app['config']->get('events.organizer_id'),
-            'token' => getenv('EB_OAUTH_TOKEN')
+            'organizer.id' => getenv('EB_ORGANIZER_ID'),
+            'token' => getenv('EB_OAUTH_TOKEN'),
+            'expand' => 'venue'
         ];
 
         if (! is_null($sinceId)) {

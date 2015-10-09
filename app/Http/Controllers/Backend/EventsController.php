@@ -72,11 +72,11 @@ class EventsController extends Controller
     public function import()
     {
         $newEvents = $this->eventRepository->importNewRemoteEvents();
-        $this->execute(
-            '\UpstatePHP\Website\Events\Commands\ImportNewEventsCommand',
-            ['events' => $newEvents]
+        $this->dispatch(
+            new \UpstatePHP\Website\Commands\ImportNewEventsCommand($newEvents)
         );
-        return Redirect::route('backend.events.index')->with(
+
+        return redirect()->route('admin.events.index')->with(
             'message',
             sprintf(
                 'success::%s new events imported',
