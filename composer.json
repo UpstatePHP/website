@@ -1,0 +1,14 @@
+{
+    "name": "upstatephp/website",
+    "description": "The website for UpstatePHP.com",
+    "authors": [
+        {
+            "name": "Steven Wade",
+            "email": "stevenwadejr@gmail.com"
+        }
+    ],
+    "require": {
+        "league/plates": "^3.1",
+        "endroid/twitter": "^1.1"
+    }
+}

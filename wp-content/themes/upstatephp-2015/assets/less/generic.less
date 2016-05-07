@@ -1,0 +1,100 @@
+body {
+    color: #141924;
+    font-family: "freightsans_pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    padding: 0;
+}
+
+h1, h2 {
+    line-height: 42px;
+}
+
+h4 {
+    line-height: 24px;
+}
+
+.slash-title {
+
+    font-family: 'Droid Sans Mono';
+    font-weight: 300;
+
+    &::before {
+        content: '//';
+        margin-right: 10px;
+    }
+}
+
+#page-container {
+    padding-top: 92px;
+    padding-bottom: 54px;
+    margin-top: -92px;
+    margin-bottom: -54px;
+    min-height: 100%;
+}
+
+.section-bg-primary {
+    background-color: @brand-primary;
+    color: #fff;
+
+    a {
+        color: #fff;
+    }
+}
+
+.section-bg-light {
+    background-color: #fff;
+    border-bottom: 1px solid #d7d8da;
+    border-top: 1px solid #d7d8da;
+}
+
+.home-bucket {
+    font-weight: 300;
+
+    .bucket-title {
+        margin-bottom: 25px;
+    }
+}
+
+
+.btn {
+    border: none;
+    .BoxShadowHelper();
+    transition: box-shadow 0.5s ease,
+                background-color 0.5s ease;
+
+    &:hover {
+        .BoxShadowHelper(2);
+    }
+}
+
+.sidebar-widget {
+    border-bottom: 1px solid #dddfe3;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    
+    &:last-child {
+        border-bottom: none;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+}
+
+.spinner {
+    transition: opacity 0.25s, width 0.25s;
+}
+.icon-spin {
+    animation: spin 2s infinite linear;
+}
+
+.form-control.error {
+    border-color: #db4f50;
+
+    & + label.error {
+        color: #db4f50;
+    }
+}
