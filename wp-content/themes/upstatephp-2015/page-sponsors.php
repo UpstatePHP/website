@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-9">
             <div class="card">
-                <div class="card-content hero">
+                <div class="card-content">
                     <?php while (have_posts() ) : the_post(); ?>
                     <div class="page-header">
                         <h1><?php the_title(); ?></h1>

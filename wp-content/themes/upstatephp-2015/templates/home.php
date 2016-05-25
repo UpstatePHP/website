@@ -12,13 +12,13 @@ get_header(); ?>
 </div>
 
 <?php if(is_active_sidebar('home-buckets')): ?>
-<div id="home-buckets" class="section-bg-light">
+<!--<div id="home-buckets" class="section-bg-light">-->
     <div class="container">
         <div class="row">
             <?php dynamic_sidebar('home-buckets'); ?>
         </div>
     </div>
-</div>
+<!--</div>-->
 <?php endif; ?>
 
 <?php get_footer(); ?>

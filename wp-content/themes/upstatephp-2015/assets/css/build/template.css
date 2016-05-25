@@ -3751,7 +3751,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 72px;
+  min-height: 69px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -3859,10 +3859,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 26px 15px;
+  padding: 24.5px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 72px;
+  height: 69px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -3879,8 +3879,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 19px;
-  margin-bottom: 19px;
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3904,7 +3904,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 13px -15px;
+  margin: 12.25px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -3942,8 +3942,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: 24.5px;
+    padding-bottom: 24.5px;
   }
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
@@ -3965,8 +3965,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 19px;
-  margin-bottom: 19px;
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4045,20 +4045,20 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 19px;
-  margin-bottom: 19px;
+  margin-top: 17.5px;
+  margin-bottom: 17.5px;
 }
 .navbar-btn.btn-sm {
-  margin-top: 21px;
-  margin-bottom: 21px;
+  margin-top: 19.5px;
+  margin-bottom: 19.5px;
 }
 .navbar-btn.btn-xs {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 23.5px;
+  margin-bottom: 23.5px;
 }
 .navbar-text {
-  margin-top: 26px;
-  margin-bottom: 26px;
+  margin-top: 24.5px;
+  margin-bottom: 24.5px;
 }
 @media (min-width: 768px) {
   .navbar-text {
@@ -6165,21 +6165,14 @@ button.close {
 }
 .card {
   background-color: #fff;
-  position: relative;
-  margin-bottom: 0.75rem;
-  border: 0.0625rem solid #e5e5e5;
-  -webkit-border-radius: 0.25rem;
-  -moz-border-radius: 0.25rem;
-  border-radius: 0.25rem;
-  padding: 0;
-}
-.card {
-  background: #fff;
+  border: 1px solid #d7d8da;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
   padding: 0;
   position: relative;
-  overflow: hidden;
 }
 .card .card-content {
   overflow: hidden;
@@ -6226,22 +6219,22 @@ button.close {
 .card-header {
   padding: 0.75rem 1.25rem;
   background-color: #f5f5f5;
-  border-bottom: 0.0625rem solid #e5e5e5;
+  border-bottom: 1px solid #d7d8da;
 }
 .card-header:first-child {
-  -webkit-border-radius: 0.1875rem 0.1875rem 0 0;
-  -moz-border-radius: 0.1875rem 0.1875rem 0 0;
-  border-radius: 0.1875rem 0.1875rem 0 0;
+  -webkit-border-radius: -0.75rem -0.75rem 0 0;
+  -moz-border-radius: -0.75rem -0.75rem 0 0;
+  border-radius: -0.75rem -0.75rem 0 0;
 }
 .card-footer {
   padding: 0.75rem 1.25rem;
   background-color: #f5f5f5;
-  border-top: 0.0625rem solid #e5e5e5;
+  border-top: 1px solid #d7d8da;
 }
 .card-footer:last-child {
-  -webkit-border-radius: 0 0 0.1875rem 0.1875rem;
-  -moz-border-radius: 0 0 0.1875rem 0.1875rem;
-  border-radius: 0 0 0.1875rem 0.1875rem;
+  -webkit-border-radius: 0 0 -0.75rem -0.75rem;
+  -moz-border-radius: 0 0 -0.75rem -0.75rem;
+  border-radius: 0 0 -0.75rem -0.75rem;
 }
 .card-blockquote {
   padding: 0;
@@ -6342,6 +6335,9 @@ button.close {
     transform: rotate(360deg);
   }
 }
+*:focus {
+  outline: none;
+}
 body {
   color: #141924;
   font-family: "freightsans_pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
@@ -6391,11 +6387,8 @@ h4 {
 }
 .btn {
   border: none;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: box-shadow 0.5s ease, background-color 0.5s ease;
-}
-.btn:hover {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 0;
+  transition: background-color 0.5s ease;
 }
 .sidebar-widget {
   border-bottom: 1px solid #dddfe3;
@@ -6425,7 +6418,7 @@ h4 {
   margin-bottom: 65px;
 }
 #site-header.navbar .navbar-brand {
-  height: 72px;
+  height: 69px;
   line-height: 34px;
   padding: 19px;
 }
@@ -6436,6 +6429,16 @@ h4 {
 }
 .navbar-default .navbar-nav > li > a {
   transition: color 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+}
+.navbar-default .navbar-nav > li.active > a {
+  background: none;
+  border-bottom: 3px solid #455c7a;
+  color: #2e3641;
+}
+.navbar-default .navbar-nav > li.active > a:hover {
+  border-bottom: 3px solid #455c7a;
+  color: #2e3641;
 }
 #main-brand {
   font-family: "Lucida Sans", Geneva, Verdana, sans-serif;
@@ -6449,16 +6452,16 @@ h4 {
   width: 143px;
 }
 #site-footer {
-  background: #2e3641;
+  border-top: 1px solid #d7d8da;
   height: 54px;
   margin-top: 50px;
+  padding-top: 10px;
 }
 #site-footer .social-link {
   color: #2e3641;
   display: inline-block;
   height: 40px;
   margin-left: 3px;
-  margin-top: 7px;
   position: relative;
 }
 #site-footer .social-link svg {
@@ -6466,7 +6469,7 @@ h4 {
   fill: #2e3641;
   height: 52%;
   left: 2px;
-  position: absolute;
+  position: relative;
   top: 9px;
   z-index: 2;
 }
@@ -6584,6 +6587,7 @@ h4 {
 }
 .tweet img {
   border-radius: 4px;
+  border: 1px solid #d7d8da;
 }
 .tweet:last-child {
   border: none;
@@ -6605,7 +6609,7 @@ h4 {
   max-width: 100%;
 }
 .home-bucket .supporter .thumbnail {
-  background: none;
+  background: #fff;
 }
 .supporter-ribbon {
   background: #455c7a;

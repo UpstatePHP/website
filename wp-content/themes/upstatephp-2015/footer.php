@@ -1,9 +1,9 @@
 
     </div><!-- END #page-container -->
-    <footer id="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <footer id="site-footer">
                     <div class="social-links pull-right">
                         <?php
                             $footerLinks = get_bookmarks([
@@ -23,14 +23,13 @@
                                     include $svg;
                                 }
                             ?>
-                            <div class="hexagon"></div>
                         </a>
                         <?php endforeach; ?>
                     </div>
-                </div>
+                </footer>
             </div>
         </div>
-    </footer>
+    </div>
 <?php wp_footer(); ?>
 </body>
 </html>

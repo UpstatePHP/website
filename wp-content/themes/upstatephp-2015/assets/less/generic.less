@@ -1,3 +1,7 @@
+*:focus {
+    outline: none;
+}
+
 body {
     color: #141924;
     font-family: "freightsans_pro", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
@@ -60,13 +64,8 @@ h4 {
 
 .btn {
     border: none;
-    .BoxShadowHelper();
-    transition: box-shadow 0.5s ease,
-                background-color 0.5s ease;
-
-    &:hover {
-        .BoxShadowHelper(2);
-    }
+    border-radius: 0;
+    transition: background-color 0.5s ease;
 }
 
 .sidebar-widget {
