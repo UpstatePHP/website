@@ -45,13 +45,13 @@ tr_meta_box('Location')->apply($event)->setCallback(function(){
 /**
  * @registers Videos
  */
-//$video = tr_post_type('Video', 'Videos');
-//$video->setIcon('camera2');
-//tr_meta_box('Meta')->apply($video)->setCallback(function(){
-//    $form = tr_form();
-//    echo $form->text('Video ID');
-//    echo $form->date('Published On');
-//});
+$video = tr_post_type('Video', 'Videos');
+$video->setIcon('camera2');
+tr_meta_box('Meta')->apply($video)->setCallback(function(){
+    $form = tr_form();
+    echo $form->text('Video ID');
+    echo $form->date('Published On');
+});
 
 //-----------------------------
 // Handle Post Type Image Sizes

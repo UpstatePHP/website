@@ -6451,6 +6451,9 @@ h4 {
   top: 6px;
   width: 143px;
 }
+#copyright {
+  margin-top: 8px;
+}
 #site-footer {
   border-top: 1px solid #d7d8da;
   height: 54px;

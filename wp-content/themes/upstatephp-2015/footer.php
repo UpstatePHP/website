@@ -4,6 +4,9 @@
         <div class="row">
             <div class="col-lg-12">
                 <footer id="site-footer">
+<!--                    <div id="copyright" class="pull-left">-->
+<!--                        &copy; --><?php //echo date('Y'); ?><!-- UpstatePHP-->
+<!--                    </div>-->
                     <div class="social-links pull-right">
                         <?php
                             $footerLinks = get_bookmarks([
