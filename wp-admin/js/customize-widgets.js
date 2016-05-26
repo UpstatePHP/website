@@ -16,7 +16,7 @@
 	delete api.Widgets.data.l10n;
 
 	/**
-	 * wp.customize.widgets.WidgetModel
+	 * wp.customize.Widgets.WidgetModel
 	 *
 	 * A single widget model.
 	 *
@@ -34,7 +34,7 @@
 		multi_number: null,
 		name: null,
 		id_base: null,
-		transport: 'refresh',
+		transport: null,
 		params: [],
 		width: null,
 		height: null,
@@ -42,7 +42,7 @@
 	});
 
 	/**
-	 * wp.customize.widgets.WidgetCollection
+	 * wp.customize.Widgets.WidgetCollection
 	 *
 	 * Collection for widget models.
 	 *
@@ -101,7 +101,7 @@
 	api.Widgets.availableWidgets = new api.Widgets.WidgetCollection( api.Widgets.data.availableWidgets );
 
 	/**
-	 * wp.customize.widgets.SidebarModel
+	 * wp.customize.Widgets.SidebarModel
 	 *
 	 * A single sidebar model.
 	 *
@@ -121,7 +121,7 @@
 	});
 
 	/**
-	 * wp.customize.widgets.SidebarCollection
+	 * wp.customize.Widgets.SidebarCollection
 	 *
 	 * Collection for sidebar models.
 	 *
@@ -134,7 +134,7 @@
 	api.Widgets.registeredSidebars = new api.Widgets.SidebarCollection( api.Widgets.data.registeredSidebars );
 
 	/**
-	 * wp.customize.widgets.AvailableWidgetsPanelView
+	 * wp.customize.Widgets.AvailableWidgetsPanelView
 	 *
 	 * View class for the available widgets panel.
 	 *
@@ -401,7 +401,7 @@
 	};
 
 	/**
-	 * wp.customize.widgets.WidgetControl
+	 * wp.customize.Widgets.WidgetControl
 	 *
 	 * Customizer control for widgets.
 	 * Note that 'widget_form' must match the WP_Widget_Form_Customize_Control::$type
@@ -663,7 +663,7 @@
 		 */
 		_setupReorderUI: function() {
 			var self = this, selectSidebarItem, $moveWidgetArea,
-				$reorderNav, updateAvailableSidebars;
+				$reorderNav, updateAvailableSidebars, template;
 
 			/**
 			 * select the provided sidebar list item in the move widget area
@@ -681,8 +681,10 @@
 			 * Add the widget reordering elements to the widget control
 			 */
 			this.container.find( '.widget-title-action' ).after( $( api.Widgets.data.tpl.widgetReorderNav ) );
-			$moveWidgetArea = $(
-				_.template( api.Widgets.data.tpl.moveWidgetArea, {
+
+
+			template = _.template( api.Widgets.data.tpl.moveWidgetArea );
+			$moveWidgetArea = $( template( {
 					sidebars: _( api.Widgets.registeredSidebars.toArray() ).pluck( 'attributes' )
 				} )
 			);
@@ -959,7 +961,7 @@
 		 * comparing the loaded form with the sanitized form, whose fields will
 		 * be aligned to copy the sanitized over. The elements returned by this
 		 * are passed into this._getInputsSignature(), and they are iterated
-		 * over when copying sanitized values over to the the form loaded.
+		 * over when copying sanitized values over to the form loaded.
 		 *
 		 * @param {jQuery} container element in which to look for inputs
 		 * @returns {jQuery} inputs
@@ -1107,7 +1109,7 @@
 			params = {};
 			params.action = 'update-widget';
 			params.wp_customize = 'on';
-			params.nonce = api.Widgets.data.nonce;
+			params.nonce = api.settings.nonce['update-widget'];
 			params.theme = api.settings.theme.stylesheet;
 			params.customized = wp.customize.previewer.query().customized;
 
@@ -1506,7 +1508,7 @@
 	} );
 
 	/**
-	 * wp.customize.widgets.WidgetsPanel
+	 * wp.customize.Widgets.WidgetsPanel
 	 *
 	 * Customizer panel containing the widget area sections.
 	 *
@@ -1577,7 +1579,7 @@
 	});
 
 	/**
-	 * wp.customize.widgets.SidebarSection
+	 * wp.customize.Widgets.SidebarSection
 	 *
 	 * Customizer section representing a widget area widget
 	 *
@@ -1602,7 +1604,7 @@
 	});
 
 	/**
-	 * wp.customize.widgets.SidebarControl
+	 * wp.customize.Widgets.SidebarControl
 	 *
 	 * Customizer control for widgets.
 	 * Note that 'sidebar_widgets' must match the WP_Widget_Area_Customize_Control::$type
@@ -1829,7 +1831,7 @@
 				}
 			});
 
-			if ( ! widgetControls.length ) {
+			if ( 0 === widgetControls.length || ( 1 === api.Widgets.registeredSidebars.length && widgetControls.length <= 1 ) ) {
 				this.container.find( '.reorder-toggle' ).hide();
 				return;
 			} else {
@@ -1980,7 +1982,7 @@
 			isExistingWidget = api.has( settingId );
 			if ( ! isExistingWidget ) {
 				settingArgs = {
-					transport: 'refresh',
+					transport: api.Widgets.data.selectiveRefreshableWidgets[ widget.get( 'id_base' ) ] ? 'postMessage' : 'refresh',
 					previewer: this.setting.previewer
 				};
 				setting = api.create( settingId, settingId, '', settingArgs );
@@ -2056,11 +2058,6 @@
 	$.extend( api.controlConstructor, {
 		widget_form: api.Widgets.WidgetControl,
 		sidebar_widgets: api.Widgets.SidebarControl
-	});
-
-	// Refresh the nonce if login sends updated nonces over.
-	api.bind( 'nonce-refresh', function( nonces ) {
-		api.Widgets.data.nonce = nonces['update-widget'];
 	});
 
 	/**

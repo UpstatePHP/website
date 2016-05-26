@@ -114,7 +114,12 @@
 	padding: 0 0 15px;
 	margin: 0;
 	font-style: normal;
-	color: #777;
+	color: #72777c;
+}
+
+.widget-holder .description,
+.inactive-sidebar .description {
+	color: #555d66;
 }
 
 #widgets-right .widgets-holder-wrap .description {
@@ -122,7 +127,7 @@
 	padding-right: 7px;
 }
 
-/* widgets 2-col Layout */
+/* Widgets 2-col Layout */
 div.widget-liquid-left {
 	margin: 0;
 	width: 38%;
@@ -134,7 +139,7 @@ div.widget-liquid-right {
 	width: 58%;
 }
 
-/* widgets Left - Available widgets */
+/* Widgets Left - Available Widgets */
 
 div#widgets-left {
 	padding-top: 12px;
@@ -155,7 +160,7 @@ div#widgets-left .sidebar-name h3 {
 	padding: 9px;
 }
 
-#widgets-left #available-widgets,
+#widgets-left .widgets-holder-wrap,
 div#widgets-left .widget-holder {
 	background: transparent;
 	border: none;
@@ -223,15 +228,7 @@ div#widgets-left .inactive-sidebar .widgets-sortables {
 	position: relative;
 }
 
-/* widgets Right */
-
-div#widgets-right:after {
-	content: ".";
-	display: block;
-	height: 0;
-	clear: both;
-	visibility: hidden;
-}
+/* Widgets Right */
 
 div#widgets-right .sidebars-column-1,
 div#widgets-right .sidebars-column-2 {
@@ -282,7 +279,7 @@ div#widgets-right .closed .widgets-sortables {
 
 /* Dragging a widget over a closed sidebar */
 #widgets-right .widgets-holder-wrap.widget-hover {
-	border-color: #777;
+	border-color: #72777c;
 	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 	box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
@@ -407,7 +404,7 @@ div#widgets-right .closed .widgets-sortables {
 }
 
 
-/* widgets Area Chooser */
+/* Widgets Area Chooser */
 .widget-liquid-left #widgets-left.chooser #available-widgets .widget,
 .widget-liquid-left #widgets-left.chooser .inactive-sidebar {
 	-webkit-transition: opacity 0.1s linear;
@@ -464,6 +461,7 @@ div#widgets-right .widget-top:hover,
 	transition: background 0.2s ease-in-out;
 }
 
+ /* @todo looks like these hover/focus states are overridden by .widgets-chooser-selected */
 .widgets-chooser li:hover,
 .widgets-chooser li:focus {
 	background: rgba(255,255,255,0.7);
@@ -474,7 +472,7 @@ div#widgets-right .widget-top:hover,
 	display: block;
 	-webkit-font-smoothing: antialiased;
 	font: normal 26px/1 dashicons;
-	color: #999;
+	color: #555d66;
 	position: absolute;
 	top: 7px;
 	left: 5px;

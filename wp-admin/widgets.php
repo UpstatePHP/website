@@ -9,7 +9,7 @@
 /** WordPress Administration Bootstrap */
 require_once( dirname( __FILE__ ) . '/admin.php' );
 
-/** WordPress Administration widgets API */
+/** WordPress Administration Widgets API */
 require_once(ABSPATH . 'wp-admin/includes/widgets.php');
 
 if ( ! current_user_can( 'edit_theme_options' ) ) {
@@ -36,42 +36,42 @@ if ( 'on' == $widgets_access ) {
 }
 
 /**
- * Fires early before the widgets administration screen loads,
+ * Fires early before the Widgets administration screen loads,
  * after scripts are enqueued.
  *
  * @since 2.2.0
  */
 do_action( 'sidebar_admin_setup' );
 
-$title = __( 'widgets' );
+$title = __( 'Widgets' );
 $parent_file = 'themes.php';
 
 get_current_screen()->add_help_tab( array(
 'id'		=> 'overview',
 'title'		=> __('Overview'),
 'content'	=>
-	'<p>' . __('widgets are independent sections of content that can be placed into any widgetized area provided by your theme (commonly called sidebars). To populate your sidebars/widget areas with individual widgets, drag and drop the title bars into the desired area. By default, only the first widget area is expanded. To populate additional widget areas, click on their title bars to expand them.') . '</p>
-	<p>' . __('The Available widgets section contains all the widgets you can choose from. Once you drag a widget into a sidebar, it will open to allow you to configure its settings. When you are happy with the widget settings, click the Save button and the widget will go live on your site. If you click Delete, it will remove the widget.') . '</p>'
+	'<p>' . __('Widgets are independent sections of content that can be placed into any widgetized area provided by your theme (commonly called sidebars). To populate your sidebars/widget areas with individual widgets, drag and drop the title bars into the desired area. By default, only the first widget area is expanded. To populate additional widget areas, click on their title bars to expand them.') . '</p>
+	<p>' . __('The Available Widgets section contains all the widgets you can choose from. Once you drag a widget into a sidebar, it will open to allow you to configure its settings. When you are happy with the widget settings, click the Save button and the widget will go live on your site. If you click Delete, it will remove the widget.') . '</p>'
 ) );
 get_current_screen()->add_help_tab( array(
 'id'		=> 'removing-reusing',
 'title'		=> __('Removing and Reusing'),
 'content'	=>
-	'<p>' . __('If you want to remove the widget but save its setting for possible future use, just drag it into the Inactive widgets area. You can add them back anytime from there. This is especially helpful when you switch to a theme with fewer or different widget areas.') . '</p>
-	<p>' . __('widgets may be used multiple times. You can give each widget a title, to display on your site, but it&#8217;s not required.') . '</p>
+	'<p>' . __('If you want to remove the widget but save its setting for possible future use, just drag it into the Inactive Widgets area. You can add them back anytime from there. This is especially helpful when you switch to a theme with fewer or different widget areas.') . '</p>
+	<p>' . __('Widgets may be used multiple times. You can give each widget a title, to display on your site, but it&#8217;s not required.') . '</p>
 	<p>' . __('Enabling Accessibility Mode, via Screen Options, allows you to use Add and Edit buttons instead of using drag and drop.') . '</p>'
 ) );
 get_current_screen()->add_help_tab( array(
 'id'		=> 'missing-widgets',
-'title'		=> __('Missing widgets'),
+'title'		=> __('Missing Widgets'),
 'content'	=>
-	'<p>' . __('Many themes show some sidebar widgets by default until you edit your sidebars, but they are not automatically displayed in your sidebar management tool. After you make your first widget change, you can re-add the default widgets by adding them from the Available widgets area.') . '</p>' .
-		'<p>' . __('When changing themes, there is often some variation in the number and setup of widget areas/sidebars and sometimes these conflicts make the transition a bit less smooth. If you changed themes and seem to be missing widgets, scroll down on this screen to the Inactive widgets area, where all of your widgets and their settings will have been saved.') . '</p>'
+	'<p>' . __('Many themes show some sidebar widgets by default until you edit your sidebars, but they are not automatically displayed in your sidebar management tool. After you make your first widget change, you can re-add the default widgets by adding them from the Available Widgets area.') . '</p>' .
+		'<p>' . __('When changing themes, there is often some variation in the number and setup of widget areas/sidebars and sometimes these conflicts make the transition a bit less smooth. If you changed themes and seem to be missing widgets, scroll down on this screen to the Inactive Widgets area, where all of your widgets and their settings will have been saved.') . '</p>'
 ) );
 
 get_current_screen()->set_help_sidebar(
 	'<p><strong>' . __('For more information:') . '</strong></p>' .
-	'<p>' . __('<a href="https://codex.wordpress.org/Appearance_Widgets_Screen" target="_blank">Documentation on widgets</a>') . '</p>' .
+	'<p>' . __('<a href="https://codex.wordpress.org/Appearance_Widgets_Screen" target="_blank">Documentation on Widgets</a>') . '</p>' .
 	'<p>' . __('<a href="https://wordpress.org/support/" target="_blank">Support Forums</a>') . '</p>'
 );
 
@@ -109,7 +109,7 @@ foreach ( $sidebars_widgets as $sidebar_id => $widgets ) {
 
 // register the inactive_widgets area as sidebar
 register_sidebar(array(
-	'name' => __('Inactive widgets'),
+	'name' => __('Inactive Widgets'),
 	'id' => 'wp_inactive_widgets',
 	'class' => 'inactive-sidebar',
 	'description' => __( 'Drag widgets here to remove them from the sidebar but keep their settings.' ),
@@ -372,7 +372,7 @@ require_once( ABSPATH . 'wp-admin/admin-header.php' ); ?>
 
 <?php
 /**
- * Fires before the widgets administration page content loads.
+ * Fires before the Widgets administration page content loads.
  *
  * @since 3.0.0
  */
@@ -383,7 +383,7 @@ do_action( 'widgets_admin_page' ); ?>
 	<div id="available-widgets" class="widgets-holder-wrap">
 		<div class="sidebar-name">
 			<div class="sidebar-name-arrow"><br /></div>
-			<h2><?php _e( 'Available widgets' ); ?> <span id="removing-widget"><?php _ex( 'Deactivate', 'removing-widget' ); ?> <span></span></span></h2>
+			<h2><?php _e( 'Available Widgets' ); ?> <span id="removing-widget"><?php _ex( 'Deactivate', 'removing-widget' ); ?> <span></span></span></h2>
 		</div>
 		<div class="widget-holder">
 			<div class="sidebar-description">
@@ -423,9 +423,9 @@ foreach ( $wp_registered_sidebars as $sidebar => $registered_sidebar ) {
 								$attributes['disabled'] = '';
 							}
 
-							submit_button( __( 'Clear Inactive widgets' ), 'delete', 'removeinactivewidgets', false, $attributes );
+							submit_button( __( 'Clear Inactive Widgets' ), 'delete', 'removeinactivewidgets', false, $attributes );
 							?>
-							<span class="spinner">
+							<span class="spinner"></span>
 						</p>
 						<?php wp_nonce_field( 'remove-inactive-widgets', '_wpnonce_remove_inactive_widgets' ); ?>
 					</form>
@@ -455,12 +455,12 @@ $sidebars_count = count( $theme_sidebars );
 if ( $sidebars_count > 1 ) {
 	$split = ceil( $sidebars_count / 2 );
 } else {
-	$single_sidebar_class = ' class="single-sidebar"';
+	$single_sidebar_class = ' single-sidebar';
 }
 
 ?>
 <div class="widget-liquid-right">
-<div id="widgets-right"<?php echo $single_sidebar_class; ?>>
+<div id="widgets-right" class="wp-clearfix<?php echo $single_sidebar_class; ?>">
 <div class="sidebars-column-1">
 <?php
 

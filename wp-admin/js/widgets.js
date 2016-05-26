@@ -128,7 +128,7 @@ wpWidgets = {
 		});
 
 		/**
-		 * Opens and closes previously closed Sidebars when widgets are dragged over/out of them.
+		 * Opens and closes previously closed Sidebars when Widgets are dragged over/out of them.
 		 */
 		sidebars.droppable( {
 			tolerance: 'intersect',

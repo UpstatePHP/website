@@ -44,7 +44,7 @@ get_current_screen()->add_help_tab( array(
 'id'		=> 'overview',
 'title'		=> __('Overview'),
 'content'	=>
-	'<p>' . sprintf(__('You can add links here to be displayed on your site, usually using <a href="%s">widgets</a>. By default, links to several sites in the WordPress community are included as examples.'), 'widgets.php') . '</p>' .
+	'<p>' . sprintf(__('You can add links here to be displayed on your site, usually using <a href="%s">Widgets</a>. By default, links to several sites in the WordPress community are included as examples.'), 'widgets.php') . '</p>' .
     '<p>' . __('Links may be separated into Link Categories; these are different than the categories used on your posts.') . '</p>' .
     '<p>' . __('You can customize the display of this screen using the Screen Options tab and/or the dropdown filters above the links table.') . '</p>'
 ) );
@@ -74,8 +74,11 @@ if ( ! current_user_can('manage_links') )
 
 <div class="wrap nosubsub">
 <h1><?php echo esc_html( $title ); ?> <a href="link-add.php" class="page-title-action"><?php echo esc_html_x('Add New', 'link'); ?></a> <?php
-if ( !empty($_REQUEST['s']) )
-	printf( '<span class="subtitle">' . __('Search results for &#8220;%s&#8221;') . '</span>', esc_html( wp_unslash($_REQUEST['s']) ) ); ?>
+if ( isset( $_REQUEST['s'] ) && strlen( $_REQUEST['s'] ) ) {
+	/* translators: %s: search keywords */
+	printf( '<span class="subtitle">' . __( 'Search results for &#8220;%s&#8221;' ) . '</span>', esc_html( wp_unslash( $_REQUEST['s'] ) ) );
+}
+?>
 </h1>
 
 <?php

@@ -80,8 +80,8 @@ $_old_files = array(
 'wp-admin/upload.css',
 'wp-admin/upload.js',
 'wp-admin/users.js',
-'wp-admin/Widgets-rtl.css',
-'wp-admin/Widgets.css',
+'wp-admin/widgets-rtl.css',
+'wp-admin/widgets.css',
 'wp-admin/xfn.js',
 'wp-includes/js/tinymce/license.html',
 // 2.5
@@ -238,7 +238,7 @@ $_old_files = array(
 'wp-admin/import',
 'wp-admin/js/wp-gears.dev.js',
 'wp-admin/js/wp-gears.js',
-'wp-admin/options-helpers.php',
+'wp-admin/options-misc.php',
 'wp-admin/page-new.php',
 'wp-admin/page.php',
 'wp-admin/rtl.css',
@@ -321,8 +321,8 @@ $_old_files = array(
 'wp-admin/css/theme-install-rtl.dev.css',
 'wp-admin/css/theme-install.css',
 'wp-admin/css/theme-install.dev.css',
-'wp-admin/css/Widgets-rtl.dev.css',
-'wp-admin/css/Widgets.dev.css',
+'wp-admin/css/widgets-rtl.dev.css',
+'wp-admin/css/widgets.dev.css',
 'wp-admin/includes/internal-linking.php',
 'wp-includes/images/admin-bar-sprite-rtl.png',
 'wp-includes/js/jquery/ui.button.js',
@@ -423,8 +423,8 @@ $_old_files = array(
 'wp-admin/images/upload-fresh.png',
 'wp-admin/images/white-grad-active.png',
 'wp-admin/images/white-grad.png',
-'wp-admin/images/Widgets-arrow-vs.gif',
-'wp-admin/images/Widgets-arrow.gif',
+'wp-admin/images/widgets-arrow-vs.gif',
+'wp-admin/images/widgets-arrow.gif',
 'wp-admin/images/wpspin_dark.gif',
 'wp-includes/images/upload.png',
 'wp-includes/js/prototype.js',
@@ -482,7 +482,7 @@ $_old_files = array(
 'wp-admin/js/inline-edit-tax.dev.js',
 'wp-admin/js/gallery.dev.js',
 'wp-admin/js/utils.dev.js',
-'wp-admin/js/Widgets.dev.js',
+'wp-admin/js/widgets.dev.js',
 'wp-admin/js/wp-fullscreen.dev.js',
 'wp-admin/js/nav-menu.dev.js',
 'wp-admin/js/dashboard.dev.js',
@@ -598,9 +598,10 @@ $_old_files = array(
 'wp-admin/css/colors.min.css',
 'wp-admin/css/colors-rtl.css',
 'wp-admin/css/colors-rtl.min.css',
-'wp-admin/css/media-rtl.min.css',
-'wp-admin/css/media.min.css',
-'wp-admin/css/farbtastic-rtl.min.css',
+// Following files added back in 4.5 see #36083
+// 'wp-admin/css/media-rtl.min.css',
+// 'wp-admin/css/media.min.css',
+// 'wp-admin/css/farbtastic-rtl.min.css',
 'wp-admin/images/lock-2x.png',
 'wp-admin/images/lock.png',
 'wp-admin/js/theme-preview.js',
@@ -700,6 +701,8 @@ $_old_files = array(
 'wp-admin/js/wp-fullscreen.min.js',
 'wp-includes/js/tinymce/wp-mce-help.php',
 'wp-includes/js/tinymce/plugins/wpfullscreen',
+// 4.5
+'wp-includes/theme-compat/comments-popup.php',
 );
 
 /**
@@ -1093,7 +1096,7 @@ function update_core($from, $to) {
 
 	// Clear the cache to prevent an update_option() from saving a stale db_version to the cache
 	wp_cache_flush();
-	// (Not all cache backends listen to 'flush')
+	// (Not all cache back ends listen to 'flush')
 	wp_cache_delete( 'alloptions', 'options' );
 
 	// Remove working directory

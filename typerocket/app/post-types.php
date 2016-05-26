@@ -7,7 +7,7 @@
 $sponsor = tr_post_type('Sponsor', 'Sponsors');
 $sponsor->setIcon('star3');
 $sponsor->setTitlePlaceholder('Enter sponsor name here');
-$sponsor->setSlug('sponsors');
+//$sponsor->setSlug('sponsors');
 tr_meta_box('Details')->apply($sponsor)->setCallback(function(){
     $form = tr_form();
     echo $form->image('Logo');
