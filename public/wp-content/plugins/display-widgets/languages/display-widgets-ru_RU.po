@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Display Widgets v2.04\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-22 09:34+0300\n"
+"PO-Revision-Date: 2015-08-20 01:41:30+0000\n"
+"Last-Translator: darmoid <smychnyk@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%100/10==1 ? 2 : n%10==1 ? 0 : (n+9)%10>3 ? 2 : 1;\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Language: \n"
+"X-Poedit-Country: \n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: display-widgets.php:310
+#@ display-widgets
+msgid "Show Widget for:"
+msgstr "Кому показывать виджет:"
+
+#: display-widgets.php:312
+#@ display-widgets
+msgid "Everyone"
+msgstr "Всем"
+
+#: display-widgets.php:313
+#@ display-widgets
+msgid "Logged-out users"
+msgstr "Не вошедшим"
+
+#: display-widgets.php:314
+#@ display-widgets
+msgid "Logged-in users"
+msgstr "Вошедшим"
+
+#: display-widgets.php:320
+#@ display-widgets
+msgid "Hide on checked pages"
+msgstr "Скрыть на выбранных страницах"
+
+#: display-widgets.php:321
+#@ display-widgets
+msgid "Show on checked pages"
+msgstr "Показать на выбранных страницах"
+
+#: display-widgets.php:326
+#@ display-widgets
+msgid "Miscellaneous"
+msgstr "Разное"
+
+#: display-widgets.php:338
+#@ default
+msgid "Pages"
+msgstr "Страницы"
+
+#: display-widgets.php:355
+#@ display-widgets
+msgid "Custom Post Types"
+msgstr "Записи произвольных типов"
+
+#: display-widgets.php:368
+#@ display-widgets
+msgid "Custom Post Type Archives"
+msgstr "Произвольные типы записей архивов"
+
+#: display-widgets.php:379
+#@ display-widgets
+msgid "Archive"
+msgstr "Архивы"
+
+#: display-widgets.php:384
+#@ default
+msgid "Categories"
+msgstr "Категории"
+
+#: display-widgets.php:402
+#@ display-widgets
+msgid "Taxonomies"
+msgstr "Таксономии"
+
+#: display-widgets.php:418
+#@ display-widgets
+msgid "Languages"
+msgstr "Языки"
+
+#: display-widgets.php:435
+#@ display-widgets
+msgid "Comma Separated list of IDs of posts not listed above"
+msgstr "Разделенный запятыми список ID записей не перечисленных выше"
+
+#: display-widgets.php:602
+#@ display-widgets
+msgid "Front"
+msgstr "Главная"
+
+#: display-widgets.php:603
+#@ display-widgets
+msgid "Blog"
+msgstr "Блог"
+
+#: display-widgets.php:604
+#@ default
+msgid "Archives"
+msgstr "Архивы"
+
+#: display-widgets.php:605
+#@ default
+msgid "Single Post"
+msgstr "Отдельная Запись"
+
+#: display-widgets.php:607
+#@ default
+msgid "Search"
+msgstr "Поиск"
+
+#: display-widgets.php:388
+#@ display-widgets
+msgid "All Categories"
+msgstr ""
+
+#: display-widgets.php:732
+#, php-format
+#@ display-widgets
+msgid "#%d (no title)"
+msgstr ""
+
