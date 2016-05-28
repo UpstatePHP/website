@@ -6,16 +6,16 @@
 
 # WordPress #
 ###################
-.htaccess
-wp-content/uploads/
-wp-content/blogs.dir/
-wp-content/upgrade/
-wp-content/backup-db/
-*.log
-wp-content/cache/
-wp-content/backups/
-sitemap.xml
-sitemap.xml.gz
+public/.htaccess
+public/wp-content/uploads/
+public/wp-content/blogs.dir/
+public/wp-content/upgrade/
+public/wp-content/backup-db/
+public/*.log
+public/wp-content/cache/
+public/wp-content/backups/
+public/sitemap.xml
+public/sitemap.xml.gz
 
 # Compiled source #
 ###################
