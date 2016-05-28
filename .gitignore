@@ -72,4 +72,4 @@ wp-config.production.php
 wp-config.staging.php
 wp-config.default.php
 vendor/
-nginx.conf
+public/nginx.conf
