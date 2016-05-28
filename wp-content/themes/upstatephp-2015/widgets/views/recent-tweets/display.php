@@ -3,7 +3,7 @@
 <div class="tweet media">
     <div class="pull-left">
         <a href="<?php echo $widget->linkUser($tweet->user); ?>" target="_blank">
-            <img src="<?php echo $tweet->user->profile_image_url; ?>" class="media-object"/>
+            <img src="<?php echo str_replace('_normal', '', $tweet->user->profile_image_url); ?>" class="media-object"/>
         </a>
     </div>
 
