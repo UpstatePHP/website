@@ -85,4 +85,4 @@ define('TR_SEED', 'bw7^sk*fCtN#RGFn3^d9bX$EG4HsMk');
 | The folder where you wish to locate typerocket core assets.
 |
 */
-define('TR_ASSETS_URL', '/' . TR_FOLDER . '/assets');
+define('TR_ASSETS_URL', WP_HOME . '/' . TR_FOLDER . '/assets');
