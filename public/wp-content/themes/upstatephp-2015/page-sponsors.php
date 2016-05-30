@@ -15,6 +15,8 @@
                             $supporters_loop = new WP_Query([
                                 'post_type' => 'sponsor',
                                 'posts_per_page' => -1,
+                                'order' => 'ASC',
+                                'orderby' => 'title',
                                 'meta_query' => [
                                     [
                                         'key' => 'type',
@@ -43,6 +45,8 @@
                         $sponsors_loop = new WP_Query([
                             'post_type' => 'sponsor',
                             'posts_per_page' => -1,
+                            'order' => 'ASC',
+                            'orderby' => 'title',
                             'meta_query' => [
                                 [
                                     'key' => 'type',
