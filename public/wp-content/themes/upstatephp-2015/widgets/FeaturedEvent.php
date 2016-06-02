@@ -34,7 +34,14 @@ class UpstatePHP_TwentyFifteen_FeaturedEvent extends WP_Widget
             $featuredEvent = $nextEvent;
         }
 
-        $nextScheduledEvent = date('n/d @ 6\p\m', strtotime('third thursday of next month'));
+        $thisMonth = strtotime('third thursday of this month');
+        $nextMonth = strtotime('third thursday of next month');
+
+        if (time() < $thisMonth) {
+            $nextScheduledEvent = date('n/d @ 6\p\m', $thisMonth);
+        } else {
+            $nextScheduledEvent = date('n/d @ 6\p\m', $nextMonth);
+        }
 
         echo $this->engine->render('display', compact('featuredEvent', 'nextScheduledEvent'));
     }
