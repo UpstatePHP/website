@@ -6411,6 +6411,9 @@ h4 {
   font-size: 22px;
   margin-bottom: 8px;
 }
+.sidebar-widget img {
+  max-width: 100%;
+}
 .spinner {
   transition: opacity 0.25s, width 0.25s;
 }
