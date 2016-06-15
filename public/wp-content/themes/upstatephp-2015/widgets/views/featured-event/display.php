@@ -13,7 +13,7 @@
                         ?>
                     </div>
                     <div class="event-meta-line">
-                        <?php echo $featuredEvent['post_content']; ?>
+                        <?php echo apply_filters('the_content', $featuredEvent['post_content']); ?>
                     </div>
                 </div>
                 <div class="event-actions">
